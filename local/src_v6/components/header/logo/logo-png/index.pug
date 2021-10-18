@@ -1,7 +1,4 @@
 .logo-desk(class=DB.layout !== 'simple' ? '' : 'simple')
-  .pic
+  .wrap
     #{DB.isMain === true ? 'span' : 'a'}&attributes(DB.isMain === true ? {} : { 'href': '/' })
-        img(src=DB.DIR + 'img/logo-png.png', alt=DB.companyName)
-  if (DB.layout !== 'simple' && logoTitle !== false)
-    .title
-      span Лидер белорусского рынка разработки и&nbsp;продвижения корпоративных сайтов и&nbsp;интернет-магазинов
+        span cospro.by
