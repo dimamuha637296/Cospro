@@ -1,7 +1,46 @@
 .logo-foot {
-  margin: 0 0 14px;
+  position: relative;
+  margin: 0 0 18px;
 
-  &__img {
-    max-height: 60px;
+  @media (max-width: $screen-md-max) {
+    padding-top: 21px;
+    margin-bottom: 9px;
+  }
+
+  &:before {
+
+    @media (max-width: $screen-md-max) {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 100vw;
+      height: 1px;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba($brand-gray-10, .2);
+    }
+  }
+
+  &__link {
+    display: table;
+    text-decoration: none;
+
+    @media (max-width: $screen-md-max) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    @include hover-focus() {
+      text-decoration: none;
+    }
+  }
+
+  &__text {
+    @include font-family-cormorant-r();
+    font-size: 25px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: $brand-gray-10;
   }
 }

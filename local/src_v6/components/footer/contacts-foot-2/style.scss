@@ -1,19 +1,64 @@
 .contacts-foot-2 {
+  padding-top: 4px;
   margin: 0 0 10px;
 
+  @media (max-width: $screen-lg-max) {
+    padding-top: 7px;
+  }
+
+  &__title {
+    font-size: 16px;
+    line-height: 1.25;
+    color: $brand-gray-10;
+
+    @media (max-width: $screen-lg-max) {
+      font-size: 15px;
+    }
+
+    a {
+      text-decoration: none;
+      color: $brand-gray-10;
+
+      @include hover-focus() {
+        text-decoration: underline;
+        color: $brand-gray-10;
+      }
+    }
+  }
+
+  &__list {
+    margin-top: 18px;
+    
+    @media (max-width: $screen-md-max) {
+      margin-top: 10px;
+    }
+  }
+
   &__item {
-    margin: 0 0 5px;
+    margin: 0 0 6px;
   }
 
   &__link {
+    display: flex;
+    align-items: flex-start;
+    font-size: 16px;
+    line-height: 1.25;
     text-decoration: none;
-
-    [class*=svg] {
-      margin-right: 5px;
-    }
+    color: $brand-gray-11;
 
     @include hover-focus {
-      text-decoration: none;
+      color: $brand-gray-11;
+      text-decoration: underline;
+    }
+
+    &--small {
+      font-size: 12px;
+    }
+
+    [class*=svg] {
+      margin-right: 10px;
+      width: 15px;
+      padding-top: 3px;
     }
   }
 }

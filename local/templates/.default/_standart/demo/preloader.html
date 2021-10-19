@@ -39,7 +39,7 @@
 					<div class="header__mob">
 						<div class="container">
 							<div class="logo-mob">
-								<a href="/"><img src="../../img/logo-mob.svg" alt="Студия Борового"></a>
+								<a href="/"><img src="../../img/logo-mob.svg" alt="CosPro"></a>
 							</div>
 							<div class="header__tools">
 								<div class="contacts-mob dropdown js-dropdown-full-width">
@@ -861,102 +861,70 @@
 				<footer class="footer d-print-none">
 					<div class="footer__inner">
 						<div class="container">
-							<div class="subscription">
-								<div class="bg"></div>
-								<div class="bg-wrap">
-									<form class="b-form" id="form-subscript-confirm" action="/personal/subscribe/subscr_edit.php">
-										<fieldset>
-											<div class="control-group">
-												<div class="title">Подписка на&nbsp;рассылку</div>
-												<div class="input-wrap">
-													<input class="input form-control" type="email" name="sf_EMAIL" placeholder="email@adress.com" value="">
-													<div class="b-btn">
-																												<input class="btn btn-primary" name="OK" type="submit" value="Подписаться">
-													</div>
-												</div>
-											</div>
-										</fieldset>
-									</form>
+							<!--include ../../../components/footer/subscription/index-->
+							<div class="footer__row row">
+								<div class="footer__col footer__col--logo">
+									<div class="logo-foot"><a class="logo-foot__link" href="#">
+											<div class="logo-foot__text">cospro.by</div></a></div>
+									<div class="logo-foot-2">
+										<div class="title">&copy; CosPro
+											2021<br>Интернет-магазин косметики и парфюмерии
+										</div>
+									</div>
+									<div class="payment">
+										<ul class="list list-reset">
+											<li class="item"><a class="link" href="#"><img src="../../img/tmp/payment/pay-1.png" alt="payment" title="payment"></a></li>
+											<li class="item"><a class="link" href="#"><img src="../../img/tmp/payment/pay-2.png" alt="payment" title="payment"></a></li>
+											<li class="item"><a class="link" href="#"><img src="../../img/tmp/payment/pay-3.png" alt="payment" title="payment"></a></li>
+											<li class="item"><a class="link" href="#"><img src="../../img/tmp/payment/pay-4.png" alt="payment" title="payment"></a></li>
+											<li class="item"><a class="link" href="#"><img src="../../img/tmp/payment/pay-5.png" alt="payment" title="payment"></a></li>
+										</ul>
+									</div>
 								</div>
-								<script>
-									!function () {
-									    'use strict';
-									
-									    function initValid() {
-									        // Validation options http://jqueryvalidation.org/documentation/
-									        var form_validator = $('#form-subscript-confirm');
-									        if (form_validator.length && $.fn.validate) {
-									            form_validator.validate({
-									                rules: {
-									                    'sf_EMAIL': {
-									                        required: true,
-									                        email: true
-									                    }
-									                }
-									            });
-									        }
-									    }
-									
-									    $(function () {
-									        initValid();
-									    });
-									}();
-								</script>
-							</div>
-							<div class="row">
-								<div class="col-lg-9 col-12">
+								<div class="footer__col footer__col--menu">
 									<div class="menu-foot-2">
 										<div class="inner">
 											<ul class="menu_level_1 break-word list-reset">
-												<li class="item_1 active"><a href="#"><span>О компании</span></a>
+												<li class="item_1"><a href="#"><span>Каталог</span></a>
 													<div class="submenu">
 														<ul class="menu_level_2 list-reset">
-															<li class="item_2 active"><a href="#"><span>Отзывы</span></a></li>
-															<li class="item_2"><a href="#"><span>Награды</span></a></li>
-															<li class="item_2"><a href="#"><span>Рейтинги</span></a></li>
-															<li class="item_2 active"><span><span>Клиенты</span></span></li>
+															<li class="item_2"><a href="#"><span>Кожа</span></a></li>
+															<li class="item_2"><a href="#"><span>Волосы</span></a></li>
+															<li class="item_2"><a href="#"><span>Ногти</span></a></li>
+															<li class="item_2"><span><span>Удаление волос</span></span></li>
+															<li class="item_2 d-md-none"><a href="#"><span>Для мужчин</span></a></li>
+															<li class="item_2 d-md-none"><a href="#"><span>Инструменты и аксессуары для парикмахера</span></a></li>
+														</ul>
+													</div>
+												</li>
+											</ul>
+											<ul class="menu_level_1 break-word list-reset d-none d-md-block">
+												<li class="item_1"><a class="d-none d-md-block" href="#"><span><br></span></a>
+													<div class="submenu">
+														<ul class="menu_level_2 list-reset">
+															<li class="item_2"><a href="#"><span>Для мужчин</span></a></li>
+															<li class="item_2"><a href="#"><span>Инструменты и аксессуары для парикмахера</span></a></li>
 														</ul>
 													</div>
 												</li>
 											</ul>
 											<ul class="menu_level_1 break-word list-reset">
-												<li class="item_1"><a href="#"><span>Портфолио</span></a>
+												<li class="item_1"><span><span>Покупателю</span></span>
 													<div class="submenu">
 														<ul class="menu_level_2 list-reset">
-															<li class="item_2"><a href="#"><span>По типу сайта</span></a></li>
-															<li class="item_2"><a href="#"><span>По отраслям</span></a></li>
-														</ul>
-													</div>
-												</li>
-												<li class="item_1"><a href="#"><span>Портфолио 2</span></a>
-													<div class="submenu">
-														<ul class="menu_level_2 list-reset">
-															<li class="item_2"><a href="#"><span>По типу сайта</span></a></li>
-															<li class="item_2"><a href="#"><span>По отраслям</span></a></li>
+															<li class="item_2"><a href="#"><span>Оплата и доставка</span></a></li>
+															<li class="item_2"><a href="#"><span>Где купить</span></a></li>
+															<li class="item_2"><a href="#"><span>Условия покупки</span></a></li>
 														</ul>
 													</div>
 												</li>
 											</ul>
 											<ul class="menu_level_1 break-word list-reset">
-												<li class="item_1 active"><span><span>Блог</span></span>
+												<li class="item_1"><a href="#"><span>Сотрудничество</span></a>
 													<div class="submenu">
 														<ul class="menu_level_2 list-reset">
-															<li class="item_2"><a href="#"><span>Новости компании</span></a></li>
-															<li class="item_2"><a href="#"><span>Мероприятия</span></a></li>
-															<li class="item_2"><a href="#"><span>Кейсы</span></a></li>
-															<li class="item_2"><a href="#"><span>Азбука клиента / FAQ</span></a></li>
-															<li class="item_2"><a href="#"><span>Экспертное мнение</span></a></li>
-															<li class="item_2"><a href="#"><span>Календарь мероприятий</span></a></li>
-														</ul>
-													</div>
-												</li>
-											</ul>
-											<ul class="menu_level_1 break-word list-reset">
-												<li class="item_1"><a href="#"><span>Карьера</span></a>
-													<div class="submenu">
-														<ul class="menu_level_2 list-reset">
-															<li class="item_2"><a href="#"><span>Вакансии</span></a></li>
-															<li class="item_2"><a href="#"><span>Стажировки</span></a></li>
+															<li class="item_2"><a href="#"><span>Обучение</span></a></li>
+															<li class="item_2"><a href="#"><span>Условия сотрудничества</span></a></li>
 														</ul>
 													</div>
 												</li>
@@ -964,74 +932,13 @@
 										</div>
 									</div>
 								</div>
-								<div class="col-lg-3 col-12">
-									<div class="row">
-										<div class="col-sm-6 col-lg-12 col-12">
-											<div class="contacts-foot" itemscope="" itemtype="http://schema.org/Organization">
-												<div class="title">Контакты</div>
-												<div class="inner">
-													<div class="address-wrap">
-														<address class="address" itemtype="http://schema.org/PostalAddress" itemscope="" itemprop="address">220068, Республика Беларусь,<br>Минск, ул. Каховская, 70а, 4 этаж</address><span class="hide" itemprop="name">ЧУП «Студия Борового»</span>
-														<div class="link-map"><a href="#">Как проехать</a></div>
-													</div>
-													<div class="tel-wrap">
-														<div class="tel" itemprop="telephone"><a href="tel:+375172336636">+375 17 233-66-36</a> Офис</div>
-														<div class="tel" itemprop="telephone"><a href="tel:+375447932322">+375 44 793-23-22</a> Velcom</div>
-														<div class="tel" itemprop="telephone"><a href="tel:+375295662322 ">+375 29 566-23-22</a> МТС</div>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="col-sm-6 col-lg-12 col-12">
-											<div class="contacts-foot-2">
-												<div class="contacts-foot-2__list">
-													<div class="contacts-foot-2__item"><a class="contacts-foot-2__link" href="tel:+375291293293"><i class="svg-velcom"></i>+375 29 1 293 293</a></div>
-													<div class="contacts-foot-2__item"><a class="contacts-foot-2__link" href="tel:+375336803903"><i class="svg-mts"></i>+375 33 6 803 903</a></div>
-													<div class="contacts-foot-2__item"><a class="contacts-foot-2__link" href="tel:+375256803903"><i class="svg-life"></i>+375 25 6 803 903</a></div>
-													<div class="contacts-foot-2__item"><a class="contacts-foot-2__link" href="tel:+375256803903"><i class="svg-viber"></i>+375 25 6 803 903</a></div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="footer__small">
-								<div class="row footer__row">
-									<div class="footer__left-col col-md-4 col-12">
-										<div class="logo-foot">
-											<div class="logo-foot__pic"><img class="logo-foot__img" src="../../img/logo-foot.svg" alt="Студия Борового"></div>
-										</div>
-										<div class="logo-foot-2">
-											<div class="title">&copy; 2003-2019, Студия Борового</div>
-										</div>
-										<div class="menu-foot">
-											<ul class="menu_level_1 break-word list-reset">
-												<li class="item_1"><a href="#"><span>Карта сайта</span></a></li>
-											</ul>
-										</div>
-									</div>
-									<div class="footer__middle-col col-md-4 col-12">
-										<div class="social-foot">
-											<div class="list"><a class="item svg-vk" href="#" target="_blank"></a><a class="item svg-tw" href="#" target="_blank"></a><a class="item svg-in" href="#" target="_blank"></a><a class="item svg-you" href="#" target="_blank"></a></div>
-										</div>
-									</div>
-									<div class="footer__right-col col-md-4 col-12">
-										<div class="studio">
-											<div class="inner">
-												<div class="pic"><img src="../../img/studio.svg" alt="Студия Борового" title="Студия Борового"></div>
-												<div class="text-wrap">Разработка сайта — <a class="link" href="http://www.db.by/" target="_blank">Студия Борового</a>
-												</div>
-											</div>
-										</div>
-										<div class="payment">
-											<div class="title">Способы оплаты</div>
-											<ul class="list list-reset">
-												<li class="item"><a class="link" href="#"><img src="../../img/tmp/payment/pay-1.png" alt="payment" title="payment"></a></li>
-												<li class="item"><a class="link" href="#"><img src="../../img/tmp/payment/pay-2.png" alt="payment" title="payment"></a></li>
-												<li class="item"><a class="link" href="#"><img src="../../img/tmp/payment/pay-3.png" alt="payment" title="payment"></a></li>
-												<li class="item"><a class="link" href="#"><img src="../../img/tmp/payment/pay-4.png" alt="payment" title="payment"></a></li>
-												<li class="item"><a class="link" href="#"><img src="../../img/tmp/payment/pay-5.png" alt="payment" title="payment"></a></li>
-											</ul>
+								<div class="footer__col footer__col--contacts">
+									<div class="contacts-foot-2">
+										<div class="contacts-foot-2__title"><a href="#"><span>Контакты</span></a></div>
+										<div class="contacts-foot-2__list">
+											<div class="contacts-foot-2__item"><a class="contacts-foot-2__link" href="tel:+375333823138"><i class="svg-contacts-foot-2-phone"></i><span>+375 33 382 31 38</span></a></div>
+											<div class="contacts-foot-2__item"><a class="contacts-foot-2__link contacts-foot-2__link--small" href="mailto:info@cospro.by"><i class="svg-contacts-foot-2-email"></i><span>info@cospro.by</span></a></div>
+											<div class="contacts-foot-2__item"><a class="contacts-foot-2__link contacts-foot-2__link--small" href="profi.minsk"><i class="svg-contacts-foot-2-insta"></i><span>profi.minsk</span></a></div>
 										</div>
 									</div>
 								</div>
@@ -1153,7 +1060,7 @@
 															</div>
 															<div class="form-group">
 																<div class="col-xl-10 col-md-9 col-12 offset-xl-2 offset-md-3 d-md-flex align-items-center">
-																															<input class="btn btn-primary btn_submit" name="submit" type="submit" value="Отправить">
+																																	<input class="btn btn-primary btn_submit" name="submit" type="submit" value="Отправить">
 																	<div class="form_required"><span class="f-star">&nbsp;*</span> — поля обязательные к заполнению
 																	</div>
 																</div>

@@ -146,8 +146,8 @@ $head-margin-h6:                    1.5rem 0 0.65rem;
 $paragraph-margin-bottom:           .7em;
 
 // Links
-$link-decoration:                   underline;
-$link-decoration-hover:             underline;
+$link-decoration:                   none;
+$link-decoration-hover:             none;
 $transition-default:                all .25s ease;
 $transition-link:                   $transition-default;
 
@@ -193,22 +193,22 @@ $box-shadow-base: 0 4px 15px rgba(0, 0, 0, 0.2);
 //=========================== style optimization =================================//
 //================================================================================//
 // https://getbootstrap.com/docs/4.3/layout/grid/#order-classes
-$enable-grid-order:                 false;// включаем классы для сортировки гридов
+$enable-grid-order:                 true;// включаем классы для сортировки гридов
 
 // https://getbootstrap.com/docs/4.3/utilities/display/
-$enable-utils-display:              false;// включаем классы для управления отображением на разных разрешениях
+$enable-utils-display:              true;// включаем классы для управления отображением на разных разрешениях
 
 // https://getbootstrap.com/docs/4.3/utilities/flex/
-$enable-utils-flex:                 false;// включаем классы для управления flexbox
+$enable-utils-flex:                 true;// включаем классы для управления flexbox
 
 // https://getbootstrap.com/docs/4.3/utilities/float/
-$enable-utils-float:                false;// включаем классы для управления float
+$enable-utils-float:                true;// включаем классы для управления float
 
 // https://getbootstrap.com/docs/4.3/utilities/sizing/
-$enable-utils-sizing:               false;// включаем классы для управления sizing
+$enable-utils-sizing:               true;// включаем классы для управления sizing
 
 // https://getbootstrap.com/docs/4.3/utilities/spacing/
 $enable-utils-spacing-simple-vertical:    true;// включаем классы для управления spacing без media запросов (только вертикальные)
-$enable-utils-spacing-simple:             false;// включаем классы для управления spacing без media запросов
+$enable-utils-spacing-simple:             true;// включаем классы для управления spacing без media запросов
 $enable-utils-spacing-important:          false;// включаем классы для управления spacing без media запросов с important
-$enable-utils-spacing-media:              false;// включаем классы для управления spacing на media запросах
+$enable-utils-spacing-media:              true;// включаем классы для управления spacing на media запросах
