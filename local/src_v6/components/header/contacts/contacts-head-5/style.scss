@@ -49,9 +49,9 @@
     line-height: 1;
     text-overflow: ellipsis;
     white-space: nowrap;
-
+    
     @media (max-width: $screen-lg-max) {
-      font-size: 15px;
+      font-size: 14px;
     }
 
     > span {
@@ -62,14 +62,8 @@
       @include svg-contacts-head-5-arrow();
       background-size: cover;
       display: inline-block;
-      margin-left: 10px;
-      vertical-align: 2px;
-
-      @media (max-width: $screen-lg-max) {
-        width: 20px;
-        height: 20px;
-        vertical-align: -4px;
-      }
+      margin-left: 3px;
+      vertical-align: 1px;
 
       @media (max-width: $grid-breakpoint-max) {
         content: none;

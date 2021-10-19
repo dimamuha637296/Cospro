@@ -21,7 +21,6 @@ $mob-menu-element-width-xs:         50px;
 }
 
 .header {
-  box-shadow: $box-shadow-base;
   position: fixed;
   top: 0;
   left: 0;
@@ -61,15 +60,22 @@ $mob-menu-element-width-xs:         50px;
   }
 
   &__row {
+    display: flex;
     position: relative;
   }
 
   &__col {
+    padding-left: 10px;
+    padding-right: 10px;
 
     &--logo {
       display: flex;
       align-items: center;
-      margin-right: 60px;
+      margin-right: 40px;
+
+      @media (max-width: $screen-lg-max) {
+        margin-right: 10px;
+      }
     }
 
     &--contacts {
@@ -81,7 +87,6 @@ $mob-menu-element-width-xs:         50px;
       display: flex;
       align-items: center;
       margin-left: auto;
-      margin-right: 20px;
     }
   }
 

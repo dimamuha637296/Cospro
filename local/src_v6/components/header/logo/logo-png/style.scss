@@ -19,6 +19,10 @@
       color: $brand-gray-12;
       text-decoration: none;
 
+      @media (max-width: $screen-lg-max) {
+        font-size: 20px;
+      }
+
       @include hover-focus() {
         text-decoration: none;
       }
