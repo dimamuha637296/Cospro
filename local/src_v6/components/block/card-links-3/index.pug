@@ -1,0 +1,8 @@
+include ../../../components/block/card-links-3-card/index
+
+mixin card-links-3(data)
+  .card-links-3
+    .card-links-3__row.row
+      each item in data.cards
+        .card-links-3__col(class=(data.colClassName ? data.colClassName : 'col-xl-3 col-lg-4 col-6'))
+          +card-links-3-card(item)

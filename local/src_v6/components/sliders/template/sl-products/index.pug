@@ -1,0 +1,16 @@
+include ../../../../components/block/card-links-3__card/index
+
+mixin sl-products(data)
+  .sl-products(class=data.modifier ? data.modifier : '')
+    if (data.title)
+      .h2.b-title #{data.title}
+    .wrap.cursor.inited-not
+      .slider
+        each slide in data.slides
+          .slide
+            .inner
+              +card-links-3-card(slide)
+      if (data.nav !== undefined)
+        +#{data.nav}()
+    if (data.pager !== undefined)
+      +#{data.pager}()

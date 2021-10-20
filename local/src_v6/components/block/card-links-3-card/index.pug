@@ -1,0 +1,35 @@
+include ../../block/sale/index
+
+mixin card-links-3-card(data)
+  .card-links-3-card(class= data.className ? data.className : '')
+    a.card-links-3-card__main-link(href='#')
+    .card-links-3-card__inner
+      .card-links-3-card__top
+        .card-links-3-card__favorites
+          a.favorites__btn.toFavoritesBtn
+        if (data.img)
+          .card-links-3-card__img-wrap
+            .card-links-3-card__img-inner
+              img.card-links-3-card__img(src=DB.DIR + data.img, alt=(data.title || 'alt'))
+              if (data.sale)
+                +sale(data.sale)
+        .card-links-3-card__text-wrap
+          .card-links-3-card__row.card-links-3-card__row--price.row
+            if (data.title)
+              .card-links-3-card__col.card-links-3-card__col--title
+                .card-links-3-card__title #{data.title}
+            if (data.price)
+              .card-links-3-card__col.card-links-3-card__col--price
+                .card-links-3-card__price #{data.price}
+            if (data.old)
+              .card-links-3-card__col.card-links-3-card__col--old
+                .card-links-3-card__old #{data.old}
+            if (data.desc)
+              .card-links-3-card__col.card-links-3-card__col--desc
+                .card-links-3-card__desc #{data.desc}
+      .card-links-3-card__bottom
+        .card-links-3-card__row.card-links-3-card__row--btns.row
+          .card-links-3-card__col.card-links-3-card__col--buy
+            +btn-primary({type: 'button', text: '<span>быстрая покупка</span>'})(data-toggle='modal', data-target='#fastBuyModal')
+          .card-links-3-card__col.card-links-3-card__col--basket
+            +btn-primary({outline: true, type: 'button', className: 'addToBasket', text: '<span class="icon"></span>'})

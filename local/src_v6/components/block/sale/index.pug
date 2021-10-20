@@ -1,0 +1,5 @@
+mixin sale(data)
+  .sale
+    each item in data.items
+      .sale__inner
+        span.sale__text(class=item.className ? item.className : '') #{item.text}

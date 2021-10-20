@@ -1,0 +1,54 @@
+.sale {
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 17px;
+  left: 19px;
+  right: 55px;
+  max-width: 100%;
+  line-height: 1;
+  opacity: 1;
+  overflow: hidden;
+  visibility: visible;
+  transition: $transition-default;
+
+  &__inner {
+    max-width: 100%;
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  &__text {
+    display: inline-block;
+    max-width: 100%;
+    margin-right: 5px;
+    @include font-family-medium();
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    color: $brand-danger;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: $brand-danger;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+
+    &.green {
+      color: #6ACA5A;
+
+      &.before {
+        background: #6ACA5A;
+      }
+    }
+  }
+}

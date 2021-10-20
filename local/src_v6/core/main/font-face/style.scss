@@ -32,8 +32,8 @@ $font-b: CeraPro-Bold, $_font-family-sans-serif;
   @include skip-font-styles();
 }
 
-@include font-face('Cera Pro', CeraPro-Italic);
-$font-i: CeraPro-Italic, $_font-family-sans-serif;
+@include font-face('Cera Pro', CeraPro-RegularItalic);
+$font-i: CeraPro-RegularItalic, $_font-family-sans-serif;
 @mixin font-family-italic() {
   font-family: $font-i;
   @include skip-font-styles();

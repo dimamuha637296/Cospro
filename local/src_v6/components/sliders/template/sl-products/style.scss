@@ -1,0 +1,146 @@
+.sl-products {
+  position: relative;
+  padding-bottom: 68px;
+
+  .b-title {
+    margin: 0;
+    text-align: center;
+  }
+
+  .wrap {
+    position: relative;
+
+    @media (max-width: $screen-xl-mid-max) {
+      padding: 0 60px;
+    }
+
+    @media (max-width: $screen-lg-max) {
+      padding: 0 50px;
+    }
+
+    @media (max-width: $screen-sm-max) {
+      padding: 0 30px;
+    }
+
+    @media (max-width: $screen-xs-max) {
+      padding: 0;
+    }
+
+    &.inited-not {
+
+      .slider {
+        display: flex;
+      }
+
+      .slide {
+        flex: 0 0 25%;
+        max-width: 25%;
+
+        @media (max-width: $screen-lg-max) {
+          flex: 0 0 33.3333%;
+          max-width: 33.3333%;
+        }
+
+        @media (max-width: $screen-md-max) {
+          flex: 0 0 50%;
+          max-width: 50%;
+        }
+
+        @media (max-width: $screen-xs-max) {
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+
+        &:nth-child(n+5) {
+          display: none;
+        }
+
+        &:nth-child(n+4) {
+
+          @media (max-width: $screen-lg-max) {
+            display: none;
+          }
+        }
+
+        &:nth-child(n+3) {
+
+          @media (max-width: $screen-md-max) {
+            display: none;
+          }
+        }
+
+        &:nth-child(n+2) {
+
+          @media (max-width: $screen-xs-max) {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .sl-nav {
+
+      .prev,
+      .next {
+        width: 50px;
+        top: 1px;
+
+        &:before {
+          left: auto;
+          right: 0;
+          margin-left: 0;
+        }
+
+        &:after {
+          left: auto;
+          right: 13px;
+          margin-left: 0;
+        }
+      }
+
+      .prev {
+        left: -77px;
+        right: auto;
+
+        @media (max-width: $screen-xl-mid-max) {
+          left: -10px;
+        }
+
+        @media (max-width: $screen-sm-max) {
+          left: -22px;
+        }
+      }
+
+      .next {
+        left: auto;
+        right: -77px;
+
+        @media (max-width: $screen-xl-mid-max) {
+          right: -10px;
+        }
+
+        @media (max-width: $screen-sm-max) {
+          right: -22px;
+        }
+      }
+    }
+  }
+
+  .slider {
+    margin: 0 ($grid-gutter-width / -2);
+  }
+
+  .slide {
+    padding: 20px ($grid-gutter-width / 2);
+  }
+
+  .inner {
+    display: flex;
+    height: 100%;
+    margin: 0 auto;
+  }
+
+  .slick-track {
+    margin-left: 0;
+  }
+}
