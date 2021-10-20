@@ -138,14 +138,17 @@ $_menu-drop-8-submenu-bg:                  $body-bg-color;
       }
 
       .icon {
-        display: inline-block;
-        vertical-align: -2px;
-        @include svg();
-        @include svg-menu-drop-8-arrow();
         margin-left: 10px;
+        vertical-align: -2px;
 
         @media (max-width: $screen-lg-max) {
           margin-left: 3px;
+        }
+
+        &:before {
+          display: inline-block;
+          @include svg();
+          @include svg-menu-drop-8-arrow();
         }
       }
     }

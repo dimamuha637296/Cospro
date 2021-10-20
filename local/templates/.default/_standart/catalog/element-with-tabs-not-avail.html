@@ -1247,23 +1247,109 @@
 																						</div>
 												</div>
 											</li>
-																				<li class="item_1 more has-submenu"><span><span>Ещё</span><span class="icon"></span></span>
-																					<div class="submenu">
-																						<div class="submenu-3">
-																							<ul class="menu_level_2 list-reset"></ul>
-																						</div>
-																					</div>
-																				</li>
+											<!--+menuMore({-->
+											<!--    itemModifier: 'has-submenu'-->
+											<!--})-->
 										</ul>
 									</div>
 								</div>
 								<div class="header__col header__col--links">
 									<div class="head-links">
 										<div class="head-links__row">
-											<div class="head-links__col"><a class="head-links__link head-links__link--search" href="#">
-													<div class="head-links__icon"></div></a></div>
-											<div class="head-links__col"><a class="head-links__link head-links__link--cart" href="#">
-													<div class="head-links__icon"></div></a></div>
+											<div class="head-links__col">
+												<div class="head-links__link head-links__link--search">
+													<div class="search-head-5">
+														<div class="backdrop"></div>
+														<div class="wrap">
+															<div class="btn-open"></div>
+															<div class="wrap">
+																<form class="search-form" action="/search/" method="get">
+																	<div class="form-wrap">
+																		<input class="btn btn-primary btn-search" name="btn-search" type="submit" value="Найти">
+																		<input class="field" id="headSearch" type="search" placeholder="Поиск по сайту" name="q" maxlength="50" required="">
+																		<div class="btn-close"></div>
+																	</div>
+																</form>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="head-links__col">
+												<div class="head-links__link head-links__link--cart">
+													<div class="head-cart"><a class="head-cart__link" href="#">
+															<div class="head-cart__icon"></div></a>
+														<div class="head-cart__drop">
+															<div class="head-cart__drop-inner">
+																<div class="head-cart__drop-title">Ваши товары</div>
+																<div class="head-cards">
+																	<div class="head-card">
+																		<div class="head-card__inner">
+																			<div class="head-card__left">
+																				<div class="head-card__pic-wrap">
+																					<div class="pic-inner"><img class="img" src="../../img/tmp/head-cards-01.png" alt="head-cards"></div>
+																				</div>
+																			</div>
+																			<div class="head-card__right">
+																				<div class="head-card__close">
+																					<div class="head-card__close-btn"></div>
+																				</div>
+																				<div class="head-card__row">
+																					<div class="head-card__col head-card__col--text">
+																						<div class="head-card__text">Nouvelle Extreme Gel Гель для укладки волос силь..</div>
+																					</div>
+																					<div class="head-card__col head-card__col--btn">
+																						<div class="head-card__btns">
+																							<button class="head-card__btn head-card__btn--minus"></button>
+																							<input class="head-card__btn head-card__quantity" type="text" value="1">
+																							<button class="head-card__btn head-card__btn--plus"></button>
+																						</div>
+																					</div>
+																					<div class="head-card__col head-card__col--sum">
+																						<div class="head-card__sum">10.00 BYN</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="head-card">
+																		<div class="head-card__inner">
+																			<div class="head-card__left">
+																				<div class="head-card__pic-wrap">
+																					<div class="pic-inner"><img class="img" src="../../img/tmp/head-cards-02.png" alt="head-cards"></div>
+																				</div>
+																			</div>
+																			<div class="head-card__right">
+																				<div class="head-card__close-btn"></div>
+																				<div class="head-card__row">
+																					<div class="head-card__col head-card__col--text">
+																						<div class="head-card__text">BES АКТИВНЫЙ ШАМПУНЬ ДЛЯ ЖИРНЫХ ВОЛОС S1</div>
+																					</div>
+																					<div class="head-card__col head-card__col--btn">
+																						<div class="head-card__btns">
+																							<button class="head-card__btn head-card__btn--minus"></button>
+																							<input class="head-card__quantity" type="text" value="1">
+																							<button class="head-card__btn head-card__btn--plus"></button>
+																						</div>
+																					</div>
+																					<div class="head-card__col head-card__col--sum">
+																						<div class="head-card__sum">26.00 BYN</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="head-cart__drop-total">
+																	<div class="head-cart__drop-total-title">СУММА ЗАКАЗА</div>
+																	<div class="head-cart__drop-total-sum">36.00 BYN</div>
+																</div>
+																																<button class="btn btn-primary" type="button">Primary</button>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
 											<div class="head-links__col"><a class="head-links__link head-links__link--favorites" href="#">
 													<div class="head-links__icon"></div></a></div>
 											<div class="head-links__col"><a class="head-links__link head-links__link--human" href="#">

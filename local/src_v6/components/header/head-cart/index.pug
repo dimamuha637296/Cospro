@@ -1,0 +1,11 @@
+.head-cart
+  a.head-cart__link(href='#')
+    .head-cart__icon
+  .head-cart__drop
+    .head-cart__drop-inner
+      .head-cart__drop-title Ваши товары
+      include ../head-cards/index
+      .head-cart__drop-total
+        .head-cart__drop-total-title СУММА ЗАКАЗА
+        .head-cart__drop-total-sum 36.00 BYN
+      +btn-primary({type: 'button', text: 'ПЕРЕЙТИ В КОРЗИНУ'})

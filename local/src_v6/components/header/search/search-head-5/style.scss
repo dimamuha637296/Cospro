@@ -1,0 +1,192 @@
+.search-head-5 {
+  
+  @media (max-width: $screen-md-max) {
+    @include mobile-height();
+  }
+
+  .backdrop {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(28,28,28,.9);
+  }
+
+  .wrap {
+    height: 24px;
+    //width: 32px;
+  }
+
+  .btn-open {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transition: all 0.5s ease;
+
+    &:before {
+      margin-top: 2px;
+      @include svg();
+      @include svg-search-head-5();
+      transition: $transition-default;
+      
+      @media (max-width: $screen-md-max) {
+        margin-top: 1px;
+      }
+
+      .header__desktop--scroll & {
+        margin-top: 1px;
+      }
+    }
+  }
+
+  .search-form {
+    z-index: 999;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    right: 0;
+    border-radius: 0;
+    display: inline-block;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.8s ease;
+
+    &:before {
+      content: '';
+      z-index: -1;
+      display: block;
+      position: absolute;
+      width: 1920px;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -960px;
+      background-color: transparent;
+      box-shadow: 0 4px 15px rgba(0,0,0,.14);
+    }
+  }
+
+  .form-wrap {
+    padding: 30px 35px 0;
+    display: flex;
+    flex-direction: row-reverse;
+
+    @media (max-width: $screen-xs-max) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+
+  .field {
+    width: 100%;
+    padding: 9px 0 8px;
+    border: none;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid $brand-white;
+    color: $brand-white;
+    font-size: 22px;
+    margin-right: 15px;
+
+    @media (max-width: $screen-sm-max) {
+      font-size: 20px;
+    }
+
+    &::placeholder {
+      color: rgba($brand-white, .7);
+    }
+
+    &::-ms-clear {
+      display: none;
+      width: 0;
+      height: 0;
+    }
+
+    &::-webkit-search-decoration,
+    &::-webkit-search-cancel-button,
+    &::-webkit-search-results-button,
+    &::-webkit-search-results-decoration {
+      display: none;
+    }
+  }
+
+  .btn-search {
+    flex: 1 0 auto;
+  }
+
+  .btn-close {
+    position: absolute;
+    top: -60px;
+    right: 29px;
+    width: 35px;
+    height: 100%;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+
+    @media (max-width: $screen-xs-max) {
+      right: 5px;
+    }
+
+    &:after,
+    &:before {
+      background-color: $brand-white;
+      content: '';
+      display: block;
+      width: 30px;
+      height: 1px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      backface-visibility: hidden;
+    }
+
+    &:before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &:after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    @include hover-focus() {
+
+      &:after,
+      &:before {
+        background-color: rgba($brand-white, .8);
+      }
+    }
+  }
+
+  &.active {
+
+    .backdrop {
+      z-index: 998;
+      display: block;
+    }
+
+    .btn-open {
+      opacity: 0;
+    }
+
+    .search-form {
+      opacity: 1;
+      visibility: visible;
+
+      .ie & {
+        overflow: visible;
+      }
+    }
+
+    .btn-search {
+      opacity: 1;
+    }
+
+    .btn-close {
+      opacity: 1;
+    }
+  }
+}

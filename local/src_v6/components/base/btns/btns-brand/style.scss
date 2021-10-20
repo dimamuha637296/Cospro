@@ -1,17 +1,17 @@
 .btn-primary {
-  background:           $brand-1;
-  border-color:         $brand-1;
+  background:           $brand-gray-12;
+  border-color:         $brand-gray-12;
   color:                $brand-white;
 
   @include hover-focus  {
-    background:         darken($brand-1, 10%);
-    border-color:       darken($brand-1, 12%);
+    background:         darken($brand-gray-12, 10%);
+    border-color:       darken($brand-gray-12, 12%);
   }
 
   &:active,
   &.active {
-    background:         darken($brand-1, 20%);
-    border-color:       darken($brand-1, 22%);
+    background:         darken($brand-gray-12, 20%);
+    border-color:       darken($brand-gray-12, 22%);
   }
 
   &.disabled,
