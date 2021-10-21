@@ -1,15 +1,14 @@
 include ../../../components/base/btns/btn/index
 .subscription
-  .bg
-  .bg-wrap
-    form#form-subscript-confirm.b-form(action='/personal/subscribe/subscr_edit.php')
-      fieldset
-        .control-group
-          .title Подписка на&nbsp;рассылку
-          .input-wrap
-            input.input.form-control(type='email', name='sf_EMAIL', placeholder='email@adress.com', value='')
-            .b-btn
-              +btn-primary({type: 'input', text: 'Подписаться'})(name='OK')
+  .h1.title
+    span СЛЕДИТЕ ЗА ОБНОВЛЕНИЯМИ
+  form#form-subscript-confirm.b-form(action='#')
+    fieldset
+      .control-group
+        .input-wrap
+          input.input.form-control.input-with-icon.input-with-icon--email(type='email', name='sf_EMAIL', placeholder='Введите ваш e-mail', value='')
+          .b-btn
+            +btn-primary({type: 'input', text: 'подписаться на рассылку'})(name='OK')
   script.
       !function () {
           'use strict';

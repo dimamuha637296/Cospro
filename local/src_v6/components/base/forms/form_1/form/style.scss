@@ -1,7 +1,8 @@
 @mixin form-control {
   display: block;
   width: 100%;
-  padding: 5px 11px;
+  padding: 13px 11px 15px 20px;
+  @include font-family-light();
   font-size: $input-font-size;
   line-height: $input-line-height;
   color: $input-color;
@@ -45,6 +46,61 @@
     cursor: not-allowed;
     // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655.
     opacity: 1;
+  }
+
+  &.input-with-icon {
+    padding-left: 50px;
+    background-repeat: no-repeat;
+    background-position: 20px center;
+    
+    @media (max-width: $screen-sm-max) {
+      padding-left: 41px;
+      background-position: 15px center;
+    }
+
+    &--address {
+      background-image: url(../img/tmp/input-address.svg);
+    }
+
+    &--auto {
+      background-image: url(../img/tmp/input-auto.svg);
+    }
+
+    &--book {
+      background-image: url(../img/tmp/input-book.svg);
+    }
+
+    &--comment {
+      background-image: url(../img/tmp/input-comment.svg);
+    }
+
+    &--email {
+      background-image: url(../img/tmp/input-email.svg);
+    }
+
+    &--human {
+      background-image: url(../img/tmp/input-human.svg);
+    }
+
+    &--location {
+      background-image: url(../img/tmp/input-location.svg);
+    }
+
+    &--pass {
+      background-image: url(../img/tmp/input-pass.svg);
+    }
+
+    &--pay {
+      background-image: url(../img/tmp/input-pay.svg);
+    }
+
+    &--post {
+      background-image: url(../img/tmp/input-post.svg);
+    }
+
+    &--tel {
+      background-image: url(../img/tmp/input-tel.svg);
+    }
   }
 }
 
