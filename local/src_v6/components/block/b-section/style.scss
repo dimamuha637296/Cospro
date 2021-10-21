@@ -1,0 +1,52 @@
+$_b-section-default-bg: $brand-white;
+
+.b-section {
+  position: relative;
+  padding: 47px 0 60px;
+
+  &__bg {
+    z-index: 0;
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: $site-max-width;
+    margin-left: ($site-max-width / -2);
+    background-size: contain;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center center;
+    
+    &--blue {
+      background-color: $brand-3;
+    }
+  }
+
+  &__wrap {
+    z-index: 1;
+    position: relative;
+  }
+
+  &__body {
+
+    > * {
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -10px;
+    margin-left: -10px;
+  }
+
+  &__col {
+    padding: 0 10px;
+  }
+}

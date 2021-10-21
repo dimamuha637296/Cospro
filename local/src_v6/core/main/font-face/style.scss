@@ -66,3 +66,10 @@ $font-cormorant-m: Cormorant-Medium, $_font-family-sans-serif;
   font-family: $font-cormorant-m;
   @include skip-font-styles();
 }
+
+@include font-face('Cormorant', Cormorant-Bold);
+$font-cormorant-b: Cormorant-Bold, $_font-family-sans-serif;
+@mixin font-family-cormorant-b() {
+  font-family: $font-cormorant-b;
+  @include skip-font-styles();
+}

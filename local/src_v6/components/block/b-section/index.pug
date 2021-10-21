@@ -1,0 +1,13 @@
+include ../../../components/block/b-head/index
+
+mixin b-section(data)
+  if (data)
+    .b-section(id=data.id, class=data.className)
+      if (data.bg)
+        .b-section__bg(class=data.bg.className, style=(data.bg.img ? 'background-image: url(' + DB.DIR + data.bg.img + ')' : ''))
+      .b-section__wrap
+        if (data.head)
+          .b-section__head
+            +b-head(data.head)
+        .b-section__body
+          block

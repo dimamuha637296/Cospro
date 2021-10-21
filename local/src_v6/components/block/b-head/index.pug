@@ -1,0 +1,21 @@
+mixin b-head(data)
+  if (data)
+    .b-head(class=data.className)
+      .b-head__row
+        if (data.title)
+          .b-head__col.b-head__col--title
+            -
+              var title = {
+                tag: (data.title.tag ? data.title.tag : 'div'),
+                className: (data.title.size ? data.title.size : 'h2'),
+                attributes: (data.title.tag === 'a' ? { href: '#' } : {}),
+                text: data.title.text
+              };
+            #{title.tag}.b-head__title(class=title.className)&attributes(title.attributes) !{title.text}
+        if (data.link)
+          .b-head__col.b-head__col--link
+            a.b-head__link(href='#', class=data.link.className ? data.link.className : '')
+              .b-head__link-text #{data.link.text}
+        if (data.desc)
+          .b-head__col.b-head__col--desc
+            .b-head__desc !{data.desc}

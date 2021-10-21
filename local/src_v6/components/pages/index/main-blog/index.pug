@@ -1,0 +1,48 @@
+include ../../../block/b-section/index
+
++b-section({
+    className: 'b-section--main-blog',
+    head: {
+        title: {
+            size: 'h1',
+            text: 'наш блог'
+        },
+        link: {
+            text: 'Перейти в блог'
+        }
+    }
+})
+  .main-blog
+    .main-blog__row.row
+      .main-blog__col.col-lg-6.col-12
+        .main-blog__card.main-blog__card--big
+          .main-blog__inner
+            .main-blog__img-wrap
+              .main-blog__img-inner
+                img.main-blog__img(src=DB.DIR + 'img/tmp/main-blog--big.jpg', alt='alt')
+            .main-blog__descr
+              .main-blog__title открыта запись на обучение “фешн-макияж 2021”
+              .main-blog__text Запускаем курс коммерческого фешн-макияжа. В программе мастер-класс популярного фешн-визажиста Ирины Самсоновой...
+              .main-blog__link-wrap
+                a(href='#').main-blog__link подробнее
+      .main-blog__col.col-lg-6.col-12
+        .main-blog__card
+          .main-blog__inner
+            .main-blog__img-wrap
+              .main-blog__img-inner
+                img.main-blog__img(src=DB.DIR + 'img/tmp/main-blog--01.jpg', alt='alt')
+            .main-blog__descr
+              .main-blog__title теперь и у нас! в продаже kylie skin
+              //.main-blog__text
+              .main-blog__link-wrap
+                a(href='#').main-blog__link подробнее
+        .main-blog__card
+          .main-blog__inner
+            .main-blog__img-wrap
+              .main-blog__img-inner
+                img.main-blog__img(src=DB.DIR + 'img/tmp/main-blog--02.jpg', alt='alt')
+            .main-blog__descr
+              .main-blog__title начинаем продажу подарочных карт
+              //.main-blog__text
+              .main-blog__link-wrap
+                a(href='#').main-blog__link подробнее
