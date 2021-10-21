@@ -1,5 +1,6 @@
 .head-cards {
   border-bottom: 1px solid #E5E5E5;
+  margin-bottom: 22px;
 }
 
 .head-card {
@@ -16,6 +17,7 @@
 
   &__right {
     position: relative;
+    padding-left: 20px;
   }
 
   &__row {

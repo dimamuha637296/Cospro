@@ -1096,13 +1096,54 @@
 															</div>
 														</div>
 							<!--include ../../components/pages/index/card-links/index-->
+							<div class="subscription">
+								<div class="bg"></div>
+								<div class="bg-wrap">
+									<form class="b-form" id="form-subscript-confirm" action="/personal/subscribe/subscr_edit.php">
+										<fieldset>
+											<div class="control-group">
+												<div class="title">Подписка на&nbsp;рассылку</div>
+												<div class="input-wrap">
+													<input class="input form-control" type="email" name="sf_EMAIL" placeholder="email@adress.com" value="">
+													<div class="b-btn">
+																												<input class="btn btn-primary" name="OK" type="submit" value="Подписаться">
+													</div>
+												</div>
+											</div>
+										</fieldset>
+									</form>
+								</div>
+								<script>
+									!function () {
+									    'use strict';
+									
+									    function initValid() {
+									        // Validation options http://jqueryvalidation.org/documentation/
+									        var form_validator = $('#form-subscript-confirm');
+									        if (form_validator.length && $.fn.validate) {
+									            form_validator.validate({
+									                rules: {
+									                    'sf_EMAIL': {
+									                        required: true,
+									                        email: true
+									                    }
+									                }
+									            });
+									        }
+									    }
+									
+									    $(function () {
+									        initValid();
+									    });
+									}();
+								</script>
+							</div>
 						</main>
 					</div>
 				</div>
 				<footer class="footer d-print-none">
 					<div class="footer__inner">
 						<div class="container">
-							<!--include ../../../components/footer/subscription/index-->
 							<div class="footer__row row">
 								<div class="footer__col footer__col--logo">
 									<div class="logo-foot"><a class="logo-foot__link" href="#">

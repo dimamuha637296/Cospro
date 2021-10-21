@@ -30,8 +30,23 @@
     top: 100%;
     transform: translateX(-50%);
     width: 310px;
-    padding-top: 50px;
+    margin-top: 19px;
+    box-shadow: $box-shadow-base;
     transition: $transition-default;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: -20px;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-bottom: 20px solid $brand-white;
+      transform: translateX(-50%);
+      transition: opacity .3s ease, transform .3s ease-in;
+    }
   }
 
   &__drop-inner {
