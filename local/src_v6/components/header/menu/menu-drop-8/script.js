@@ -10,7 +10,13 @@
 
                 icons.off('click.menu').on('click.menu', function(e) {
                     e.preventDefault();
-                    $(this).closest('.item_1').toggleClass('active');
+                    var item = $(this).closest('.item_1');
+                    item.siblings('.item_1').removeClass('active');
+                    if (item.hasClass('active')) {
+                        item.removeClass('active');
+                    } else {
+                        item.addClass('active');
+                    }
                 });
             });
         }
