@@ -22,6 +22,7 @@
             var prev = self.find('.prev');
             var next = self.find('.next');
             sliderWrap.removeClass('inited-not');
+            slideCounter(block);
             slider.on('setPosition', function () {
                 setSlidesHeight(slider);
             });
@@ -32,8 +33,9 @@
                 autoplay: false,
                 autoplaySpeed: 7000,
                 speed: 500,
+                // centerMode: true,
                 arrows: slidesLength > 4,
-                dots: slidesLength > 4,
+                dots: false,
                 appendDots: pager,
                 dotsClass: 'list-reset', // pager class
                 nextArrow: next,
@@ -44,7 +46,7 @@
                         settings: {
                             slidesToShow: 3,
                             arrows: slidesLength > 3,
-                            dots: slidesLength > 3
+                            // dots: slidesLength > 3
                         }
                     },
                     {
@@ -52,15 +54,16 @@
                         settings: {
                             slidesToShow: 2,
                             arrows: slidesLength > 2,
-                            dots: slidesLength > 2
+                            // dots: slidesLength > 2
                         }
                     },
                     {
-                        breakpoint: ws.const.screen.screen_xs_max,
+                        breakpoint: ws.const.screen.screen_sm_max,
                         settings: {
                             slidesToShow: 1,
                             arrows: false,
-                            dots: slidesLength > 1
+                            // dots: slidesLength > 1,
+                            // centerMode: true,
                         }
                     }
                 ]

@@ -1,10 +1,11 @@
-include ../../../../components/block/card-links-3__card/index
+include ../../../../components/block/card-links-3-card/index
 
 mixin sl-products(data)
   .sl-products(class=data.modifier ? data.modifier : '')
     if (data.title)
-      .h2.b-title #{data.title}
+      .h1.b-title #{data.title}
     .wrap.cursor.inited-not
+      include ../../util/slide-counter/index
       .slider
         each slide in data.slides
           .slide

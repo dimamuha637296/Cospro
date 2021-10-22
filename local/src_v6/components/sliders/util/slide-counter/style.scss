@@ -6,12 +6,12 @@ $_slide-counter-fz:             14px;
   color: $_slide-counter-color;
   background: $_slide-counter-bg;
   font-size: $_slide-counter-fz;
-
-  .inited-not & {
+  
+  @media (max-width: $screen-sm-max) {
     display: none;
   }
 
-  .devider {
-    padding: 0 5px;
+  .inited-not & {
+    display: none;
   }
 }

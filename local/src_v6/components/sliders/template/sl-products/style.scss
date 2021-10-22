@@ -1,30 +1,13 @@
 .sl-products {
   position: relative;
-  padding-bottom: 68px;
 
   .b-title {
-    margin: 0;
-    text-align: center;
+    margin-bottom: 40px;
   }
 
   .wrap {
     position: relative;
-
-    @media (max-width: $screen-xl-mid-max) {
-      padding: 0 60px;
-    }
-
-    @media (max-width: $screen-lg-max) {
-      padding: 0 50px;
-    }
-
-    @media (max-width: $screen-sm-max) {
-      padding: 0 30px;
-    }
-
-    @media (max-width: $screen-xs-max) {
-      padding: 0;
-    }
+    padding: 0;
 
     &.inited-not {
 
@@ -82,29 +65,14 @@
 
       .prev,
       .next {
-        width: 50px;
-        top: 1px;
-
-        &:before {
-          left: auto;
-          right: 0;
-          margin-left: 0;
-        }
-
-        &:after {
-          left: auto;
-          right: 13px;
-          margin-left: 0;
-        }
+        width: 37px;
+        height: 48px;
+        top: -85px;
       }
 
       .prev {
-        left: -77px;
-        right: auto;
-
-        @media (max-width: $screen-xl-mid-max) {
-          left: -10px;
-        }
+        left: auto;
+        right: 134px;
 
         @media (max-width: $screen-sm-max) {
           left: -22px;
@@ -113,11 +81,7 @@
 
       .next {
         left: auto;
-        right: -77px;
-
-        @media (max-width: $screen-xl-mid-max) {
-          right: -10px;
-        }
+        right: 0;
 
         @media (max-width: $screen-sm-max) {
           right: -22px;
@@ -131,7 +95,7 @@
   }
 
   .slide {
-    padding: 20px ($grid-gutter-width / 2);
+    padding: 0 ($grid-gutter-width / 2);
   }
 
   .inner {
@@ -142,5 +106,23 @@
 
   .slick-track {
     margin-left: 0;
+  }
+
+  .slick-list {
+
+    @media (max-width: $screen-sm-max) {
+      overflow: visible;
+    }
+  }
+
+  .slide-counter {
+    position: absolute;
+    right: 61px;
+    top: -88px;
+    @include font-family-cormorant-r();
+    font-size: 40px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: $brand-gray-10;
   }
 }
