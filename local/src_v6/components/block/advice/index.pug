@@ -1,0 +1,13 @@
+mixin advice(data)
+  .advice
+    .advice__row.row
+      each item in data.cards
+        .advice__col
+          .advice__card
+            if (item.img)
+              .advice__img-wrap
+                .advice__img-inner
+                  img.advice__img(src=DB.DIR + item.img, alt='alt')
+            if (item.text)
+              .advice__descr
+                .advice__text !{item.text}

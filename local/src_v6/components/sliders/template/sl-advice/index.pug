@@ -1,0 +1,19 @@
+mixin sl-advice(data)
+  .sl-advice(class=data.modifier ? data.modifier : '')
+    .wrap.cursor.inited-not
+      .slider
+        each slide in data.slides
+          .slide
+            .inner
+              .advice__card
+                if (slide.img)
+                  .advice__img-wrap
+                    .advice__img-inner
+                      img.advice__img(src=DB.DIR + slide.img, alt='alt')
+                if (slide.text)
+                  .advice__descr
+                    .advice__text !{slide.text}
+      if (data.nav !== undefined)
+        +#{data.nav}()
+    if (data.pager !== undefined)
+      +#{data.pager}()

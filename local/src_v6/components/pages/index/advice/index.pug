@@ -1,0 +1,61 @@
+include ../../../../components/block/b-section/index
+include ../../../../components/block/advice/index
+include ../../../../components/sliders/template/sl-advice/index
+include ../../../../components/sliders/nav/sl-nav/index
+include ../../../../components/sliders/pager/sl-pager/index
+
++b-section({
+    className: 'b-section--advice',
+})
+  .d-none.d-lg-block
+    +advice({
+        cards: [
+            {
+                img: 'img/tmp/adv-01.svg',
+                text: 'Индивидуальный подход <br>в выборе косметики',
+            },
+            {
+                img: 'img/tmp/adv-02.svg',
+                text: 'Быстрая <br>доставка',
+            },
+            {
+                img: 'img/tmp/adv-03.svg',
+                text: 'Обучающие <br>семинары',
+            },
+            {
+                img: 'img/tmp/adv-04.png',
+                text: 'Сертифицированная <br>продукция',
+            },
+            {
+                img: 'img/tmp/adv-05.png',
+                text: 'Программа <br>лояльности',
+            },
+        ]
+    })
+  .d-block.d-lg-none
+    +sl-advice({
+        nav: 'sl-nav',
+        pager: 'sl-pager',
+        slides: [
+            {
+                img: 'img/tmp/adv-01.svg',
+                text: 'Индивидуальный подход <br>в выборе косметики',
+            },
+            {
+                img: 'img/tmp/adv-02.svg',
+                text: 'Быстрая <br>доставка',
+            },
+            {
+                img: 'img/tmp/adv-03.svg',
+                text: 'Обучающие <br>семинары',
+            },
+            {
+                img: 'img/tmp/adv-04.png',
+                text: 'Сертифицированная <br>продукция',
+            },
+            {
+                img: 'img/tmp/adv-05.png',
+                text: 'Программа <br>лояльности',
+            }
+        ]
+    })
