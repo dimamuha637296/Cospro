@@ -2,7 +2,12 @@ $_b-section-default-bg: $brand-white;
 
 .b-section {
   position: relative;
-  padding: 47px 0 60px;
+  padding: 50px 0 50px;
+
+  @media (max-width: $screen-sm-max) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
 
   &__bg {
     z-index: 0;

@@ -1,0 +1,25 @@
+mixin sl-main-blog(data)
+  .sl-main-blog(class=data.modifier ? data.modifier : '')
+    if (data.title)
+      .h1.b-title #{data.title}
+    .wrap.cursor.inited-not
+      .slider
+        each slide in data.slides
+          .slide
+            .inner
+              .main-blog__card
+                .main-blog__inner
+                  .main-blog__img-wrap
+                    .main-blog__img-inner
+                      img.main-blog__img(src=DB.DIR + slide.img, alt='alt')
+                  .main-blog__descr
+                    if (slide.title)
+                      .main-blog__title !{slide.title}
+                    if (slide.text)
+                      .main-blog__text !{slide.text}
+                    .main-blog__link-wrap
+                      a(href='#').main-blog__link !{slide.link}
+      if (data.nav !== undefined)
+        +#{data.nav}()
+    if (data.pager !== undefined)
+      +#{data.pager}()

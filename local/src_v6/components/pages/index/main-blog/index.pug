@@ -1,4 +1,7 @@
 include ../../../block/b-section/index
+include ../../../../components/sliders/template/sl-main-blog/index
+include ../../../../components/sliders/nav/sl-nav/index
+include ../../../../components/sliders/pager/sl-pager/index
 
 +b-section({
     className: 'b-section--main-blog',
@@ -12,37 +15,73 @@ include ../../../block/b-section/index
         }
     }
 })
-  .main-blog
-    .main-blog__row.row
-      .main-blog__col.col-lg-6.col-12
-        .main-blog__card.main-blog__card--big
-          .main-blog__inner
-            .main-blog__img-wrap
-              .main-blog__img-inner
-                img.main-blog__img(src=DB.DIR + 'img/tmp/main-blog--big.jpg', alt='alt')
-            .main-blog__descr
-              .main-blog__title открыта запись на обучение “фешн-макияж 2021”
-              .main-blog__text Запускаем курс коммерческого фешн-макияжа. В программе мастер-класс популярного фешн-визажиста Ирины Самсоновой...
-              .main-blog__link-wrap
-                a(href='#').main-blog__link подробнее
-      .main-blog__col.col-lg-6.col-12
-        .main-blog__card
-          .main-blog__inner
-            .main-blog__img-wrap
-              .main-blog__img-inner
-                img.main-blog__img(src=DB.DIR + 'img/tmp/main-blog--01.jpg', alt='alt')
-            .main-blog__descr
-              .main-blog__title теперь и у нас! в продаже kylie skin
-              //.main-blog__text
-              .main-blog__link-wrap
-                a(href='#').main-blog__link подробнее
-        .main-blog__card
-          .main-blog__inner
-            .main-blog__img-wrap
-              .main-blog__img-inner
-                img.main-blog__img(src=DB.DIR + 'img/tmp/main-blog--02.jpg', alt='alt')
-            .main-blog__descr
-              .main-blog__title начинаем продажу подарочных карт
-              //.main-blog__text
-              .main-blog__link-wrap
-                a(href='#').main-blog__link подробнее
+  .d-none.d-lg-block
+    .main-blog
+      .main-blog__row.row
+        .main-blog__col.col-lg-6.col-12
+          .main-blog__card.main-blog__card--big
+            .main-blog__inner
+              .main-blog__img-wrap
+                .main-blog__img-inner
+                  img.main-blog__img(src=DB.DIR + 'img/tmp/main-blog--big.jpg', alt='alt')
+              .main-blog__descr
+                .main-blog__title открыта запись на обучение “фешн-макияж 2021”
+                .main-blog__text Запускаем курс коммерческого фешн-макияжа. В программе мастер-класс популярного фешн-визажиста Ирины Самсоновой...
+                .main-blog__link-wrap
+                  a(href='#').main-blog__link подробнее
+        .main-blog__col.col-lg-6.col-12
+          .main-blog__card
+            .main-blog__inner
+              .main-blog__img-wrap
+                .main-blog__img-inner
+                  img.main-blog__img(src=DB.DIR + 'img/tmp/main-blog--01.jpg', alt='alt')
+              .main-blog__descr
+                .main-blog__title теперь и у нас! в продаже kylie skin
+                //.main-blog__text
+                .main-blog__link-wrap
+                  a(href='#').main-blog__link подробнее
+          .main-blog__card
+            .main-blog__inner
+              .main-blog__img-wrap
+                .main-blog__img-inner
+                  img.main-blog__img(src=DB.DIR + 'img/tmp/main-blog--02.jpg', alt='alt')
+              .main-blog__descr
+                .main-blog__title начинаем продажу подарочных карт
+                //.main-blog__text
+                .main-blog__link-wrap
+                  a(href='#').main-blog__link подробнее
+  .d-block.d-lg-none
+    +sl-main-blog({
+        nav: 'sl-nav',
+        pager: 'sl-pager',
+        slides: [
+            {
+                className: '',
+                img: 'img/tmp/main-blog--big.jpg',
+                title: 'открыта запись на обучение “фешн-макияж 2021”',
+                text: 'Запускаем курс коммерческого фешн-макияжа. В программе мастер-класс популярного фешн-визажиста Ирины Самсоновой...',
+                link: 'подробнее'
+            },
+            {
+                className: '',
+                img: 'img/tmp/main-blog--big.jpg',
+                title: 'открыта запись на обучение “фешн-макияж 2021”',
+                text: 'Запускаем курс коммерческого фешн-макияжа. В программе мастер-класс популярного фешн-визажиста Ирины Самсоновой...',
+                link: 'подробнее'
+            },
+            {
+                className: '',
+                img: 'img/tmp/main-blog--big.jpg',
+                title: 'открыта запись на обучение “фешн-макияж 2021”',
+                text: 'Запускаем курс коммерческого фешн-макияжа. В программе мастер-класс популярного фешн-визажиста Ирины Самсоновой...',
+                link: 'подробнее'
+            },
+            {
+                className: '',
+                img: 'img/tmp/main-blog--big.jpg',
+                title: 'открыта запись на обучение “фешн-макияж 2021”',
+                text: 'Запускаем курс коммерческого фешн-макияжа. В программе мастер-класс популярного фешн-визажиста Ирины Самсоновой...',
+                link: 'подробнее'
+            }
+        ]
+    })
