@@ -1,12 +1,12 @@
 $_sl-pager-bg:                            transparent;
-$_sl-pager-active-bg:                     #fff;
-$_sl-pager-dot-width:                     10px;
+$_sl-pager-active-bg:                     $brand-gray-12;
+$_sl-pager-dot-width:                     8px;
 
 .sl-pager {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 24px;
+  bottom: -8px;
 
   ul {
     margin: 0;
@@ -32,7 +32,7 @@ $_sl-pager-dot-width:                     10px;
       background: $_sl-pager-bg;
       border-radius: 50%;
       transition: $transition-link;
-      border: 1px solid $_sl-pager-active-bg;
+      border: 1px solid #EBE8E1;
     }
 
     .desktop & {
@@ -41,6 +41,7 @@ $_sl-pager-dot-width:                     10px;
 
         &:after {
           background: $_sl-pager-active-bg;
+          border: 1px solid $_sl-pager-active-bg;
         }
       }
     }
@@ -51,6 +52,7 @@ $_sl-pager-dot-width:                     10px;
 
       &:after {
         background: $_sl-pager-active-bg;
+        border: 1px solid $_sl-pager-active-bg;
       }
     }
 

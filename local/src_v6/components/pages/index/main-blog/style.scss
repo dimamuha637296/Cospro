@@ -29,6 +29,14 @@
         }
       }
     }
+
+    .slider & {
+      margin-bottom: 0;
+
+      .main-blog__img-wrap {
+        padding: 109.38% 0 0;
+      }
+    }
   }
 
   &__inner {
@@ -91,12 +99,21 @@
     font-size: 30px;
     line-height: 1.2;
     text-transform: uppercase;
+
+    @media (max-width: $screen-md-max) {
+      font-size: 20px;
+    }
   }
 
   &__text {
     font-size: 22px;
     line-height: 1.4;
     margin-top: 20px;
+
+    @media (max-width: $screen-md-max) {
+      font-size: 10px;
+      margin-top: 10px;
+    }
   }
 
   &__link {
