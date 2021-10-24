@@ -4,7 +4,8 @@ block pageVars
 block title
   h1.hidden#title H1 Заголовок страницы. В магазинах начался сезон скидок
 block content
-  include ../../components/pages/catalog/full-catalog-sort/index
+  .d-none.d-lg-block
+    include ../../components/pages/catalog/full-catalog-sort/index
   include ../../components/pages/catalog/card-links-3/index
   include ../../components/base/pagination/index
   include ../../components/footer/subscription/index
