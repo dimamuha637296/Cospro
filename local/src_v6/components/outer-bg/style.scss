@@ -36,12 +36,12 @@ html body {
 .g-content {
   padding-bottom: 44px;
 
-  @media (min-width: $screen-lg-min) {
-
-    .g-sidebar + & {
-      padding-left: 30px;
-    }
-  }
+  //@media (min-width: $screen-lg-min) {
+  //
+  //  .g-sidebar + & {
+  //    padding-left: 30px;
+  //  }
+  //}
 
   .main & {
     padding-bottom: 20px;

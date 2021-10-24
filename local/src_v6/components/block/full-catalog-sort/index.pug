@@ -1,0 +1,10 @@
+mixin full-catalog-sort(data)
+  .full-catalog-sort
+    .full-catalog-sort__row
+      if (data.sortBy)
+        .full-catalog-sort__col.full-catalog-sort__col--sort-by
+          .full-catalog-sort__sort-by
+            select.form-control.ui-select.small-select(name=data.sortBy.name)
+              option(value='0', selected='', disabled='') #{data.sortBy.placeholder}
+              for option, index in data.sortBy.options
+                option(value=(index + 1)) #{option}

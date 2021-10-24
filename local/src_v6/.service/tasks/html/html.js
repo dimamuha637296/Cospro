@@ -53,7 +53,7 @@ module.exports = function (opt) {
 
         // Проходим по чанкам страниц для компиляции
         splitedPages.forEach(function (item) {
-            var worker = childProcess.fork(process.argv[1], [taskName, '--silent']); // Запускаем процесс компиляции на отдельном ядре процессора
+            var worker = childProcess.fork(process.argv[1], [taskName]); // Запускаем процесс компиляции на отдельном ядре процессора
             var sendInfo = { // Список страниц и директория для их расположения
                 src: item,
                 dest: dest,

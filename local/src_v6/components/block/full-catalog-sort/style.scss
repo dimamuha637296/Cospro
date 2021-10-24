@@ -1,0 +1,24 @@
+.full-catalog-sort {
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -0.25rem;
+
+    @media (min-width: $screen-xl-min) {
+      justify-content: space-between;
+    }
+  }
+
+  &__col {
+    padding: 0 0.25rem;
+  }
+
+  &__sort-by {
+    margin: 0 0 1.0rem;
+  }
+
+  &__sort-by {
+    margin: 0 0 1.0rem;
+  }
+}
