@@ -6,3 +6,4 @@ mixin catalog-filters(data)
     .catalog-filters__collapse.collapse(id='catalog_filters_collapse')
       .catalog-filters__wrap
         +categories(data.categories)
+        +btn-primary({type: 'button', text: 'сбросить фильтр', outline: true})

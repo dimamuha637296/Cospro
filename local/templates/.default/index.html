@@ -1846,46 +1846,46 @@
 																</div>
 															</div>
 														</div>
-							<div class="subscription">
-								<div class="h1 title"><span>СЛЕДИТЕ ЗА ОБНОВЛЕНИЯМИ</span></div>
-								<form class="b-form" id="form-subscript-confirm" action="#">
-									<fieldset>
-										<div class="control-group">
-											<div class="input-wrap">
-												<input class="input form-control input-with-icon input-with-icon--email" type="email" name="sf_EMAIL" placeholder="Введите ваш e-mail" value="">
-												<div class="b-btn">
-																											<input class="btn btn-primary" name="OK" type="submit" value="подписаться на рассылку">
-												</div>
+						</main>
+						<div class="subscription">
+							<div class="h1 title"><span>СЛЕДИТЕ ЗА ОБНОВЛЕНИЯМИ</span></div>
+							<form class="b-form" id="form-subscript-confirm" action="#">
+								<fieldset>
+									<div class="control-group">
+										<div class="input-wrap">
+											<input class="input form-control input-with-icon input-with-icon--email" type="email" name="sf_EMAIL" placeholder="Введите ваш e-mail" value="">
+											<div class="b-btn">
+																								<input class="btn btn-primary" name="OK" type="submit" value="подписаться на рассылку">
 											</div>
 										</div>
-									</fieldset>
-								</form>
-								<script>
-									!function () {
-									    'use strict';
-									
-									    function initValid() {
-									        // Validation options http://jqueryvalidation.org/documentation/
-									        var form_validator = $('#form-subscript-confirm');
-									        if (form_validator.length && $.fn.validate) {
-									            form_validator.validate({
-									                rules: {
-									                    'sf_EMAIL': {
-									                        required: true,
-									                        email: true
-									                    }
-									                }
-									            });
-									        }
-									    }
-									
-									    $(function () {
-									        initValid();
-									    });
-									}();
-								</script>
-							</div>
-						</main>
+									</div>
+								</fieldset>
+							</form>
+							<script>
+								!function () {
+								    'use strict';
+								
+								    function initValid() {
+								        // Validation options http://jqueryvalidation.org/documentation/
+								        var form_validator = $('#form-subscript-confirm');
+								        if (form_validator.length && $.fn.validate) {
+								            form_validator.validate({
+								                rules: {
+								                    'sf_EMAIL': {
+								                        required: true,
+								                        email: true
+								                    }
+								                }
+								            });
+								        }
+								    }
+								
+								    $(function () {
+								        initValid();
+								    });
+								}();
+							</script>
+						</div>
 					</div>
 				</div>
 				<footer class="footer d-print-none">

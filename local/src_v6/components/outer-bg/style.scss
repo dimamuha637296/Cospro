@@ -34,7 +34,11 @@ html body {
 }
 
 .g-content {
-  padding-bottom: 44px;
+  padding-bottom: 100px;
+
+  @media (max-width: $screen-sm-max) {
+    padding-bottom: 41px;
+  }
 
   //@media (min-width: $screen-lg-min) {
   //

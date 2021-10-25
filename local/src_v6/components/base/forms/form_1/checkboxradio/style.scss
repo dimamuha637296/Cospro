@@ -40,11 +40,12 @@
 
     // checkboxes styles
     &:not(.ui-checkboxradio-radio-label) {
+      font-size: 16px;
 
       .ui-checkboxradio-icon {
-        width: 20px;
-        height: 20px;
-        margin: 0 9px 0 0;
+        width: 15px;
+        height: 15px;
+        margin: 5px 10px 0 0;
         border: 1px solid #C3C3C3;
       }
 

@@ -2,7 +2,19 @@ include ../../../../components/block/catalog-filters/index
 
 +catalog-filters({
     categories: {
-        title: 'Категории',
-        list: ['Волшебная цена', 'Хит', 'New', 'Premium', 'Скидки']
+        blocks: [
+            {
+                title: 'Подкатегории',
+                list: ['Масла и флюиды', 'Лечение волос и кожи головы', 'Шампуни', 'Маски и кондиционеры', 'Ламинирование волос', 'Бальзамы', 'Гели, воски, пасты', 'Спреи и сыворотки', 'Лаки, муссы, пенки']
+            },
+            {
+                title: 'Стоимость',
+                inputs: true
+            },
+            {
+                title: 'Производители',
+                list: ['Concept', 'Londa', 'Constant Delight', 'Mon Platin', 'FarmaVita', 'Estel', 'Schwarzkopf Professional', 'Lisap', 'NEXXT', 'OLLIN', 'Alfaparf', 'C:EHKO', 'Wella', 'INSIGHT', 'CHI', 'BES', 'KONDOR', 'DCM', '3DeLuXe', 'Nouvelle', 'BINGO', 'TaShe', 'EVA']
+            }
+        ]
     }
 })
