@@ -89,4 +89,45 @@
     font-size: 14px;
     padding: 12px 40px;
   }
+
+  .quantity {
+
+    &__btn {
+      width: 25px;
+      height: 25px;
+
+      &--minus,
+      &--plus {
+
+        &:before,
+        &:after {
+          width: 7px;
+          height: 1px;
+        }
+      }
+    }
+
+    &__input {
+      display: block;
+      width: 25px;
+      height: 25px;
+      border: 1px solid transparent;
+      text-align: center;
+      font-size: 17px;
+      color: rgba($brand-black, .5);
+      line-height: 23px;
+    }
+
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    /* Firefox */
+    input[type=number] {
+      -moz-appearance: textfield;
+    }
+  }
 }

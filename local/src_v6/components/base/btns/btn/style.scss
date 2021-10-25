@@ -8,6 +8,7 @@ button {
 button:focus {
   outline: none;
 }
+
 // END reboot
 
 .btn {
@@ -54,6 +55,275 @@ button:focus {
     &.active {
       //background-image: none;
       //box-shadow: inset 0 1px 3px rgba(0,0,0,.1);
+    }
+  }
+
+  &.with-icon {
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 50px;
+
+    > * {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    &.icon-left {
+
+      .icon {
+        margin-right: 10px;
+      }
+    }
+
+    &.icon-right {
+
+      .icon {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .icon {
+    @include svg();
+  }
+
+  &.addToBasket {
+
+    &[class*="outline" ] {
+
+      .icon {
+        @include svg-toBasket-black();
+      }
+
+      @include hover-focus() {
+
+        .icon {
+          @include svg-toBasket();
+        }
+      }
+
+      &.active,
+      &:active {
+
+        .icon {
+          @include svg-toBasket();
+        }
+      }
+
+      &.disabled,
+      &[disabled] {
+
+        .icon {
+          @include svg-toBasket-black();
+        }
+      }
+    }
+
+    .icon {
+      @include svg-toBasket();
+    }
+
+    @include hover-focus() {
+
+      .icon {
+        @include svg-toBasket();
+      }
+    }
+
+    &.active,
+    &:active {
+
+      .icon {
+        @include svg-toBasket();
+      }
+    }
+
+    &.disabled,
+    &[disabled] {
+
+      .icon {
+        @include svg-toBasket-black();
+      }
+    }
+  }
+
+  &.addFavorites {
+
+    &[class*="outline" ] {
+
+      .icon {
+        @include svg-toFavorites-black();
+      }
+
+      @include hover-focus() {
+
+        .icon {
+          @include svg-toFavorites();
+        }
+      }
+
+      &.active,
+      &:active {
+
+        .icon {
+          @include svg-toFavorites();
+        }
+      }
+
+      &.disabled,
+      &[disabled] {
+
+        .icon {
+          @include svg-toFavorites-black();
+        }
+      }
+    }
+
+    .icon {
+      @include svg-toFavorites();
+    }
+
+    @include hover-focus() {
+
+      .icon {
+        @include svg-toFavorites();
+      }
+    }
+
+    &.active,
+    &:active {
+
+      .icon {
+        @include svg-toFavorites();
+      }
+    }
+
+    &.disabled,
+    &[disabled] {
+
+      .icon {
+        @include svg-toFavorites-black();
+      }
+    }
+  }
+
+  &.toAccount {
+
+    &[class*="outline" ] {
+
+      .icon {
+        @include svg-toAccount-black();
+      }
+
+      @include hover-focus() {
+
+        .icon {
+          @include svg-toAccount();
+        }
+      }
+
+      &.active,
+      &:active {
+
+        .icon {
+          @include svg-toAccount();
+        }
+      }
+
+      &.disabled,
+      &[disabled] {
+
+        .icon {
+          @include svg-toAccount-black();
+        }
+      }
+    }
+
+    .icon {
+      @include svg-toAccount();
+    }
+
+    @include hover-focus() {
+
+      .icon {
+        @include svg-toAccount();
+      }
+    }
+
+    &.active,
+    &:active {
+
+      .icon {
+        @include svg-toAccount();
+      }
+    }
+
+    &.disabled,
+    &[disabled] {
+
+      .icon {
+        @include svg-toAccount-black();
+      }
+    }
+  }
+
+  &.toSave {
+
+    &[class*="outline" ] {
+
+      .icon {
+        @include svg-toSave-black();
+      }
+
+      @include hover-focus() {
+
+        .icon {
+          @include svg-toSave();
+        }
+      }
+
+      &.active,
+      &:active {
+
+        .icon {
+          @include svg-toSave();
+        }
+      }
+
+      &.disabled,
+      &[disabled] {
+
+        .icon {
+          @include svg-toSave-black();
+        }
+      }
+    }
+
+    .icon {
+      @include svg-toSave();
+    }
+
+    @include hover-focus() {
+
+      .icon {
+        @include svg-toSave();
+      }
+    }
+
+    &.active,
+    &:active {
+
+      .icon {
+        @include svg-toSave();
+      }
+    }
+
+    &.disabled,
+    &[disabled] {
+
+      .icon {
+        @include svg-toSave-black();
+      }
     }
   }
 }
