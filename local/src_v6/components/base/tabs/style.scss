@@ -38,6 +38,11 @@ $nav-tabs-link-active-bg:           $brand-gray-12;
     font-size: $nav-tabs-link-font-size;
     border: $nav-tabs-border-width solid $nav-tabs-border-color;
 
+    @media (max-width: $screen-sm-max) {
+      padding: 4px 9px;
+      font-size: 16px;
+    }
+
     @include hover-focus {
       background-color: $nav-tabs-hover-link-bg;
       border: $nav-tabs-border-width solid $nav-tabs-hover-border-color;
@@ -86,6 +91,10 @@ $nav-tabs-link-active-bg:           $brand-gray-12;
 
     .tab-content {
       padding-top: 38px;
+
+      @media (max-width: $screen-sm-max) {
+        padding-top: 20px;
+      }
     }
   }
 }

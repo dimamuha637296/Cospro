@@ -2,7 +2,7 @@
     'use strict';
 
     function addToBasket() {
-        var addBasketBtn = $('.addToBasket');
+        var addBasketBtn = $('.js-addToBasket');
         if (addBasketBtn.length) {
             addBasketBtn.each(function () {
                 var self = $(this);

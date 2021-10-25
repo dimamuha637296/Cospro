@@ -13,18 +13,18 @@
         var slidesLength = slider.find('.slide').length;
         var sliderWrap = block.find('.wrap');
         sliderWrap.removeClass('inited-not');
-        if (slidesLength <= 3) {
-            sliderWrap.addClass('not-move');
-        }
+        // if (slidesLength <= 3) {
+        //     sliderWrap.addClass('not-move');
+        // }
         slider.slick({
-            slidesToShow: 3,
+            slidesToShow: 5,
             slidesToScroll: 1,
             adaptiveHeight: false, // true - height: auto
             // variableWidth: true,
             autoplay: false,
             autoplaySpeed: 7000,
             speed: 500,
-            arrows: slidesLength > 3,
+            arrows: slidesLength > 5,
             dots: false,
             focusOnSelect: true,
             dotsClass: 'list-reset', // pager class
@@ -33,23 +33,32 @@
             prevArrow: prev,
             responsive: [
                 {
-                    breakpoint: ws.const.screen.screen_lg,
-                    settings: {
-                        slidesToShow: 2,
-                        arrows: slidesLength > 2
-                    }
-                },
-                {
-                    breakpoint: ws.const.screen.screen_md,
+                    breakpoint: ws.const.screen.screen_lg_max,
                     settings: {
                         slidesToShow: 3,
                         arrows: slidesLength > 3
                     }
                 },
                 {
-                    breakpoint: ws.const.screen.screen_mob,
+                    breakpoint: ws.const.screen.screen_md_max,
                     settings: {
-                        variableWidth: false
+                        slidesToShow: 5,
+                        arrows: slidesLength > 5
+                    }
+                },
+                {
+                    breakpoint: ws.const.screen.screen_sm_max,
+                    settings: {
+                        slidesToShow: 5,
+                        arrows: slidesLength > 5
+                    }
+                },
+                {
+                    breakpoint: ws.const.screen.screen_xs_max,
+                    settings: {
+                        variableWidth: false,
+                        slidesToShow: 3,
+                        arrows: slidesLength > 3
                     }
                 }
             ]

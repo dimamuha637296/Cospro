@@ -23,6 +23,10 @@ $breadcrumb-border-radius:          0;
   background-color: $breadcrumb-bg;
   font-size: $breadcrumb-font-size;
   letter-spacing: 0.05em;
+
+  @media (max-width: $screen-md-max) {
+    margin-bottom: 20px;
+  }
 }
 
 .breadcrumb-item {

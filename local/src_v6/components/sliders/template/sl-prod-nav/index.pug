@@ -5,7 +5,7 @@ mixin sl-prod-nav(data)
         each slide in data.slides
           .slide
             .inner
-              img.img(src=DB.DIR + 'img/tmp/' + slide.pic, alt='ÖLFLEX® CLASSIC 100 300/500 V')
+              img.img(src=DB.DIR + 'img/tmp/' + slide.pic, alt='nav')
       if (data.pager !== undefined)
         +#{data.pager}()
       if (data.nav !== undefined)

@@ -1,6 +1,12 @@
 !function () {
     'use strict';
 
+    function setSlidesHeight(slider) {
+        if (typeof setSimilarSlidesHeight === 'function') {
+            setSimilarSlidesHeight(slider);
+        }
+    }
+
     function popupGallery () {
         var gallery = $('.popup-gallery');
         if (!gallery.length) {
@@ -43,6 +49,9 @@
         //var slidesLength = slider.find('.slide').length;
         var sliderWrap = block.find('.wrap');
         sliderWrap.removeClass('inited-not');
+        slider.on('setPosition', function () {
+            setSlidesHeight(slider);
+        });
         slider.slick({
             slidesToShow: 1,
             slidesToScroll: 1,

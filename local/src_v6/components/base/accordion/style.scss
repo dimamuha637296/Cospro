@@ -9,11 +9,31 @@ $_accordion-font-size:                24px;
     padding-left: $_accordion-padding-left;
     margin-bottom: 5px;
 
+    @media (max-width: $screen-sm-max) {
+      padding-left: 0;
+      margin-bottom: 0;
+      border-bottom: 1px solid rgba($brand-gray-10, .1);
+    }
+
+    &:first-child {
+
+      @media (max-width: $screen-sm-max) {
+        border-top: 1px solid rgba($brand-gray-10, .1);
+      }
+    }
+
     .link {
       font-size: $_accordion-font-size;
       text-decoration: none;
       position: relative;
       display: inline-block;
+
+      @media (max-width: $screen-sm-max) {
+        display: block;
+        width: 100%;
+        padding-right: 15px;
+        font-size: 16px;
+      }
 
       &:before {
         font-size: 7px;
@@ -22,6 +42,12 @@ $_accordion-font-size:                24px;
         left: -$_accordion-padding-left - 1px;
         transform: rotate(-180deg);
         transition: transform .3s ease;
+
+        @media (max-width: $screen-sm-max) {
+          top: 11px;
+          left: auto;
+          right: 0;
+        }
       }
       
       @include hover-focus {
@@ -44,6 +70,10 @@ $_accordion-font-size:                24px;
 
   .acc-heading {
     padding: 0 0 17px;
+
+    @media (max-width: $screen-sm-max) {
+      padding: 12px 0 13px;
+    }
   }
 
   .acc-body {
@@ -51,5 +81,9 @@ $_accordion-font-size:                24px;
     line-height: 1.62;
     padding-bottom: 31px;
     padding-left: 9px;
+
+    @media (max-width: $screen-sm-max) {
+      font-size: 16px;
+    }
   }
 }

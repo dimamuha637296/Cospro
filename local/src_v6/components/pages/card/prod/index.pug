@@ -31,10 +31,10 @@ include ../../../../components/base/accordion/index
               .prod__col.prod__col--buy
                 include ../../../block/quantity/index
               .prod__col.prod__col--buy
-                +btn-primary({type: 'button', text: '<span>быстрая покупка</span>'})(data-toggle='modal', data-target='#fastBuyModal')
+                +btn-primary({type: 'button', text: '<span class="d-none d-lg-block">быстрая покупка</span><span class="d-block d-lg-none">Купить</span>'})(data-toggle='modal', data-target='#fastBuyModal')
               .prod__col.prod__col--buy
-                +btn-primary({outline: true, type: 'button', className: 'with-icon icon-left addToBasket', text: '<span class="icon"></span><span>в корзину</span>'})
-              .prod__col.prod__col--buy
+                +btn-primary({outline: true, type: 'button', className: 'with-icon icon-left addToBasket js-addToBasket', text: '<span class="icon"></span><span>в корзину</span>'})
+              .prod__col.prod__col--buy.d-none.d-lg-block
                 +btn-primary({outline: true, type: 'button', className: 'with-icon addFavorites', text: '<span class="icon"></span>'})
             +accordion({
                 items: [
@@ -53,3 +53,42 @@ include ../../../../components/base/accordion/index
                 ]
             })
           #tab-2.tab-pane.fade(role='tabpanel')
+            .prod__cost 107.10 BYN
+            .prod__row.prod__row--buy.row
+              .prod__col.prod__col--buy
+                include ../../../block/quantity/index
+              .prod__col.prod__col--buy
+                +btn-primary({
+                    type: 'button',
+                    text: '<span class="d-none d-lg-block">быстрая покупка</span><span class="d-block d-lg-none">Купить</span>'
+                })(data-toggle='modal', data-target='#fastBuyModal')
+              .prod__col.prod__col--buy
+                +btn-primary({
+                    outline: true,
+                    type: 'button',
+                    className: 'with-icon icon-left addToBasket js-addToBasket',
+                    text: '<span class="icon"></span><span>в корзину</span>'
+                })
+              .prod__col.prod__col--buy.d-none.d-lg-block
+                +btn-primary({
+                    outline: true,
+                    type: 'button',
+                    className: 'with-icon addFavorites',
+                    text: '<span class="icon"></span>'
+                })
+            +accordion({
+                items: [
+                    {
+                        title: 'Описание',
+                        text: 'Кондиционер превосходно кондиционирует и распутывает волосы. Придает ослепительный блеск без утяжеления. Идеально сбалансированная формула и оригинальная концентрация активных ингредиентов в составе обеспечивают волосы правильным количеством элементов, необходимых для того, чтобы день за днем ваши волосы выглядели превосходно! Входящий в состав мультивитаминный комплекс наполняет волосы жизненной силой. Содержит ненасыщенные жирные кислоты Омега-3 и Омега-6. Не содержит сульфатов, парабенов, парафиновых и минеральных масел. Активные ингредиенты: мультивитаминный комплекс, Омега-3, Омега-6. Способ применения: после использования шампуня Illuminating Low Shampoo нанести кондиционер на влажные волосы, равномерно распределив по всей длине. Оставить на одну-две минуты. Тщательно смыть водой.'
+                    },
+                    {
+                        title: 'Доставка',
+                        text: 'Кондиционер превосходно кондиционирует и распутывает волосы. Придает ослепительный блеск без утяжеления. Идеально сбалансированная формула и оригинальная концентрация активных ингредиентов в составе обеспечивают волосы правильным количеством элементов, необходимых для того, чтобы день за днем ваши волосы выглядели превосходно! Входящий в состав мультивитаминный комплекс наполняет волосы жизненной силой. Содержит ненасыщенные жирные кислоты Омега-3 и Омега-6. Не содержит сульфатов, парабенов, парафиновых и минеральных масел. Активные ингредиенты: мультивитаминный комплекс, Омега-3, Омега-6. Способ применения: после использования шампуня Illuminating Low Shampoo нанести кондиционер на влажные волосы, равномерно распределив по всей длине. Оставить на одну-две минуты. Тщательно смыть водой.'
+                    },
+                    {
+                        title: 'Обмен и возврат',
+                        text: 'Кондиционер превосходно кондиционирует и распутывает волосы. Придает ослепительный блеск без утяжеления. Идеально сбалансированная формула и оригинальная концентрация активных ингредиентов в составе обеспечивают волосы правильным количеством элементов, необходимых для того, чтобы день за днем ваши волосы выглядели превосходно! Входящий в состав мультивитаминный комплекс наполняет волосы жизненной силой. Содержит ненасыщенные жирные кислоты Омега-3 и Омега-6. Не содержит сульфатов, парабенов, парафиновых и минеральных масел. Активные ингредиенты: мультивитаминный комплекс, Омега-3, Омега-6. Способ применения: после использования шампуня Illuminating Low Shampoo нанести кондиционер на влажные волосы, равномерно распределив по всей длине. Оставить на одну-две минуты. Тщательно смыть водой.'
+                    }
+                ]
+            })

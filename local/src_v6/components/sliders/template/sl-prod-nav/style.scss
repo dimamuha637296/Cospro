@@ -19,8 +19,20 @@
     }
   }
 
+  .slider {
+    //margin-left: -5px;
+    //margin-right: -5px;
+  }
+
+  .slick-list {
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+
   .slide {
     position: relative;
+    padding-left: 5px;
+    padding-right: 5px;
   }
 
   .slick-track {
@@ -41,24 +53,30 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 86px;
-    height: 86px;
+    position: relative;
+    width: 100%;
+    height: 100px;
     margin: 0 auto;
     padding: 9px;
-    border: 1px solid $border-color-base;
     background-color: $body-bg-color;
-    transition: all .3s ease;
+    transition: $transition-default;
 
-    @media (max-width: $screen-xs-max) {
-      width: 65px;
-      height: 65px;
-      margin: 0 auto;
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      border: 1px solid #e5e5e5;
+      background: transparent;
+      transition: $transition-default;
     }
 
     &:hover,
     &:focus,
     .slick-current & {
-      border: 1px solid $brand-1;
       background-color: #fff;
     }
 
@@ -67,6 +85,16 @@
       &:hover,
       &:focus {
         cursor: default;
+      }
+    }
+  }
+
+  .slick-current {
+
+    .inner {
+
+      &:before {
+        background: rgba(81, 88, 85, 0.5);
       }
     }
   }
