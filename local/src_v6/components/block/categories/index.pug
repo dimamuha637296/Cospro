@@ -1,0 +1,12 @@
+mixin categories(data)
+  .categories
+    if (data.title)
+      .categories__title #{data.title}
+    if (data.list)
+      .categories__list
+        each item, index in data.list
+          .categories__item
+            .categories__checkbox.checkbox
+              label.categories__label
+                input.categories__input.ui-checkbox(type='checkbox', name=('category_' + index))
+                span.categories__name #{item}

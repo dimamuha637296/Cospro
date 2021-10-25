@@ -1,0 +1,18 @@
+.categories {
+  margin: 0 0 2.1rem;
+
+  &__title {
+    margin: 0 0 1.9rem;
+    color: $brand-black;
+    font-size: 1.8rem;
+    line-height: 1.25;
+  }
+
+  &__item {
+    margin: 0 0 1.0rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

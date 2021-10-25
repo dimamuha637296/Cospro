@@ -1,0 +1,8 @@
+include ../../../components/block/categories/index
+
+mixin catalog-filters(data)
+  .catalog-filters
+    a.catalog-filters__toggle.collapsed(href='#catalog_filters_collapse', data-toggle='collapse') Фильтры
+    .catalog-filters__collapse.collapse(id='catalog_filters_collapse')
+      .catalog-filters__wrap
+        +categories(data.categories)

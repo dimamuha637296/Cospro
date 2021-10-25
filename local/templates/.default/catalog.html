@@ -898,60 +898,52 @@
 						<h1 class="hidden" id="title">H1 Заголовок страницы. В магазинах начался сезон скидок</h1>
 						<div class="row">
 							<aside class="g-sidebar col-lg-3 col-12 d-print-none">
-								<nav class="menu-aside-3">
-									<ul class="menu_level_1 list-reset break-word">
-										<li class="item_1"><a href="#"><span>Платежно-справочные терминалы</span></a><a class="icon" data-toggle="collapse" href="#accordion-m-0"></a>
-											<div class="collapse show" id="accordion-m-0">
-												<ul class="menu_level_2 list-reset">
-													<li class="item_2"><a href="#"><span>Мобильные терминалы</span></a></li>
-													<li class="item_2"><span><span>Стационарные</span></span></li>
-													<li class="item_2 active"><a href="#"><span>Интеллектуальные пин-пады</span></a></li>
-													<li class="item_2 active"><span><span>Интеллектуальные пин-пады</span></span></li>
-												</ul>
-											</div>
-										</li>
-										<li class="item_1"><span><span>Банкоматы</span></span><a class="icon collapsed" data-toggle="collapse" href="#accordion-m-13"></a>
-											<div class="collapse" id="accordion-m-13">
-												<ul class="menu_level_2 list-reset">
-													<li class="item_2 active"><a href="#"><span>Монофункциональные</span></a></li>
-													<li class="item_2"><a href="#"><span>Мультифункциональные</span></a></li>
-													<li class="item_2"><a href="#"><span>Системы ресайклинга</span></a></li>
-												</ul>
-											</div>
-										</li>
-										<li class="item_1 active"><a href="#"><span>Оборудование для обработки наличности</span></a></li>
-										<li class="item_1 active"><span><span>EFT-терминалы</span></span><a class="icon collapsed" data-toggle="collapse" href="#accordion-m-16"></a>
-											<div class="collapse" id="accordion-m-16">
-												<ul class="menu_level_2 list-reset">
-													<li class="item_2"><a href="#"><span>Пункт 11</span></a></li>
-													<li class="item_2"><span><span>Пункт 12</span></span></li>
-													<li class="item_2 active"><a href="#"><span>Пункт 13 (дополнительная удлинняющая строка)</span></a><a class="icon collapsed" data-toggle="collapse" href="#accordion-m-218"></a>
-														<div class="collapse" id="accordion-m-218">
-															<ul class="menu_level_3 list-reset">
-																<li class="item_3"><a href="#">Страхование домашнего имущества</a></li>
-																<li class="item_3"><a href="#">Комплексное страхование помещений и ГО его владельцев</a></li>
-																<li class="item_3"><a href="#">Страхование строений</a></li>
-															</ul>
-														</div>
-													</li>
-													<li class="item_2 active"><span><span>Пункт 14</span></span><a class="icon collapsed" data-toggle="collapse" href="#accordion-m-219"></a>
-														<div class="collapse" id="accordion-m-219">
-															<ul class="menu_level_3 list-reset">
-																<li class="item_3"><a href="#">Страхование домашнего имущества</a></li>
-																<li class="item_3"><a href="#">Комплексное страхование помещений и ГО его владельцев</a></li>
-																<li class="item_3"><a href="#">Страхование строений</a></li>
-															</ul>
-														</div>
-													</li>
-													<li class="item_2"><a href="#"><span>Пункт 15</span></a></li>
-													<li class="item_2"><a href="#"><span>Пункт 16</span></a></li>
-												</ul>
-											</div>
-										</li>
-										<li class="item_1"><a href="#"><span>Программное обеспечение</span></a></li>
-										<li class="item_1"><a href="#"><span>Сервис</span></a></li>
-									</ul>
-								</nav>
+																<div class="catalog-filters"><a class="catalog-filters__toggle collapsed" href="#catalog_filters_collapse" data-toggle="collapse">Фильтры</a>
+																	<div class="catalog-filters__collapse collapse" id="catalog_filters_collapse">
+																		<div class="catalog-filters__wrap">
+																											<div class="categories">
+																												<div class="categories__title">Категории</div>
+																												<div class="categories__list">
+																													<div class="categories__item">
+																														<div class="categories__checkbox checkbox">
+																															<label class="categories__label">
+																																<input class="categories__input ui-checkbox" type="checkbox" name="category_0"><span class="categories__name">Волшебная цена</span>
+																															</label>
+																														</div>
+																													</div>
+																													<div class="categories__item">
+																														<div class="categories__checkbox checkbox">
+																															<label class="categories__label">
+																																<input class="categories__input ui-checkbox" type="checkbox" name="category_1"><span class="categories__name">Хит</span>
+																															</label>
+																														</div>
+																													</div>
+																													<div class="categories__item">
+																														<div class="categories__checkbox checkbox">
+																															<label class="categories__label">
+																																<input class="categories__input ui-checkbox" type="checkbox" name="category_2"><span class="categories__name">New</span>
+																															</label>
+																														</div>
+																													</div>
+																													<div class="categories__item">
+																														<div class="categories__checkbox checkbox">
+																															<label class="categories__label">
+																																<input class="categories__input ui-checkbox" type="checkbox" name="category_3"><span class="categories__name">Premium</span>
+																															</label>
+																														</div>
+																													</div>
+																													<div class="categories__item">
+																														<div class="categories__checkbox checkbox">
+																															<label class="categories__label">
+																																<input class="categories__input ui-checkbox" type="checkbox" name="category_4"><span class="categories__name">Скидки</span>
+																															</label>
+																														</div>
+																													</div>
+																												</div>
+																											</div>
+																		</div>
+																	</div>
+																</div>
 							</aside>
 							<main class="g-content col-lg-9 col-12" id="workarea">
 								<div class="d-none d-lg-block">
@@ -1124,58 +1116,57 @@
 																		</div>
 																	</div>
 																</div>
-								<nav>
+								<nav class="pagination-wrap">
 									<ul class="pagination list-reset">
-										<li class="page-item disabled"><span class="page-link prev"></span></li>
-										<li class="page-item active"><a class="page-link" href="#">1<span class="sr-only">(current)</span></a></li>
-										<li class="page-item"><a class="page-link" href="#">2</a></li>
-										<li class="page-item"><a class="page-link" href="#">3</a></li>
-										<li class="page-item"><a class="page-link" href="#">4</a></li>
-										<li class="page-item hover"><a class="page-link" href="#">5</a></li>
-										<li class="page-item"><a class="page-link" href="#">6</a></li>
-										<li class="page-item"><a class="page-link next" href="#"></a></li>
+										<li class="page-item disabled"><span class="page-link prev"><span>пред</span></span></li>
+										<li class="page-item active"><a class="page-link" href="#"><span>2</span></a></li>
+										<li class="page-item"><a class="page-link" href="#"><span>3</span></a></li>
+										<li class="page-item"><a class="page-link" href="#"><span>4</span></a></li>
+										<li class="page-item hover"><a class="page-link" href="#"><span>5</span></a></li>
+										<li class="page-item"><a class="page-link" href="#"><span>6</span></a></li>
+										<li class="page-item"><a class="page-link next" href="#"><span>след</span></a></li>
 									</ul>
 								</nav>
-								<div class="subscription">
-									<div class="h1 title"><span>СЛЕДИТЕ ЗА ОБНОВЛЕНИЯМИ</span></div>
-									<form class="b-form" id="form-subscript-confirm" action="#">
-										<fieldset>
-											<div class="control-group">
-												<div class="input-wrap">
-													<input class="input form-control input-with-icon input-with-icon--email" type="email" name="sf_EMAIL" placeholder="Введите ваш e-mail" value="">
-													<div class="b-btn">
-																														<input class="btn btn-primary" name="OK" type="submit" value="подписаться на рассылку">
-													</div>
-												</div>
-											</div>
-										</fieldset>
-									</form>
-									<script>
-										!function () {
-										    'use strict';
-										
-										    function initValid() {
-										        // Validation options http://jqueryvalidation.org/documentation/
-										        var form_validator = $('#form-subscript-confirm');
-										        if (form_validator.length && $.fn.validate) {
-										            form_validator.validate({
-										                rules: {
-										                    'sf_EMAIL': {
-										                        required: true,
-										                        email: true
-										                    }
-										                }
-										            });
-										        }
-										    }
-										
-										    $(function () {
-										        initValid();
-										    });
-										}();
-									</script>
-								</div>
 							</main>
+						</div>
+						<div class="subscription">
+							<div class="h1 title"><span>СЛЕДИТЕ ЗА ОБНОВЛЕНИЯМИ</span></div>
+							<form class="b-form" id="form-subscript-confirm" action="#">
+								<fieldset>
+									<div class="control-group">
+										<div class="input-wrap">
+											<input class="input form-control input-with-icon input-with-icon--email" type="email" name="sf_EMAIL" placeholder="Введите ваш e-mail" value="">
+											<div class="b-btn">
+																								<input class="btn btn-primary" name="OK" type="submit" value="подписаться на рассылку">
+											</div>
+										</div>
+									</div>
+								</fieldset>
+							</form>
+							<script>
+								!function () {
+								    'use strict';
+								
+								    function initValid() {
+								        // Validation options http://jqueryvalidation.org/documentation/
+								        var form_validator = $('#form-subscript-confirm');
+								        if (form_validator.length && $.fn.validate) {
+								            form_validator.validate({
+								                rules: {
+								                    'sf_EMAIL': {
+								                        required: true,
+								                        email: true
+								                    }
+								                }
+								            });
+								        }
+								    }
+								
+								    $(function () {
+								        initValid();
+								    });
+								}();
+							</script>
 						</div>
 					</div>
 				</div>

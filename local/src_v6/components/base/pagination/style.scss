@@ -1,39 +1,70 @@
 // Pagination
 
-$pagination-padding-y:              0.5rem;
-$pagination-padding-x:              0.5rem;
-$pagination-min-height:             3.5rem;
-$pagination-min-width:              3.5rem;
+$pagination-padding-y:              0;
+$pagination-padding-x:              0;
+$pagination-min-height:             25px;
+$pagination-min-width:              25px;
 $pagination-item-offset:            0;
 $pagination-line-height:            1.25;
 $pagnation-border-radius:           0;
 
-$pagination-fz:                     1.8rem;
-$pagination-color:                  $link-color;
+$pagination-fz:                     16px;
+$pagination-color:                  rgba($brand-gray-10, .5);
 $pagination-bg:                     transparent;
 
 $pagination-border-width:           0;
 $pagination-border-style:           solid;
-$pagination-border-color:           $border-color-base;
+$pagination-border-color:           transparent;
 
-$pagination-hover-color:            $link-color-hover;
+$pagination-hover-color:            $brand-gray-10;
 $pagination-hover-bg:               transparent;
 $pagination-hover-border-color:     transparent;
 
-$pagination-active-color:           $link-color-active;
+$pagination-active-color:           $brand-gray-10;
 $pagination-active-bg:              transparent;
-$pagination-active-border-color:    $brand-gray-4;
+$pagination-active-border-color:    transparent;
 
 $pagination-disabled-color:         $disabled-color;
 $pagination-disabled-bg:            transparent;
 $pagination-disabled-border-color:  transparent;
+
+.pagination-wrap {
+  position: relative;
+  margin-top: 40px;
+  margin-bottom: 10px;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(8,5,8,.2);
+    z-index: 0;
+
+    @media (max-width: $screen-sm-max) {
+      display: none;
+    }
+  }
+}
 
 .pagination {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin: 0 0 20px;
+  position: relative;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+  background: $brand-white;
+
+  @media (max-width: $screen-sm-max) {
+    width: 100%;
+  }
 }
 
 .page-link {
@@ -50,12 +81,12 @@ $pagination-disabled-border-color:  transparent;
   color: $pagination-color;
   font-size: $pagination-fz;
   line-height: $pagination-line-height;
-  text-decoration: underline;
+  text-decoration: none;
+  text-transform: uppercase;
   background-color: $pagination-bg;
 
-  @media (max-width: $screen-xs-max) {
-    padding-left: 8px;
-    padding-right: 8px;
+  @media (max-width: $screen-sm-max) {
+    font-size: 14px;
   }
 
   &:hover,
@@ -64,6 +95,7 @@ $pagination-disabled-border-color:  transparent;
     color: $pagination-hover-color;
     background-color: $pagination-hover-bg;
     border-color: $pagination-hover-border-color;
+    text-decoration: none;
   }
 
   // Opinionated: add "hand" cursor to non-disabled .page-link elements
@@ -87,27 +119,80 @@ $pagination-disabled-border-color:  transparent;
     margin-right: 0;
   }
 
-  .prev {
-
-    &:before {
-      transform: scale(-1, 1);
-    }
-  }
-
   .prev,
   .next {
 
-    &:before {
+    @media (max-width: $screen-sm-max) {
+      width: 35px;
+      height: 35px;
+      border: 1px solid $pagination-color;
+    }
+
+    &:before,
+    &:after{
       @include svg;
       @include svg-pagin-next;
+      background-size: contain;
+      background-repeat: no-repeat;
       display: block;
+      margin-left: 10px;
+      margin-right: 10px;
+
+      @media (max-width: $screen-sm-max) {
+        width: 17px;
+      }
     }
 
     @include hover-focus {
 
-      &:before {
-        @include svg-pagin-next-hover();
+      @media (max-width: $screen-sm-max) {
+        border: 1px solid $pagination-hover-color;
       }
+
+      &:before,
+      &:after {
+        @include svg-pagin-next-hover();
+
+        @media (max-width: $screen-sm-max) {
+          width: 17px;
+        }
+      }
+    }
+
+    span {
+
+      @media (max-width: $screen-sm-max) {
+        display: none;
+      }
+    }
+  }
+
+  .prev {
+    margin-right: 65px;
+
+    @media (max-width: $screen-sm-max) {
+      margin-right: 45px;
+    }
+
+    &:before,
+    &:after {
+      transform: scale(-1, 1);
+    }
+
+    &:after {
+      display: none;
+    }
+  }
+
+  .next {
+    margin-left: 65px;
+
+    @media (max-width: $screen-sm-max) {
+      margin-left: 45px;
+    }
+
+    &:before {
+      display: none;
     }
   }
 
@@ -121,8 +206,17 @@ $pagination-disabled-border-color:  transparent;
     &.prev,
     &.next {
 
-      &:before {
+      @media (max-width: $screen-sm-max) {
+        border: 1px solid $pagination-active-color;
+      }
+
+      &:before,
+      &:after{
         @include svg-pagin-next-active();
+
+        @media (max-width: $screen-sm-max) {
+          width: 17px;
+        }
       }
     }
   }
@@ -138,8 +232,17 @@ $pagination-disabled-border-color:  transparent;
     &.prev,
     &.next {
 
-      &:before {
+      @media (max-width: $screen-sm-max) {
+        border: 1px solid $pagination-disabled-color;
+      }
+
+      &:before,
+      &:after {
         @include svg-pagin-next-disabled();
+
+        @media (max-width: $screen-sm-max) {
+          width: 17px;
+        }
       }
     }
   }

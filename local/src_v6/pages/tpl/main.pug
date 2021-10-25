@@ -27,11 +27,14 @@ html(lang='ru-RU')
                       include ../../components/aside/menu-aside-3/index
                   main#workarea.g-content.col-lg-9.col-12
                     block content
+                block contentBottom
               else
                 main#workarea.g-content
                   block content
+                block contentBottom
             else
               block content
+              block contentBottom
         footer.footer.d-print-none
           block footer
             include ../../components/footer/footer/index
