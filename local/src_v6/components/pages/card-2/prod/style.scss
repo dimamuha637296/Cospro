@@ -1,0 +1,131 @@
+.prod {
+
+  &__row {
+
+    &--top {
+      margin-bottom: 17px;
+
+      @media (max-width: $screen-sm-max) {
+        margin-bottom: 20px;
+      }
+    }
+
+    &--buy {
+      margin-left: -5px;
+      margin-right: -5px;
+      margin-bottom: 65px;
+
+      @media (max-width: $screen-sm-max) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__col {
+
+    &--right {
+      padding-left: 50px;
+
+      @media (max-width: $screen-lg-max) {
+        padding-left: 30px;
+      }
+
+      @media (max-width: $screen-md-max) {
+        padding-left: 10px;
+      }
+    }
+
+    &--buy {
+      padding-left: 5px;
+      padding-right: 5px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__title {
+
+    .g-wrap & {
+      @include font-family-cormorant-m;
+      font-size: 30px;
+      line-height: 1.34;
+      text-transform: none;
+      margin-bottom: 29px;
+
+      @media (max-width: $screen-sm-max) {
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__top-text {
+    font-size: 18px;
+    line-height: 1.78;
+    color: $brand-gray-10;
+
+    @media (max-width: $screen-sm-max) {
+      font-size: 14px;
+    }
+    
+    &.right-text {
+      text-align: right;
+
+      @media (max-width: $screen-md-max) {
+        text-align: left;
+      }
+    }
+    
+    a {
+      color: $brand-gray-10;
+      text-decoration: underline;
+      text-decoration-color: $brand-gray-10;
+      
+      @include hover-focus() {
+        color: $brand-gray-10;
+        text-decoration: none;
+        text-decoration-color: $brand-gray-10;
+      }
+    }
+  }
+
+  &__select-wrap {
+    margin-bottom: 40px;
+    max-width: 490px;
+
+    @media (max-width: $screen-sm-max) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__cost {
+    @include font-family-medium();
+    font-size: 30px;
+    line-height: 1.26;
+    color: $brand-gray-10;
+    margin-bottom: 42px;
+
+    @media (max-width: $screen-sm-max) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .btn {
+
+    .icon {
+      @include svg();
+    }
+
+    &.addToBasket {
+
+      .icon {
+
+      }
+    }
+
+    &.addFavorites {
+      padding-left: 0;
+      padding-right: 0;
+      width: 50px;
+    }
+  }
+}

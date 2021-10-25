@@ -1,0 +1,48 @@
+include ../../../../components/base/accordion/index
+.prod
+  .prod__row.prod__row--main.row
+    .prod__col.prod__col--left.col-lg-5.col-12
+      include ../sl-prod-wrap/index
+    .prod__col.prod__col--right.col-lg-7.col-12
+      .prod__row.prod__row--top.row
+        .prod__col.col-lg-6.col-12
+          .prod__top-text
+            span Бренд:
+            | &ensp;
+            a(href='#') Irisk
+        .prod__col.col-lg-6.col-12
+          .prod__top-text.right-text
+            span Артикул:
+            | &ensp;
+            span 893900272
+      h1.prod__title.small IRISK NUDE STRONG Каучуковый гель-лак 15мл
+      .prod__select-wrap
+        select.form-control.ui-select
+          option(value='0', selected='', disabled='') Выберите цвет
+          option(value='1') Красный
+      .prod__cost 107.10 BYN
+      .prod__row.prod__row--buy.row
+        .prod__col.prod__col--buy
+          include ../../../block/quantity/index
+        .prod__col.prod__col--buy
+          +btn-primary({type: 'button', text: '<span class="d-none d-lg-block">быстрая покупка</span><span class="d-block d-lg-none">Купить</span>'})(data-toggle='modal', data-target='#fastBuyModal')
+        .prod__col.prod__col--buy
+          +btn-primary({outline: true, type: 'button', className: 'with-icon icon-left addToBasket js-addToBasket', text: '<span class="icon"></span><span>в корзину</span>'})
+        .prod__col.prod__col--buy.d-none.d-lg-block
+          +btn-primary({outline: true, type: 'button', className: 'with-icon addFavorites', text: '<span class="icon"></span>'})
+      +accordion({
+          items: [
+              {
+                  title: 'Описание',
+                  text: 'Каучуковый гель-лак Irisk Nude Strong избавит вас от необходимости применять специальную каучуковую базу под гель-лак. Его густота, плотность и эластичность позволит вам легко, быстро и безопасно отрастить длину,а также укрепить тонкие и ломкие ногти. Френч-маникюр с новинкой займет существенно меньше времени, ведь покрытие сохнет в лампе всего 30-40 секунд!'
+              },
+              {
+                  title: 'Доставка',
+                  text: 'Каучуковый гель-лак Irisk Nude Strong избавит вас от необходимости применять специальную каучуковую базу под гель-лак. Его густота, плотность и эластичность позволит вам легко, быстро и безопасно отрастить длину,а также укрепить тонкие и ломкие ногти. Френч-маникюр с новинкой займет существенно меньше времени, ведь покрытие сохнет в лампе всего 30-40 секунд!'
+              },
+              {
+                  title: 'Обмен и возврат',
+                  text: 'Каучуковый гель-лак Irisk Nude Strong избавит вас от необходимости применять специальную каучуковую базу под гель-лак. Его густота, плотность и эластичность позволит вам легко, быстро и безопасно отрастить длину,а также укрепить тонкие и ломкие ногти. Френч-маникюр с новинкой займет существенно меньше времени, ведь покрытие сохнет в лампе всего 30-40 секунд!'
+              }
+          ]
+      })

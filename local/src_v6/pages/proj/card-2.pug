@@ -1,0 +1,13 @@
+extends ../tpl/main
+block pageVars
+  - DB.pageTitle = 'Карточка товара 2';
+  - DB.layout = 'wide';
+  - DB.bodyClass = 'no-padding-bottom'
+block title
+block content
+  include ../../components/pages/card-2/prod/index
+block contentBottom
+  include ../../components/pages/card/sl-products/index
+  include ../../components/footer/subscription/index
+block popup
+  include ../../components/modals/fast-buy-modal/index

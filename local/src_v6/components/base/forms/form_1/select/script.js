@@ -11,7 +11,7 @@
                 }
                 self.selectmenu({
                     change: function () {
-                        if ($.fn.validate) {
+                        if (($.fn.validate) && (!self.closest('form'))) {
                             self.closest('form').validate().element(this);
                         }
                     }
