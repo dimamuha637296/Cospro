@@ -1,1 +1,3 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="9.31" height="9" viewBox="0 0 7.993 6.007"><path fill="#{$link-color}" fill-rule="evenodd" clip-rule="evenodd" d="M0 1.507L1.342 0l2.654 2.989L6.652 0l1.341 1.508-3.999 4.499L0 1.507z"/></svg>
+<svg width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M1 1L8.4375 7L15 1" stroke="#080508"/>
+</svg>
