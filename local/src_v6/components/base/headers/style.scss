@@ -96,6 +96,7 @@ h2,
 
 h3,
 .h3 {
+  @include font-family-bold();
   font-size: $font-size-h3;
   line-height: $line-height-h3;
   margin: $head-margin-h3;

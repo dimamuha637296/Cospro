@@ -24,7 +24,7 @@ $nav-tabs-link-active-bg:           $brand-gray-12;
 
   .nav-item {
     margin-right: 10px;
-    margin-bottom: $nav-tabs-border-width;
+    margin-bottom: 10px;
 
     &:last-child {
       margin-right: 0;
@@ -90,10 +90,92 @@ $nav-tabs-link-active-bg:           $brand-gray-12;
     }
 
     .tab-content {
-      padding-top: 38px;
+      padding-top: 28px;
 
       @media (max-width: $screen-sm-max) {
-        padding-top: 20px;
+        padding-top: 10px;
+      }
+    }
+  }
+
+  &.tabs-string {
+
+    .nav {
+      justify-content: space-around;
+    }
+
+    .nav-link {
+      padding: 0;
+      border: none;
+      background-color: transparent;
+      font-size: 18px;
+      color: $brand-gray-10;
+
+      @include hover-focus() {
+        background-color: transparent;
+        color: $brand-gray-10;
+      }
+    }
+
+    .nav-link.active,
+    .nav-link.acc-link:not(.collapsed) {
+      text-decoration: underline;
+    }
+
+    .tab-content {
+      padding-top: 28px;
+
+      @media (max-width: $screen-sm-max) {
+        padding-top: 10px;
+      }
+    }
+
+    &.tabs-accordion {
+
+      @media (max-width: $screen-sm-max) {
+        padding-top: 0;
+      }
+
+      .nav-link {
+
+        @media (max-width: $screen-sm-max) {
+          background-color: $brand-gray-12;
+          color: $brand-white;
+          padding: 10px;
+          text-decoration: none;
+        }
+        
+        @include hover-focus() {
+
+          @media (max-width: $screen-sm-max) {
+            background-color: $brand-gray-12;
+            color: $brand-white;
+          }
+        }
+      }
+
+      .nav-link.active,
+      .nav-link.acc-link:not(.collapsed) {
+
+        @media (max-width: $screen-sm-max) {
+          background-color: $brand-gray-12;
+          color: $brand-white;
+          text-decoration: none;
+        }
+      }
+
+      .tab-content {
+
+        @media (max-width: $screen-sm-max) {
+          padding-top: 0;
+        }
+      }
+
+      .panel {
+
+        @media (max-width: $screen-sm-max) {
+          margin-bottom: 10px;
+        }
       }
     }
   }

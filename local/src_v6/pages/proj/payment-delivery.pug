@@ -1,0 +1,12 @@
+extends ../tpl/main
+block pageVars
+  - DB.pageTitle = 'Оплата и доставка';
+  - DB.layout = 'wide';
+  // - DB.bodyClass = 'no-padding-bottom'
+block title
+block content
+  include ../../components/pages/payment-delivery/content/index
+block contentBottom
+  include ../../components/footer/subscription/index
+block popup
+  include ../../components/modals/fast-buy-modal/index
