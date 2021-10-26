@@ -1,0 +1,57 @@
+.contacts {
+
+  &__title {
+
+    .g-wrap & {
+      margin-top: 0;
+      margin-bottom: 23px;
+    }
+  }
+
+  &__block {
+    margin-bottom: 33px;
+  }
+
+  &__links {
+
+  }
+
+  &__item {
+    display: table;
+    position: relative;
+    font-size: 16px;
+    line-height: 1.25;
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    span {
+      display: inline-block;
+    }
+
+    &.contacts__item--with-icon {
+      padding-left: 26px;
+    }
+  }
+
+  &__icon {
+    @include svg();
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-top: 1px;
+
+    &--viber {
+
+      @include svg-contacts-viber();
+    }
+
+    &--inst {
+
+      @include svg-contacts-inst();
+    }
+  }
+}

@@ -94,7 +94,11 @@ $_b-head-gutter-width: 30px;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
+    
+    @media (max-width: $screen-sm-max) {
+      margin-bottom: 15px;
+    }
 
     .b-head__col {
       flex: 0 0 100%;

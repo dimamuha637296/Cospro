@@ -1,0 +1,41 @@
+include ../../../../components/block/b-section/index
+
++b-head({
+    className: 'b-head--contacts b-head--align-center',
+    title: {
+        tag: 'h1',
+        size: 'h1',
+        text: 'контакты'
+    }
+})
+.contacts
+  .contacts__row.row
+    .contacts__col.col-md-4.col-12
+      .contacts__block
+        h3.contacts__title В мессенджерах
+        .contacts__links
+          a.contacts__item.contacts__item--with-icon(href='tel:+375293243179')
+            span.contacts__icon.contacts__icon--viber
+            span +375 (29) 324-31-79
+          a.contacts__item.contacts__item--with-icon(href='#')
+            span.contacts__icon.contacts__icon--inst
+            span profi.minsk
+    .contacts__col.col-md-4.col-12
+      .contacts__block
+        h3.contacts__title Телефон
+        .contacts__links
+          a.contacts__item(href='tel:+375333823138')
+            span +375 (33) 382-31-38
+          a.contacts__item(href='tel:+375293243179')
+            span +375 (29) 324-31-79
+      .contacts__block
+        h3.contacts__title Электронная почта
+        .contacts__links
+          a.contacts__item(href='mailto:info@cospro.by')
+            span info@cospro.by
+    .contacts__col.col-md-4.col-12
+      .contacts__block
+        h3.contacts__title Офис
+        .contacts__links
+          .contacts__item
+            span г. Минск, ул. Сурганова 50( ТЦ Рига), второй этаж
