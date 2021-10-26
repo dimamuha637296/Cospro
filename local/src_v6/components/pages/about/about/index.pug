@@ -1,0 +1,101 @@
+include ../../../../components/block/b-section/index
+include ../../../../components/block/b-head/index
+include ../../../../components/sliders/template/sl-digits/index
+include ../../../../components/sliders/nav/sl-nav/index
+include ../../../../components/sliders/pager/sl-pager/index
++b-head({
+    className: 'b-head--about b-head--align-center',
+    title: {
+        tag: 'h1',
+        size: 'h1',
+        text: 'О нас'
+    }
+})
+.row.justify-content-center
+  .col-xl-8.col-lg-11.col-12
+    .about
+      p.about__text
+        | COSPRO.BY — это  импортер и официальный представитель в Беларуси нескольких брендов профессиональной косметики и  электротоваров.
+        br
+        br
+        | Мы — одна из самых быстро растущих марок женской и мужской одежды по мнению журнала РБК: каждый год мы в 2-3 раза увеличиваем производство и продажи. В 2014 году с командой из 3 человек мы открывали первый офлайн-магазин в Екатеринбурге. Сегодня в команде работают более 600 профессионалов в 35 магазинах в 11 городах и на онлайн-площадке.
+        br
+        br
+        | Наша идея — помочь девушкам создать лаконичный и продуманный базовый гардероб, который можно быстро обновить 1-2 свежими вещами. Поэтому мы выпускаем новые капсулы каждый месяц, а не пару раз в год, и тщательно следим за качеством и ценами. Мы хотим, чтобы красивые вещи были доступны каждой женщине, независимо от возраста, внешности и дохода.
+      .d-none.d-md-block
+        .about-digits
+          .about-digits__row.row
+            .about-digits__col.col-md-3.col-12
+              .about-digits__item
+                .about-digits__num 9
+                .about-digits__text испортируемых <br>брендов
+            .about-digits__col.col-md-3.col-12
+              .about-digits__item
+                .about-digits__num >3 000
+                .about-digits__text довольных <br>клиентов
+            .about-digits__col.col-md-3.col-12
+              .about-digits__item
+                .about-digits__num 100
+                .about-digits__text городов РБ <br>для доставки
+            .about-digits__col.col-md-3.col-12
+              .about-digits__item
+                .about-digits__num 30
+                .about-digits__text брендов <br>в продаже
+      .d-block.d-md-none
+        +sl-digits({
+            nav: 'sl-nav',
+            pager: 'sl-pager',
+            slides: [
+                {
+                    num: '9',
+                    text: 'испортируемых <br>брендов',
+                },
+                {
+                    num: '>3 000',
+                    text: 'довольных <br>клиентов',
+                },
+                {
+                    num: '100',
+                    text: 'городов РБ <br>для доставки',
+                },
+                {
+                    num: '30',
+                    text: 'брендов <br>в продаже',
+                },
+            ]
+        })
+      p.about__pre-brands Мы работаем с многими брендами, в том числе:
+      .about-brands
+        .about-brands__row.row
+          .about-brands__col.col-md-3.col-6
+            a(href='#').about-brands__link DYCON
+          .about-brands__col.col-md-3.col-6
+            a(href='#').about-brands__link GLORYA
+          .about-brands__col.col-md-3.col-6
+            a(href='#').about-brands__link EVABOND
+          .about-brands__col.col-md-3.col-6
+            a(href='#').about-brands__link IRISK
+          .about-brands__col.col-md-3.col-6
+            a(href='#').about-brands__link HAIRWAY
+          .about-brands__col.col-md-3.col-6
+            a(href='#').about-brands__link ITALY
+          .about-brands__col.col-md-3.col-6
+            a(href='#').about-brands__link KODI
+          .about-brands__col.col-md-3.col-6
+            a(href='#').about-brands__link LONDA
+          .about-brands__col.col-md-3.col-6
+            a(href='#').about-brands__link DYCON
+          .about-brands__col.col-md-3.col-6
+            a(href='#').about-brands__link GLORYA
+          .about-brands__col.col-md-3.col-6
+            a(href='#').about-brands__link EVABOND
+          .about-brands__col.col-md-3.col-6
+            a(href='#').about-brands__link IRISK
+          .about-brands__col.col-md-3.col-6
+            a(href='#').about-brands__link HAIRWAY
+          .about-brands__col.col-md-3.col-6
+            a(href='#').about-brands__link ITALY
+          .about-brands__col.col-md-3.col-6
+            a(href='#').about-brands__link KODI
+          .about-brands__col.col-md-3.col-6
+            a(href='#').about-brands__link LONDA

@@ -1,0 +1,14 @@
+mixin sl-digits(data)
+  .sl-digits(class=data.modifier ? data.modifier : '')
+    .wrap.cursor.inited-not
+      .slider
+        each slide in data.slides
+          .slide
+            .inner
+              .about-digits__item
+                .about-digits__num !{slide.num}
+                .about-digits__text !{slide.text}
+      if (data.nav !== undefined)
+        +#{data.nav}()
+    if (data.pager !== undefined)
+      +#{data.pager}()

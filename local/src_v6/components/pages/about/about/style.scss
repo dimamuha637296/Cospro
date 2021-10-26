@@ -1,0 +1,80 @@
+.about {
+  font-size: 18px;
+  line-height: 1.62;
+
+  @media (max-width: $screen-sm-max) {
+    font-size: 16px;
+  }
+
+  &__text {
+    margin-bottom: 46px;
+
+    @media (max-width: $screen-sm-max) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__pre-brands {
+    margin-bottom: 48px;
+
+    @media (max-width: $screen-sm-max) {
+      margin-bottom: 25px;
+    }
+  }
+}
+
+.about-digits {
+  margin-bottom: 50px;
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__num {
+    @include font-family-cormorant-r();
+    font-size: 40px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    margin-bottom: 9px;
+
+    .slider & {
+      text-align: center;
+    }
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 1.62;
+    color: $brand-black;
+
+    .slider & {
+      text-align: center;
+    }
+  }
+}
+
+.about-brands {
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__link {
+    @include font-family-cormorant-r();
+    font-size: 25px;
+    line-height: 1.2;
+    color: $brand-gray-12;
+    margin-bottom: 40px;
+
+    @media (max-width: $screen-sm-max) {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+
+    @include hover-focus() {
+      color: rgba($brand-gray-12, .7);
+    }
+  }
+}

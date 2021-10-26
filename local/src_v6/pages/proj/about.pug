@@ -1,0 +1,12 @@
+extends ../tpl/main
+block pageVars
+  - DB.pageTitle = 'О нас';
+  - DB.layout = 'wide';
+  // - DB.bodyClass = 'no-padding-bottom'
+block title
+block content
+  include ../../components/pages/about/about/index
+block contentBottom
+  include ../../components/footer/subscription/index
+block popup
+  include ../../components/modals/fast-buy-modal/index
