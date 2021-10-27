@@ -1,0 +1,20 @@
+include ../../../../components/block/card-links-4/index
+.blog
+  .blog-banner
+    .blog-banner__row.row
+      .blog-banner__col.blog-banner__col--pic.col
+        img.blog-banner__img.img(src=DB.DIR + 'img/tmp/blog-banner.png', alt='alt')
+      .blog-banner__col.blog-banner__col--text.col
+        .blog-banner__title Уход на кожей лица летом
+        .blog-banner__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis nisl et facilisis congue. Suspendisse aliquam dui vitae ultrices luctus. Nam quis scelerisque felis. Morbi a elementum odio. Maecenas vitae diam a tortor volutpat vestibulum eget nec nisi. Proin consectetur iaculis iaculis.
+        +btn-secondary({text: 'читать статью', className: 'blog-banner__btn'})
+  +card-links-4({
+      cards: [
+          {
+              img: 'img/tmp/card-links-4-01.jpg',
+              title: 'тренды маникюра 2021',
+              text: 'Pellentesque tempor enim sit amet ligula pulvinar, id auctor enim eleifend. Curabitur vel dui neque.',
+              link: 'Читать статью'
+          }
+      ]
+  })

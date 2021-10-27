@@ -1,0 +1,13 @@
+extends ../tpl/main
+block pageVars
+  - DB.pageTitle = 'Блог';
+  - DB.layout = 'wide';
+  // - DB.bodyClass = 'no-padding-bottom'
+block title
+block content
+  include ../../components/pages/blog/blog/index
+  include ../../components/base/pagination/index
+block contentBottom
+  include ../../components/footer/subscription/index
+block popup
+  include ../../components/modals/fast-buy-modal/index

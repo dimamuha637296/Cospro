@@ -3,7 +3,7 @@
   &__alphabet {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 42px;
+    margin-bottom: 32px;
   }
 
   &__alphabet-block {
@@ -27,6 +27,7 @@
       display: inline-block;
       margin-right: 16px;
       color: $brand-black;
+      margin-bottom: 10px;
 
       &:last-child {
         margin-right: 0;
