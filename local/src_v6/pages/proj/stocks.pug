@@ -1,0 +1,12 @@
+extends ../tpl/main
+block pageVars
+  - DB.pageTitle = 'Акции';
+  - DB.layout = 'wide';
+  - DB.bodyClass = 'no-padding-bottom'
+block title
+block content
+  include ../../components/pages/stocks/content/index
+block contentBottom
+  include ../../components/footer/subscription/index
+block popup
+  include ../../components/modals/fast-buy-modal/index

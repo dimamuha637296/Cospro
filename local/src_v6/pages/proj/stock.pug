@@ -1,0 +1,13 @@
+extends ../tpl/main
+block pageVars
+  - DB.pageTitle = 'Акция';
+  - DB.layout = 'wide';
+  - DB.bodyClass = 'no-padding-bottom'
+block title
+block content
+  include ../../components/pages/stock/content/index
+block contentBottom
+  include ../../components/pages/stock/sl-products/index
+  include ../../components/footer/subscription/index
+block popup
+  include ../../components/modals/fast-buy-modal/index

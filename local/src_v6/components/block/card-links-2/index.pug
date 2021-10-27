@@ -1,0 +1,13 @@
+mixin card-links-2(data)
+  .card-links-2(class=data.className)
+    .card-links-2__row.row
+      each card in data.cards
+        .card-links-2__col(class=(data.colClassName ? data.colClassName : 'col-12 col-sm-6 col-md-4 col-lg-3'))
+          a.card-links-2__card(href='#')
+            if (card.img)
+              .card-links-2__img-wrap
+                .card-links-2__img-inner
+                  img.card-links-2__img(src=DB.DIR + card.img, alt=(card.title || 'alt'))
+            .card-links-2__descr
+              if (card.text)
+                .card-links-2__text #{card.text}

@@ -2,6 +2,9 @@ mixin b-head(data)
   if (data)
     .b-head(class=data.className)
       .b-head__row
+        if (data.subtitle)
+          .b-head__col.b-head__col--subtitle
+            .b-head__subtitle !{data.subtitle}
         if (data.title)
           .b-head__col.b-head__col--title
             -
