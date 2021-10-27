@@ -1,0 +1,11 @@
+extends ../tpl/main
+block pageVars
+  - DB.pageTitle = 'Избранное';
+  - DB.layout = 'wide';
+block title
+block content
+  include ../../components/pages/favorites/content/index
+block contentBottom
+  include ../../components/footer/subscription/index
+block popup
+  include ../../components/modals/fast-buy-modal/index
