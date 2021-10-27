@@ -1,0 +1,21 @@
+include ../../block/sale/index
+
+mixin card-links-4-card(data)
+  .card-links-4-card(class= data.className ? data.className : '')
+    a.card-links-4-card__main-link(href='#')
+    if (data.bg)
+      .card-links-4-card__mask
+        .card-links-4-card__mask-bg(class=data.bg.className, style=(data.bg.img ? 'background-image: url(' + DB.DIR + data.bg.img + ')' : ''))
+        .card-links-4-card__mask-text !{data.title}
+    .card-links-4-card__inner
+      if (data.img)
+        .card-links-4-card__img-wrap
+          .card-links-4-card__img-inner
+            img.card-links-4-card__img(src=DB.DIR + data.img, alt=(data.title || 'alt'))
+      .card-links-4-card__descr
+        if (data.title)
+          .card-links-4-card__title !{data.title}
+        if (data.text)
+          .card-links-4-card__text !{data.text}
+        if (data.link)
+          a.card-links-4-card__link(href='#') !{data.link}

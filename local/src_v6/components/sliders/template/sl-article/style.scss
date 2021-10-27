@@ -1,0 +1,141 @@
+.sl-article {
+  position: relative;
+
+  .b-title {
+    margin-top: 0;
+    margin-bottom: 40px;
+  }
+
+  .wrap {
+    position: relative;
+    padding: 0;
+
+    @media (max-width: $screen-xs-max) {
+      padding-right: 30px;
+    }
+
+    &.inited-not {
+
+      .slider {
+        display: flex;
+      }
+
+      .slide {
+        flex: 0 0 25%;
+        max-width: 25%;
+
+        @media (max-width: $screen-lg-max) {
+          flex: 0 0 33.3333%;
+          max-width: 33.3333%;
+        }
+
+        @media (max-width: $screen-md-max) {
+          flex: 0 0 50%;
+          max-width: 50%;
+        }
+
+        @media (max-width: $screen-xs-max) {
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+
+        &:nth-child(n+5) {
+          display: none;
+        }
+
+        &:nth-child(n+4) {
+
+          @media (max-width: $screen-lg-max) {
+            display: none;
+          }
+        }
+
+        &:nth-child(n+3) {
+
+          @media (max-width: $screen-md-max) {
+            display: none;
+          }
+        }
+
+        &:nth-child(n+2) {
+
+          @media (max-width: $screen-xs-max) {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .sl-nav {
+
+      .prev,
+      .next {
+        width: 37px;
+        height: 48px;
+        top: -85px;
+      }
+
+      .prev {
+        left: auto;
+        right: 134px;
+
+        @media (max-width: $screen-sm-max) {
+          left: -22px;
+        }
+      }
+
+      .next {
+        left: auto;
+        right: 0;
+
+        @media (max-width: $screen-sm-max) {
+          right: -22px;
+        }
+      }
+    }
+  }
+
+  .slider {
+    margin: 0 ($grid-gutter-width / -2);
+
+    @media (max-width: $screen-sm-max) {
+      margin: 0 -5px;
+    }
+  }
+
+  .slide {
+    padding: 0 ($grid-gutter-width / 2);
+
+    @media (max-width: $screen-sm-max) {
+      padding: 0 5px;
+    }
+  }
+
+  .inner {
+    display: flex;
+    height: 100%;
+    margin: 0 auto;
+  }
+
+  .slick-track {
+    margin-left: 0;
+  }
+
+  .slick-list {
+
+    @media (max-width: $screen-xs-max) {
+      overflow: visible;
+    }
+  }
+
+  .slide-counter {
+    position: absolute;
+    right: 61px;
+    top: -88px;
+    @include font-family-cormorant-r();
+    font-size: 40px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: $brand-gray-10;
+  }
+}

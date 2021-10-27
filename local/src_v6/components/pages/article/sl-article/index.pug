@@ -1,0 +1,39 @@
+include ../../../../components/sliders/template/sl-article/index
+include ../../../../components/sliders/nav/sl-nav/index
+include ../../../../components/sliders/pager/sl-pager/index
+include ../../../../components/block/b-section/index
+
++b-section({
+    className: 'b-section--sl-article-bottom',
+})
+  +sl-article({
+      nav: 'sl-nav',
+      pager: 'sl-pager',
+      title: 'также по теме',
+      slides: [
+          {
+              img: 'img/tmp/card-links-4-03.jpg',
+              title: 'Актуальные прически',
+              text: 'Pellentesque tempor enim sit amet ligula pulvinar, id auctor enim eleifend. Curabitur vel dui neque.',
+              link: 'Читать статью'
+          },
+          {
+              img: 'img/tmp/card-links-4-04.jpg',
+              title: 'разбор звезд до/после и их ухода',
+              text: 'Pellentesque tempor enim sit amet ligula pulvinar, id auctor enim eleifend. Curabitur vel dui neque.',
+              link: 'Читать статью'
+          },
+          {
+              img: 'img/tmp/card-links-4-02.jpg',
+              title: 'новые бренды в уходовой нише',
+              text: 'Pellentesque tempor enim sit amet ligula pulvinar, id auctor enim eleifend. Curabitur vel dui neque.',
+              link: 'Читать статью'
+          },
+          {
+              img: 'img/tmp/card-links-4-03.jpg',
+              title: 'актуальные прически 2021',
+              text: 'Pellentesque tempor enim sit amet ligula pulvinar, id auctor enim eleifend. Curabitur vel dui neque.',
+              link: 'Читать статью'
+          }
+      ]
+  })

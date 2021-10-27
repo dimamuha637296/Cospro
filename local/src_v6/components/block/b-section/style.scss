@@ -55,7 +55,8 @@ $_b-section-default-bg: $brand-white;
     padding: 0 10px;
   }
 
-  &--sl-products-bottom {
+  &--sl-products-bottom,
+  &--sl-article {
     padding-top: 76px;
     padding-bottom: 80px;
   }

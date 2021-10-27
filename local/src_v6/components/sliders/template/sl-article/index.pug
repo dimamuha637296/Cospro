@@ -1,0 +1,17 @@
+include ../../../../components/block/card-links-4-card/index
+
+mixin sl-article(data)
+  .sl-article(class=data.modifier ? data.modifier : '')
+    if (data.title)
+      .h1.b-title #{data.title}
+    .wrap.cursor.inited-not
+      include ../../util/slide-counter/index
+      .slider
+        each slide in data.slides
+          .slide
+            .inner
+              +card-links-4-card(slide)
+      if (data.nav !== undefined)
+        +#{data.nav}()
+    if (data.pager !== undefined)
+      +#{data.pager}()

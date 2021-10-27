@@ -1,10 +1,4 @@
 .about {
-  font-size: 18px;
-  line-height: 1.62;
-
-  @media (max-width: $screen-sm-max) {
-    font-size: 16px;
-  }
 
   &__text {
     margin-bottom: 46px;
