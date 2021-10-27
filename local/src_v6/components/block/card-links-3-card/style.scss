@@ -39,7 +39,7 @@
 
       .desktop & {
 
-        & + .card-links-3-card__inner {
+        & ~ .card-links-3-card__inner {
 
           .card-links-3-card__title {
             color: $link-color;

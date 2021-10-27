@@ -5,14 +5,19 @@ mixin card-links-4(data)
         .card-links-4__col(class=(data.colClassName ? data.colClassName : 'col-12 col-sm-6 col-lg-4'))
           .card-links-4__card
             a.card-links-4__main-link(href='#')
-            if (card.img)
-              .card-links-4__img-wrap
-                .card-links-4__img-inner
-                  img.card-links-4__img(src=DB.DIR + card.img, alt=(card.title || 'alt'))
-            .card-links-4__descr
-              if (card.title)
-                .card-links-4__title !{card.title}
-              if (card.text)
-                .card-links-4__text !{card.text}
-              if (card.link)
-                a.card-links-4__link(href='#') !{card.link}
+            if (card.bg)
+              .card-links-4__mask
+                .card-links-4__mask-bg(class=card.bg.className, style=(card.bg.img ? 'background-image: url(' + DB.DIR + card.bg.img + ')' : ''))
+                .card-links-4__mask-text !{card.title}
+            .card-links-4__inner
+              if (card.img)
+                .card-links-4__img-wrap
+                  .card-links-4__img-inner
+                    img.card-links-4__img(src=DB.DIR + card.img, alt=(card.title || 'alt'))
+              .card-links-4__descr
+                if (card.title)
+                  .card-links-4__title !{card.title}
+                if (card.text)
+                  .card-links-4__text !{card.text}
+                if (card.link)
+                  a.card-links-4__link(href='#') !{card.link}
