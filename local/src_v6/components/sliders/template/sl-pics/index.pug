@@ -1,0 +1,12 @@
+mixin sl-pics(data)
+  .sl-pics(class=data.modifier ? data.modifier : '')
+    .wrap.cursor.inited-not
+      .slider
+        each slide in data.slides
+          .slide
+            .inner
+              img(src=DB.DIR + slide.img, alt='alt')
+      if (data.nav !== undefined)
+        +#{data.nav}()
+    if (data.pager !== undefined)
+      +#{data.pager}()
