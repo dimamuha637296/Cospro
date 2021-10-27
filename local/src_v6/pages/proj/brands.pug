@@ -1,0 +1,12 @@
+extends ../tpl/main
+block pageVars
+  - DB.pageTitle = 'Бренды';
+  - DB.layout = 'wide';
+  // - DB.bodyClass = 'no-padding-bottom'
+block title
+block content
+  include ../../components/pages/brands/brands/index
+block contentBottom
+  include ../../components/footer/subscription/index
+block popup
+  include ../../components/modals/fast-buy-modal/index

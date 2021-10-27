@@ -1,0 +1,9 @@
+mixin brand-links(data)
+  .brand-links
+    .brand-links__row.row
+      each item in data.pics
+        .brand-links__col
+          a.brand-links__card(href='#')
+            .brand-links__img-wrap
+              .brand-links__img-inner
+                img.brand-links__img(src=DB.DIR + item, alt=(item || 'alt'))
