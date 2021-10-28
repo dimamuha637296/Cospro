@@ -1,0 +1,124 @@
+include ../../../../components/block/cooperation-menu/index
+include ../../../../components/sliders/template/sl-coop-menu/index
+include ../../../../components/sliders/nav/sl-nav/index
+include ../../../../components/sliders/pager/sl-pager/index
+
+.d-none.d-md-block
+  .cooperation-menu-block
+    .cooperation-menu-block__row.row
+      .cooperation-menu-block__col.col-md-4.col-12
+        +cooperation-menu({
+            img: 'img/tmp/cm-01.svg',
+            title: 'волосы',
+            list: [
+                'Уход',
+                'Окрашивание',
+                'Кератин',
+                'Красители различных видов',
+                'Комплексный уход',
+                'Кератиновое выпрямление',
+                'Стайлинг',
+                'Лечение',
+            ]
+        })
+      .cooperation-menu-block__col.col-md-4.col-12
+        +cooperation-menu({
+            img: 'img/tmp/cm-02.svg',
+            title: 'тело',
+            list: [
+                'Депиляции',
+                'Уход',
+                'Шугаринг',
+                'Восковая депиляция',
+                'Вспомогательные уходовые средства',
+            ]
+        })
+      .cooperation-menu-block__col.col-md-4.col-12
+        +cooperation-menu({
+            img: 'img/tmp/cm-03.svg',
+            title: 'ногти',
+            list: [
+                'Покрытие',
+                'Уход',
+                'Аппараты для процедур',
+                'Гели',
+                'Кисти',
+            ]
+        })
+      .cooperation-menu-block__col.col-md-5.col-12
+        +cooperation-menu({
+            img: 'img/tmp/cm-01.svg',
+            title: 'рассходные материалы',
+            list: [
+                'Одноразовые полотенца',
+                'Пеньюары',
+                'Фольга',
+            ]
+        })
+      .cooperation-menu-block__col.col-md-4.col-12
+        +cooperation-menu({
+            img: 'img/tmp/cm-01.svg',
+            title: 'электротовары',
+            list: [
+                'Фены для волос',
+            ]
+        })
+.d-block.d-md-none
+  +sl-coop-menu({
+      nav: 'sl-nav',
+      pager: 'sl-pager',
+      slides: [
+          {
+              img: 'img/tmp/cm-01.svg',
+              title: 'волосы',
+              list: [
+                  'Уход',
+                  'Окрашивание',
+                  'Кератин',
+                  'Красители различных видов',
+                  'Комплексный уход',
+                  'Кератиновое выпрямление',
+                  'Стайлинг',
+                  'Лечение',
+              ]
+          },
+          {
+              img: 'img/tmp/cm-02.svg',
+              title: 'тело',
+              list: [
+                  'Депиляции',
+                  'Уход',
+                  'Шугаринг',
+                  'Восковая депиляция',
+                  'Вспомогательные уходовые средства',
+              ]
+          },
+          {
+              img: 'img/tmp/cm-03.svg',
+              title: 'ногти',
+              list: [
+                  'Покрытие',
+                  'Уход',
+                  'Аппараты для процедур',
+                  'Гели',
+                  'Кисти',
+              ]
+          },
+          {
+              img: 'img/tmp/cm-01.svg',
+              title: 'рассходные материалы',
+              list: [
+                  'Одноразовые полотенца',
+                  'Пеньюары',
+                  'Фольга',
+              ]
+          },
+          {
+              img: 'img/tmp/cm-01.svg',
+              title: 'электротовары',
+              list: [
+                  'Фены для волос',
+              ]
+          }
+      ]
+  })

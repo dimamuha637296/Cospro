@@ -1,0 +1,16 @@
+include ../../block/sale/index
+
+mixin cooperation-menu(data)
+  .cooperation-menu(class= data.className ? data.className : '')
+    .cooperation-menu__inner
+      if (data.img)
+        .cooperation-menu__img-wrap
+          .cooperation-menu__img-inner
+            img.cooperation-menu__img(src=DB.DIR + data.img, alt=(data.title || 'alt'))
+      .cooperation-menu__descr
+        if (data.title)
+          .cooperation-menu__title !{data.title}
+        if (data.list)
+          .cooperation-menu__list-links
+            each item in data.list
+              a.cooperation-menu__link(href='#') !{item}

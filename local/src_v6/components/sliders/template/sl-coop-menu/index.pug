@@ -1,0 +1,14 @@
+include ../../../../components/block/cooperation-menu/index
+
+mixin sl-coop-menu(data)
+  .sl-coop-menu(class=data.modifier ? data.modifier : '')
+    .wrap.cursor.inited-not
+      .slider
+        each slide in data.slides
+          .slide
+            .inner
+              +cooperation-menu(slide)
+      if (data.nav !== undefined)
+        +#{data.nav}()
+    if (data.pager !== undefined)
+      +#{data.pager}()
