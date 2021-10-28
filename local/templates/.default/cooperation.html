@@ -910,6 +910,139 @@
 								<div class="row justify-content-center">
 									<div class="col-xl-8 col-lg-11 col-12">
 										<p>Хотите стать нашим партнером? Получите индивидуальное предложение и начинайте работать с нами уже сейчас!</p>
+										<div class="form-cooperation">
+											<div class="form-cooperation__inner">
+												<form class="form-1" id="form-cooperation" name="form_cooperation" method="post" target="_top" action="/">
+													<fieldset class="fieldset">
+														<div class="row">
+															<div class="col-md-6 col-12">
+																<!-- row-->
+																<div class="form-group control-group">
+																	<div class="text col-12">
+																		<div class="input-wrap">
+																			<input class="form-control input-with-icon input-with-icon--human" id="form_cooperation_FIO" type="text" name="form_cooperation_FIO" placeholder="Введите ваше имя" value="" required="">
+																		</div>
+																	</div>
+																	<div class="controls col-12"></div>
+																</div>
+															</div>
+															<div class="col-md-6 col-12">
+																<!-- row-->
+																<div class="form-group control-group">
+																	<div class="text col-12">
+																		<div class="input-wrap">
+																			<select class="form-control ui-select input-with-icon input-with-icon--star" id="form_cooperation_TYPE" name="form_cooperation_TYPE" required>
+																				<option value="" selected disabled>Тип партнера</option>
+																				<option>Тип 1</option>
+																				<option>Тип 2</option>
+																			</select>
+																		</div>
+																	</div>
+																	<div class="controls col-12"></div>
+																</div>
+															</div>
+															<div class="col-md-6 col-12">
+																<!-- row-->
+																<div class="form-group control-group">
+																	<div class="text col-12">
+																		<div class="input-wrap">
+																			<input class="form-control js_mask_tel input-with-icon input-with-icon--tel" id="form_cooperation_TEL" type="tel" name="form_cooperation_TEL" placeholder="Введите номер телефона" value="" required="">
+																		</div>
+																	</div>
+																	<div class="controls col-12"></div>
+																</div>
+															</div>
+															<div class="col-md-6 col-12">
+																<!-- row-->
+																<div class="form-group control-group">
+																	<div class="text col-12">
+																		<div class="input-wrap">
+																			<input class="form-control input-with-icon input-with-icon--email" id="form_cooperation_MAIL" type="email" name="form_cooperation_MAIL" placeholder="Введите ваш e-mail" value="" required="">
+																		</div>
+																	</div>
+																	<div class="controls col-12"></div>
+																</div>
+															</div>
+															<div class="col-12">
+																<!-- row-->
+																<div class="form-group control-group">
+																	<div class="text col-12">
+																		<div class="input-wrap">
+																			<select class="form-control ui-select input-with-icon input-with-icon--bag" id="form_cooperation_CATEGORY" name="form_cooperation_CATEGORY" required>
+																				<option value="" selected disabled>Выберите категорию</option>
+																				<option>Тип 1</option>
+																				<option>Тип 2</option>
+																			</select>
+																		</div>
+																	</div>
+																	<div class="controls col-12"></div>
+																</div>
+															</div>
+															<div class="col-12">
+																<!-- row-->
+																<div class="form-group control-group">
+																	<div class="text col-12">
+																		<div class="input-wrap">
+																			<textarea class="form-control" id="form_cooperation_MESSAGE" name="form_cooperation_MESSAGE" placeholder="Опишите свое предложение по сотрудничеству" required></textarea>
+																		</div>
+																	</div>
+																	<div class="controls col-12"></div>
+																</div>
+															</div>
+															<div class="col-12">
+																<!-- row-->
+																<div class="form-group mb-0">
+																	<div class="col-12 btn-wrap">
+																																		<input class="btn btn-primary btn_submit" type="submit" value="отправить">
+																	</div>
+																</div>
+															</div>
+														</div>
+													</fieldset>
+												</form>
+												<script>
+													!function () {
+													    'use strict';
+													
+													    // Form validation
+													    function initValid() {
+													        // Validation options http://jqueryvalidation.org/documentation/
+													        var form_validator = $('#form-cooperation');
+													        if (form_validator.length && $.fn.validate) {
+													            form_validator.validate({
+													                rules: {
+													                    'form_cooperation_FIO': {
+													                        required: true,
+													                        minlength: 2
+													                    },
+													                    'form_cooperation_TYPE': {
+													                        required: true
+													                    },
+													                    'form_cooperation_TEL': {
+													                        minlengthphone: true,
+													                        requiredphone: true
+													                    },
+													                    'form_cooperation_MAIL': {
+													                        required: true
+													                    },
+													                    'form_cooperation_CATEGORY': {
+													                        required: true
+													                    },
+													                    'form_cooperation_MESSAGE': {
+													                        required: true
+													                    }
+													                }
+													            });
+													        }
+													    }
+													
+													    $(function () {
+													        initValid();
+													    });
+													}();
+												</script>
+											</div>
+										</div>
 										<p>Наша группа компаний является импортером и официальным представителем в Беларуси нескольких брендов профессиональной косметики и  электротоваров.<br>Большой выбор  товаров разного ценового сегмента позволяет нам сделать предложение подходящее именно Вам!</p>
 										<p class="mb-10">Мы заботимся о Вашей репутации, а потому предлагаем регулярные обучающие семинары  и постоянную поддержку наших технологов. Для нас очень важно, чтобы вы умели правильно работать с нашим продуктом, получали отличные результаты и благодарных клиентов.</p>
 										<div class="d-none d-md-block">

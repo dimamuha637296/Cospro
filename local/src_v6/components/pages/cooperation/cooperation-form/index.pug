@@ -1,0 +1,99 @@
+include ../../../base/forms/form_1/form/index
+.form-cooperation
+  .form-cooperation__inner
+    form#form-cooperation.form-1(name='form_cooperation', method='post', target='_top', action='/')
+      fieldset.fieldset
+        .row
+          .col-md-6.col-12
+            // row
+            .form-group.control-group
+              .text.col-12
+                .input-wrap
+                  input#form_cooperation_FIO.form-control.input-with-icon.input-with-icon--human(type='text', name='form_cooperation_FIO', placeholder='Введите ваше имя', value='', required='')
+              .controls.col-12
+          .col-md-6.col-12
+            // row
+            .form-group.control-group
+              .text.col-12
+                .input-wrap
+                  select#form_cooperation_TYPE.form-control.ui-select.input-with-icon.input-with-icon--star(name='form_cooperation_TYPE', required)
+                    option(value='', selected, disabled) Тип партнера
+                    option Тип 1
+                    option Тип 2
+              .controls.col-12
+          .col-md-6.col-12
+            // row
+            .form-group.control-group
+              .text.col-12
+                .input-wrap
+                  input#form_cooperation_TEL.form-control.js_mask_tel.input-with-icon.input-with-icon--tel(type='tel', name='form_cooperation_TEL', placeholder='Введите номер телефона', value='', required='')
+              .controls.col-12
+          .col-md-6.col-12
+            // row
+            .form-group.control-group
+              .text.col-12
+                .input-wrap
+                  input#form_cooperation_MAIL.form-control.input-with-icon.input-with-icon--email(type='email', name='form_cooperation_MAIL', placeholder='Введите ваш e-mail', value='', required='')
+              .controls.col-12
+          .col-12
+            // row
+            .form-group.control-group
+              .text.col-12
+                .input-wrap
+                  select#form_cooperation_CATEGORY.form-control.ui-select.input-with-icon.input-with-icon--bag(name='form_cooperation_CATEGORY', required)
+                    option(value='', selected, disabled) Выберите категорию
+                    option Тип 1
+                    option Тип 2
+              .controls.col-12
+          .col-12
+            // row
+            .form-group.control-group
+              .text.col-12
+                .input-wrap
+                  textarea#form_cooperation_MESSAGE.form-control(name='form_cooperation_MESSAGE', placeholder='Опишите свое предложение по сотрудничеству', required)
+              .controls.col-12
+          .col-12
+            // row
+            .form-group.mb-0
+              .col-12.btn-wrap
+                +btn-primary({type: 'input', className: 'btn_submit', text: 'отправить'})
+    script.
+        !function () {
+            'use strict';
+
+            // Form validation
+            function initValid() {
+                // Validation options http://jqueryvalidation.org/documentation/
+                var form_validator = $('#form-cooperation');
+                if (form_validator.length && $.fn.validate) {
+                    form_validator.validate({
+                        rules: {
+                            'form_cooperation_FIO': {
+                                required: true,
+                                minlength: 2
+                            },
+                            'form_cooperation_TYPE': {
+                                required: true
+                            },
+                            'form_cooperation_TEL': {
+                                minlengthphone: true,
+                                requiredphone: true
+                            },
+                            'form_cooperation_MAIL': {
+                                required: true
+                            },
+                            'form_cooperation_CATEGORY': {
+                                required: true
+                            },
+                            'form_cooperation_MESSAGE': {
+                                required: true
+                            }
+                        }
+                    });
+                }
+            }
+
+            $(function () {
+                initValid();
+            });
+        }();

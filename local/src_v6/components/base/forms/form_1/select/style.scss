@@ -13,6 +13,112 @@
     position: absolute;
     width: 1px;
     display: block !important;
+
+    // Иконки перед текстом
+    &.input-with-icon {
+
+      & ~ .ui-selectmenu-button {
+        padding-left: 50px;
+        background-repeat: no-repeat;
+        background-position: 20px center;
+
+        @media (max-width: $screen-sm-max) {
+          padding-left: 41px;
+          background-position: 15px center;
+        }
+      }
+
+      &--address {
+
+        & ~ .ui-selectmenu-button {
+          background-image: url(../img/tmp/input-address.svg);
+        }
+      }
+
+      &--auto {
+
+        & ~ .ui-selectmenu-button {
+          background-image: url(../img/tmp/input-auto.svg);
+        }
+      }
+
+      &--bag {
+
+        & ~ .ui-selectmenu-button {
+          background-image: url(../img/tmp/input-bag.svg);
+        }
+      }
+
+      &--book {
+
+        & ~ .ui-selectmenu-button {
+          background-image: url(../img/tmp/input-book.svg);
+        }
+      }
+
+      &--comment {
+
+        & ~ .ui-selectmenu-button {
+          background-image: url(../img/tmp/input-comment.svg);
+        }
+      }
+
+      &--email {
+
+        & ~ .ui-selectmenu-button {
+          background-image: url(../img/tmp/input-email.svg);
+        }
+      }
+
+      &--human {
+
+        & ~ .ui-selectmenu-button {
+          background-image: url(../img/tmp/input-human.svg);
+        }
+      }
+
+      &--location {
+
+        & ~ .ui-selectmenu-button {
+          background-image: url(../img/tmp/input-location.svg);
+        }
+      }
+
+      &--pass {
+
+        & ~ .ui-selectmenu-button {
+          background-image: url(../img/tmp/input-pass.svg);
+        }
+      }
+
+      &--pay {
+
+        & ~ .ui-selectmenu-button {
+          background-image: url(../img/tmp/input-pay.svg);
+        }
+      }
+
+      &--post {
+
+        & ~ .ui-selectmenu-button {
+          background-image: url(../img/tmp/input-post.svg);
+        }
+      }
+
+      &--star {
+
+        & ~ .ui-selectmenu-button {
+          background-image: url(../img/tmp/input-star.svg);
+        }
+      }
+
+      &--tel {
+
+        & ~ .ui-selectmenu-button {
+          background-image: url(../img/tmp/input-tel.svg);
+        }
+      }
+    }
   }
 
   .ui-selectmenu-text {
