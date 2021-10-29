@@ -1,0 +1,16 @@
+.content-wrap
+  .row.justify-content-center
+    .col-xl-8.col-lg-11.col-12
+      .tabs-string.tabs
+        ul.nav.nav-tabs.list-reset(role="tablist")
+          li.nav-item
+            a.nav-link.active(href='#tab-01', data-toggle='tab')
+              span АВТОРИЗАЦИЯ
+          li.nav-item
+            a.nav-link(href='#tab-02', data-toggle='tab')
+              span РЕГИСТРАЦИЯ
+        .tab-content
+          #tab-01.tab-pane.fade.in.active.show(role='tabpanel')
+            include ../form-auth/index
+          #tab-02.tab-pane.fade(role='tabpanel')
+            include ../form-registration/index

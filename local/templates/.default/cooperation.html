@@ -993,7 +993,7 @@
 																<!-- row-->
 																<div class="form-group mb-0">
 																	<div class="col-12 btn-wrap">
-																																		<input class="btn btn-primary btn_submit" type="submit" value="отправить">
+																																		<button class="btn btn-primary btn_submit" id="form-cooperation-submit" type="button">отправить</button>
 																	</div>
 																</div>
 															</div>
@@ -1036,8 +1036,20 @@
 													        }
 													    }
 													
+													    function validOnButton() {
+													        var form = $('#form-cooperation');
+													        var btn = $('#form-cooperation-submit');
+													
+													        btn.on('click', function () {
+													            if (form.valid()) {
+													                form.submit();
+													            }
+													        })
+													    }
+													
 													    $(function () {
 													        initValid();
+													        validOnButton();
 													    });
 													}();
 												</script>

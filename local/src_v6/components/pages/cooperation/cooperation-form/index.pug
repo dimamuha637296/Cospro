@@ -56,7 +56,7 @@ include ../../../base/forms/form_1/form/index
             // row
             .form-group.mb-0
               .col-12.btn-wrap
-                +btn-primary({type: 'input', className: 'btn_submit', text: 'отправить'})
+                +btn-primary({type: 'button', className: 'btn_submit', text: 'отправить'})(id='form-cooperation-submit')
     script.
         !function () {
             'use strict';
@@ -93,7 +93,19 @@ include ../../../base/forms/form_1/form/index
                 }
             }
 
+            function validOnButton() {
+                var form = $('#form-cooperation');
+                var btn = $('#form-cooperation-submit');
+
+                btn.on('click', function () {
+                    if (form.valid()) {
+                        form.submit();
+                    }
+                })
+            }
+
             $(function () {
                 initValid();
+                validOnButton();
             });
         }();

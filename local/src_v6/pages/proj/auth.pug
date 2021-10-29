@@ -1,0 +1,11 @@
+extends ../tpl/main
+block pageVars
+  - DB.pageTitle = 'авторизация';
+  - DB.layout = 'wide';
+  // - DB.bodyClass = 'no-padding-bottom'
+block title
+block content
+  include ../../components/pages/auth/content/index
+block contentBottom
+block popup
+  include ../../components/modals/fast-buy-modal/index
