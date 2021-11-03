@@ -1,0 +1,12 @@
+extends ../tpl/main
+block pageVars
+  - DB.pageTitle = 'регистрация';
+  - DB.layout = 'wide';
+  - DB.bodyClass = 'no-padding-bottom lk'
+block title
+block content
+  include ../../components/block/lk-classes/index
+  include ../../components/pages/registration/content/index
+block contentBottom
+block popup
+  include ../../components/modals/fast-buy-modal/index
