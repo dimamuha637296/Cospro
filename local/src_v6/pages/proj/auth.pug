@@ -2,9 +2,10 @@ extends ../tpl/main
 block pageVars
   - DB.pageTitle = 'авторизация';
   - DB.layout = 'wide';
-  // - DB.bodyClass = 'no-padding-bottom'
+  - DB.bodyClass = 'no-padding-bottom lk'
 block title
 block content
+  include ../../components/block/lk-classes/index
   include ../../components/pages/auth/content/index
 block contentBottom
 block popup

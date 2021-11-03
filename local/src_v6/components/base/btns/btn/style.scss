@@ -84,7 +84,17 @@ button:focus {
   }
 
   .icon {
-    @include svg();
+
+    .g-wrap & {
+      @include svg();
+      position: relative;
+      top: auto;
+      bottom: auto;
+      left: auto;
+      right: auto;
+      color: transparent;
+      background-color: transparent;
+    }
   }
 
   &.addToBasket {
@@ -263,6 +273,66 @@ button:focus {
 
       .icon {
         @include svg-toAccount-black();
+      }
+    }
+  }
+
+  &.toReg {
+
+    &[class*="outline" ] {
+
+      .icon {
+        @include svg-toReg-black();
+      }
+
+      @include hover-focus() {
+
+        .icon {
+          @include svg-toReg();
+        }
+      }
+
+      &.active,
+      &:active {
+
+        .icon {
+          @include svg-toReg();
+        }
+      }
+
+      &.disabled,
+      &[disabled] {
+
+        .icon {
+          @include svg-toReg-black();
+        }
+      }
+    }
+
+    .icon {
+      @include svg-toReg();
+    }
+
+    @include hover-focus() {
+
+      .icon {
+        @include svg-toReg();
+      }
+    }
+
+    &.active,
+    &:active {
+
+      .icon {
+        @include svg-toReg();
+      }
+    }
+
+    &.disabled,
+    &[disabled] {
+
+      .icon {
+        @include svg-toReg-black();
       }
     }
   }

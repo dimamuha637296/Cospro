@@ -1,5 +1,4 @@
-
-<!-- - DB.bodyClass = 'no-padding-bottom'--><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru-RU">
 	<head>
 		<meta charset="UTF-8">
@@ -33,7 +32,7 @@
 		<script src="js/libs/jquery-ui.datepicker_ru.min.js"></script>
 		<script src="js/app.min.js"></script>
 	</head>
-	<body class="ru js-off pm-close  inner">
+	<body class="ru js-off pm-close no-padding-bottom lk inner">
 		<div class="db g-wrap" id="db">
 			<div class="outer-bg pm-content">
 				<header class="header">
@@ -897,7 +896,7 @@
 							</ol>
 						</nav>
 						<main class="g-content" id="workarea">
-							<div class="content-wrap">
+							<div class="content-wrap lk-content-wrap">
 								<div class="row justify-content-center">
 									<div class="col-xl-8 col-lg-11 col-12">
 										<div class="tabs-string tabs">
@@ -907,7 +906,7 @@
 											</ul>
 											<div class="tab-content">
 												<div class="tab-pane fade in active show" id="tab-01" role="tabpanel">
-													<div class="form-auth">
+													<div class="form-auth lk-form">
 														<div class="form-auth__inner">
 															<form class="form-1" id="form-auth" name="form_auth" method="post" target="_top" action="/">
 																<fieldset class="fieldset">
@@ -934,12 +933,18 @@
 																				<div class="controls col-12"></div>
 																			</div>
 																		</div>
-																		<div class="col-12">
+																		<div class="col-md-5 col-12">
 																			<!-- row-->
 																			<div class="form-group mb-0">
 																				<div class="col-12 btn-wrap">
-																																					<button class="btn btn-primary btn_submit" id="form-auth-submit" type="button">войти в аккаунт</button>
+																																					<button class="btn btn-primary btn_submit with-icon icon-right toAccount" id="form-auth-submit" type="button"><span>войти в аккаунт</span><span class="icon"></span></button>
 																				</div>
+																			</div>
+																		</div>
+																		<div class="col-md-7 col-12 info-wrap">
+																			<div class="form-info">
+																				<div class="form-info__item">Забыли свой пароль?&ensp;<a href="#">Восстановите</a></div>
+																				<div class="form-info__item">Проблемы со входом в Ваш кабинет?&ensp;<a href="#">Напишите нам</a></div>
 																			</div>
 																		</div>
 																	</div>
@@ -988,7 +993,7 @@
 													</div>
 												</div>
 												<div class="tab-pane fade" id="tab-02" role="tabpanel">
-													<div class="form-registration">
+													<div class="form-registration lk-form">
 														<div class="form-registration__inner">
 															<form class="form-1" id="form-registration" name="form_registration" method="post" target="_top" action="/">
 																<fieldset class="fieldset">
@@ -1048,12 +1053,34 @@
 																				<div class="controls col-12"></div>
 																			</div>
 																		</div>
-																		<div class="col-12">
+																		<div class="col-md-5 col-12">
 																			<!-- row-->
 																			<div class="form-group mb-0">
 																				<div class="col-12 btn-wrap">
-																																					<button class="btn btn-primary btn_submit" id="form-registration-submit" type="button">зарегистрироваться</button>
+																																					<button class="btn btn-primary btn_submit with-icon icon-right toReg" id="form-registration-submit" type="button"><span>зарегистрироваться</span><span class="icon"></span></button>
 																				</div>
+																			</div>
+																		</div>
+																		<div class="col-md-7 col-12 info-wrap">
+																			<div class="form-group control-group mb-0">
+																				<div class="text col-12">
+																					<div class="checkbox">
+																						<label>
+																							<input class="ui-checkbox" type="checkbox"><span>Подписаться на новости и скидки, чтобы в числе первых узнавать о новинках, трендах и специальных предложениях.</span>
+																						</label>
+																					</div>
+																				</div>
+																				<div class="controls col-12"></div>
+																			</div>
+																			<div class="form-group control-group">
+																				<div class="text col-12">
+																					<div class="categories__checkbox checkbox">
+																						<label>
+																							<input class="ui-checkbox" type="checkbox"><span>Нажимая на кнопку “Зарегистрироваться”, Вы принимаете условия <a href="#">Политики конфиденциальности</a></span>
+																						</label>
+																					</div>
+																				</div>
+																				<div class="controls col-12"></div>
 																			</div>
 																		</div>
 																	</div>

@@ -1,5 +1,6 @@
 include ../../../base/forms/form_1/form/index
-.form-registration
+
+.form-registration.lk-form
   .form-registration__inner
     form#form-registration.form-1(name='form_registration', method='post', target='_top', action='/')
       fieldset.fieldset
@@ -39,11 +40,30 @@ include ../../../base/forms/form_1/form/index
                 .input-wrap
                   input#form_registration_NEWPASS.form-control.input-with-icon.input-with-icon--pass(type='password', name='form_registration_NEWPASS', placeholder='Повторите пароль', value='', required='')
               .controls.col-12
-          .col-12
+          .col-md-5.col-12
             // row
             .form-group.mb-0
               .col-12.btn-wrap
-                +btn-primary({type: 'button', className: 'btn_submit', text: 'зарегистрироваться'})(id='form-registration-submit')
+                +btn-primary({
+                    type: 'button',
+                    className: 'btn_submit with-icon icon-right toReg',
+                    text: '<span>зарегистрироваться</span><span class="icon"></span>'
+                })(id='form-registration-submit')
+          .col-md-7.col-12.info-wrap
+            .form-group.control-group.mb-0
+              .text.col-12
+                .checkbox
+                  label
+                    input.ui-checkbox(type='checkbox')
+                    span Подписаться на новости и скидки, чтобы в числе первых узнавать о новинках, трендах и специальных предложениях.
+              .controls.col-12
+            .form-group.control-group
+              .text.col-12
+                .categories__checkbox.checkbox
+                  label
+                    input.ui-checkbox(type='checkbox')
+                    span Нажимая на кнопку “Зарегистрироваться”, Вы принимаете условия <a href="#">Политики конфиденциальности</a>
+              .controls.col-12
     script.
         !function () {
             'use strict';
