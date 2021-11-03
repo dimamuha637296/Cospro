@@ -11,8 +11,8 @@
     }
 
     &--buy {
-      margin-left: -5px;
-      margin-right: -5px;
+      margin-left: 0;
+      margin-right: -10px;
       margin-bottom: 65px;
 
       @media (max-width: $screen-sm-max) {
@@ -36,9 +36,14 @@
     }
 
     &--buy {
-      padding-left: 5px;
-      padding-right: 5px;
+      padding-right: 0;
+      padding-left: 0;
+      margin-right: 10px;
       margin-bottom: 15px;
+    }
+
+    &--no-margin-right {
+      margin-right: 0;
     }
   }
 
@@ -61,7 +66,7 @@
   &__top-text {
     font-size: 18px;
     line-height: 1.78;
-    color: $brand-gray-10;
+    color: $brand-gray-12;
 
     @media (max-width: $screen-sm-max) {
       font-size: 14px;

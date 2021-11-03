@@ -4,7 +4,7 @@ mixin accordion(data)
       each item, i in data.items
         .panel
           .acc-heading
-            a.link.svg-arrow.collapsed(href='#', data-toggle='collapse', data-target='#accordion-' + i + '')
+            a.link.svg-arrow(href='#', data-toggle='collapse', data-target='#accordion-' + i + '', class=i !== 0 ? 'collapsed' : '')
               span !{item.title}
-          .collapse(id='accordion-' + i + '', data-parent='#accordion-30')
+          .collapse(id='accordion-' + i + '', data-parent='#accordion-30', class=i === 0 ? 'show' : '')
             .acc-body !{item.text}

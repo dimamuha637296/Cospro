@@ -16,7 +16,7 @@ include ../../../../components/base/accordion/index
             | &ensp;
             span 893900272
       h1.prod__title.small Alfaparf Milano SDL Diamond Normal Hair <br>Кондиционер придающий блеск для нормальных волос
-      .prod-tabs.tabs-string.tabs.mb-0
+      .prod-tabs.tabs-border.tabs.mb-0
         ul.nav.nav-tabs.list-reset(role="tablist")
           li.nav-item
             a.nav-link.active(href='#tab-1', data-toggle='tab')
@@ -28,7 +28,7 @@ include ../../../../components/base/accordion/index
           #tab-1.tab-pane.fade.in.active.show(role='tabpanel')
             .prod__cost 107.10 BYN
             .prod__row.prod__row--buy.row
-              .prod__col.prod__col--buy
+              .prod__col.prod__col--buy.prod__col--no-margin-right
                 include ../../../block/quantity/index
               .prod__col.prod__col--buy
                 +btn-primary({type: 'button', text: '<span class="d-none d-lg-block">быстрая покупка</span><span class="d-block d-lg-none">Купить</span>'})(data-toggle='modal', data-target='#fastBuyModal')
