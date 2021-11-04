@@ -1,0 +1,16 @@
+extends ../tpl/main
+block pageVars
+  - DB.pageTitle = 'Блог';
+  - DB.layout = 'wide';
+  // - DB.bodyClass = 'no-padding-bottom'
+  - DB.breadcrumb = ['Бренды', 'Jaguar']
+block title
+block breadcrumbs
+  include ../../components/base/breadcrumb/index
+block content
+  include ../../components/pages/brand/brand/index
+  include ../../components/base/pagination/index
+block contentBottom
+  include ../../components/footer/subscription/index
+block popup
+  include ../../components/modals/fast-buy-modal/index
