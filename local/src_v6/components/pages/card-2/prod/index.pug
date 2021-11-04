@@ -29,7 +29,7 @@ include ../../../../components/base/accordion/index
         .prod__col.prod__col--buy
           +btn-primary({outline: true, type: 'button', className: 'with-icon icon-left addToBasket js-addToBasket', text: '<span class="icon"></span><span>в корзину</span>'})
         .prod__col.prod__col--buy.d-none.d-lg-block
-          +btn-primary({outline: true, type: 'button', className: 'with-icon addFavorites', text: '<span class="icon"></span>'})
+          +btn-primary({outline: true, type: 'button', className: 'with-icon addFavorites toFavoritesBtn', text: '<span class="icon"></span>'})
       +accordion({
           items: [
               {
