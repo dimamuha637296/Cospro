@@ -6,6 +6,10 @@
     cursor: pointer;
     user-select: none;
 
+    .lk & {
+      color: $brand-gray-11;
+    }
+
     &.ui-state-disabled {
       opacity: .35;
     }

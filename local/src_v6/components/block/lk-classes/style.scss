@@ -53,6 +53,16 @@
       margin-top: 0;
     }
   }
+  
+  a {
+    text-decoration: underline;
+    color: #333;
+    text-decoration-color: rgba(#333, .6);
+    
+    @include hover-focus() {
+      text-decoration: none;
+    }
+  }
 }
 
 .form-info {
@@ -61,6 +71,7 @@
     font-size: 14px;
     line-height: 1.29;
     text-align: right;
+    color: $brand-gray-11;
     margin-bottom: 6px;
 
     @media (max-width: $screen-sm-max) {
