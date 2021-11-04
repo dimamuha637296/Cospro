@@ -53,6 +53,10 @@
             setSlidesHeight(slider);
         });
         slider.slick({
+            loop: false,
+            draggable: false,
+            swipe: false,
+            // touchMove: false,
             slidesToShow: 1,
             slidesToScroll: 1,
             adaptiveHeight: false, // true - height: auto

@@ -1,3 +1,11 @@
+include ../../../sliders/template/sl-prod/index
+include ../../../sliders/template/sl-prod-nav/index
+
 .sl-prod-wrap
-  include ../../../../components/catalog/sl-prod/index
-  include ../../../../components/catalog/sl-prod-nav/index
+  +sl-prod({
+      slides: [
+          {
+              pic: 'sl-prod-0.png'
+          }
+      ]
+  })

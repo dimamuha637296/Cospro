@@ -17,8 +17,9 @@
         //     sliderWrap.addClass('not-move');
         // }
         slider.slick({
+            loop: false,
             slidesToShow: 5,
-            slidesToScroll: 1,
+            slidesToScroll: 5,
             adaptiveHeight: false, // true - height: auto
             // variableWidth: true,
             autoplay: false,
@@ -36,6 +37,7 @@
                     breakpoint: ws.const.screen.screen_lg_max,
                     settings: {
                         slidesToShow: 3,
+                        slidesToScroll: 3,
                         arrows: slidesLength > 3
                     }
                 },
@@ -43,6 +45,7 @@
                     breakpoint: ws.const.screen.screen_md_max,
                     settings: {
                         slidesToShow: 5,
+                        slidesToScroll: 5,
                         arrows: slidesLength > 5
                     }
                 },
@@ -50,6 +53,7 @@
                     breakpoint: ws.const.screen.screen_sm_max,
                     settings: {
                         slidesToShow: 5,
+                        slidesToScroll: 5,
                         arrows: slidesLength > 5
                     }
                 },
@@ -58,6 +62,7 @@
                     settings: {
                         variableWidth: false,
                         slidesToShow: 3,
+                        slidesToScroll: 3,
                         arrows: slidesLength > 3
                     }
                 }
