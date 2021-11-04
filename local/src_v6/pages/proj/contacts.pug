@@ -3,7 +3,10 @@ block pageVars
   - DB.pageTitle = 'Контакты';
   - DB.layout = 'wide';
   // - DB.bodyClass = 'no-padding-bottom'
+  - DB.breadcrumb = ['Покупателю', 'Контакты']
 block title
+block breadcrumbs
+  include ../../components/base/breadcrumb/index
 block content
   include ../../components/pages/contacts/contacts/index
 block contentBottom

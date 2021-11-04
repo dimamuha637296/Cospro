@@ -1,7 +1,12 @@
-nav
-  ol.breadcrumb.list-reset
-    li.breadcrumb-item(typeof='v:Breadcrumb')
-      a(href='#')
-        | Каталог
-    li.breadcrumb-item.active
-      span Волосы
+if (DB.breadcrumb === undefined)
+  - var breadcrumb = ['Каталог', 'Волосы'];
+else
+  - var breadcrumb = DB.breadcrumb;
+
+mixin breadcrumb(data)
+  nav
+    ol.breadcrumb.list-reset
+      each item, i in data
+        li.breadcrumb-item
+          #{(i !== (data.length - 1)) ? 'a': 'span'}(class=(i !== (data.length - 1)) ? '': 'active')&attributes((i !== (data.length - 1)) ? { 'href': '#' } : {}) !{item}
++breadcrumb(breadcrumb)

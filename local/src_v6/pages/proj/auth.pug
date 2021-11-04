@@ -3,7 +3,10 @@ block pageVars
   - DB.pageTitle = 'авторизация';
   - DB.layout = 'wide';
   - DB.bodyClass = 'no-padding-bottom lk'
+  - DB.breadcrumb = ['Авторизация']
 block title
+block breadcrumbs
+  include ../../components/base/breadcrumb/index
 block content
   include ../../components/block/lk-classes/index
   include ../../components/pages/auth/content/index

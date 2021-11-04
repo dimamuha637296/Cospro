@@ -3,7 +3,10 @@ block pageVars
   - DB.pageTitle = 'Карточка товара';
   - DB.layout = 'wide';
   - DB.bodyClass = 'no-padding-bottom'
+  - DB.breadcrumb = ['Каталог', 'Волосы', 'Бальзамы', 'Alfaparf Milano SDL Diamond Normal Hair Кондиционер придающий блеск для нормальных волос']
 block title
+block breadcrumbs
+  include ../../components/base/breadcrumb/index
 block content
   include ../../components/pages/card/prod/index
 block contentBottom

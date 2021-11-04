@@ -3,7 +3,10 @@ block pageVars
   - DB.pageTitle = 'Карточка товара 2';
   - DB.layout = 'wide';
   - DB.bodyClass = 'no-padding-bottom'
+  - DB.breadcrumb = ['Каталог', 'Ногти', 'Гель-лаки', 'IRISK NUDE STRONG Каучуковый гель-лак']
 block title
+block breadcrumbs
+  include ../../components/base/breadcrumb/index
 block content
   include ../../components/pages/card-2/prod/index
 block contentBottom

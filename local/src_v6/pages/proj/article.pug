@@ -3,7 +3,10 @@ block pageVars
   - DB.pageTitle = 'Статья';
   - DB.layout = 'wide';
   // - DB.bodyClass = 'no-padding-bottom'
+  - DB.breadcrumb = ['Блог', 'Тренды маникюра 2021']
 block title
+block breadcrumbs
+  include ../../components/base/breadcrumb/index
 block content
   include ../../components/pages/article/article/index
 block contentBottom

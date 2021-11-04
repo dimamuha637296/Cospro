@@ -1,8 +1,11 @@
 extends ../tpl/main
 block pageVars
   - DB.pageTitle = 'Каталог';
+  - DB.breadcrumb = ['Каталог', 'Волосы']
 block title
   h1.hidden#title H1 Заголовок страницы. В магазинах начался сезон скидок
+block breadcrumbs
+  include ../../components/base/breadcrumb/index
 block aside
   include ../../components/pages/catalog/catalog-filters/index
 block content

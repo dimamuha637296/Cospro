@@ -2,7 +2,10 @@ extends ../tpl/main
 block pageVars
   - DB.pageTitle = 'Избранное';
   - DB.layout = 'wide';
+  - DB.breadcrumb = ['Избранное']
 block title
+block breadcrumbs
+  include ../../components/base/breadcrumb/index
 block content
   include ../../components/pages/favorites/content/index
 block contentBottom

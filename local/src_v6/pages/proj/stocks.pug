@@ -3,7 +3,10 @@ block pageVars
   - DB.pageTitle = 'Акции';
   - DB.layout = 'wide';
   - DB.bodyClass = 'no-padding-bottom'
+  - DB.breadcrumb = ['Акции']
 block title
+block breadcrumbs
+  include ../../components/base/breadcrumb/index
 block content
   include ../../components/pages/stocks/content/index
 block contentBottom

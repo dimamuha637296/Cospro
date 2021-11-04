@@ -3,7 +3,10 @@ block pageVars
   - DB.pageTitle = 'Сотрудничество';
   - DB.layout = 'wide';
   // - DB.bodyClass = 'no-padding-bottom'
+  - DB.breadcrumb = ['Сотрудничество']
 block title
+block breadcrumbs
+  include ../../components/base/breadcrumb/index
 block content
   include ../../components/pages/cooperation/content/index
 block contentBottom

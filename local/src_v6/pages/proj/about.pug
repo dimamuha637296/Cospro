@@ -3,7 +3,10 @@ block pageVars
   - DB.pageTitle = 'О нас';
   - DB.layout = 'wide';
   // - DB.bodyClass = 'no-padding-bottom'
+  - DB.breadcrumb = ['Покупателю', 'О нас']
 block title
+block breadcrumbs
+  include ../../components/base/breadcrumb/index
 block content
   include ../../components/pages/about/about/index
 block contentBottom

@@ -3,7 +3,10 @@ block pageVars
   - DB.pageTitle = 'Акция';
   - DB.layout = 'wide';
   - DB.bodyClass = 'no-padding-bottom'
+  - DB.breadcrumb = ['Акции', 'Спрей 200мл после солнца в подарок']
 block title
+block breadcrumbs
+  include ../../components/base/breadcrumb/index
 block content
   include ../../components/pages/stock/content/index
 block contentBottom
