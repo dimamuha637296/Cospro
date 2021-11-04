@@ -21,6 +21,18 @@
     .ui-selectmenu-icon {
       width: 10px;
     }
+
+    .ui-front {
+
+      .ui-menu {
+        width: auto !important;
+      }
+    }
+  }
+
+  .ui-selectmenu-menu {
+    right: 0;
+    left: auto!important;
   }
 
   &__sort-by-text {

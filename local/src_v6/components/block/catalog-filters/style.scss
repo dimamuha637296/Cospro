@@ -28,7 +28,7 @@
     }
 
     @include hover-focus() {
-      color: $brand-3;
+      color: $brand-gray-12;
       text-decoration: none;
 
       &:before {
