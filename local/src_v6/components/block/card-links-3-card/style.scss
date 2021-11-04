@@ -348,17 +348,17 @@
     align-items: center;
     padding: 0;
 
-    @include hover-focus-active() {
+    //@include hover-focus-active() {
+    //
+    //  .icon {
+    //    @include svg-card-links-3-cart--white();
+    //  }
+    //}
 
-      .icon {
-        @include svg-card-links-3-cart--white();
-      }
-    }
-
-    .icon {
-      @include svg();
-      @include svg-card-links-3-cart();
-    }
+    //.icon {
+    //  @include svg();
+    //  @include svg-card-links-3-cart();
+    //}
   }
 
   .favorites__btn {
