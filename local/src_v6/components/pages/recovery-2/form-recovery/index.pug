@@ -1,0 +1,119 @@
+include ../../../base/forms/form_1/form/index
+
+.form-recovery-2.lk-form
+  .form-recovery-2__inner
+    form#form-recovery-2.form-1(name='form_recovery_2', method='post', target='_top', action='/')
+      fieldset.fieldset
+        .code-wrap
+          .row
+            .col-3
+              // row
+              .form-group.control-group
+                .text.col-12
+                  .input-wrap
+                    input#form_recovery_2_CODE_1.form-control(type='text', name='form_recovery_2_CODE_1', maxlength='1', placeholder='', value='', required='')
+                .controls.col-12
+            .col-3
+              // row
+              .form-group.control-group
+                .text.col-12
+                  .input-wrap
+                    input#form_recovery_2_CODE_2.form-control(type='text', name='form_recovery_2_CODE_2', maxlength='1', placeholder='', value='', required='')
+                .controls.col-12
+            .col-3
+              // row
+              .form-group.control-group
+                .text.col-12
+                  .input-wrap
+                    input#form_recovery_2_CODE_3.form-control(type='text', name='form_recovery_2_CODE_3', maxlength='1', placeholder='', value='', required='')
+                .controls.col-12
+            .col-3
+              // row
+              .form-group.control-group
+                .text.col-12
+                  .input-wrap
+                    input#form_recovery_2_CODE_4.form-control(type='text', name='form_recovery_2_CODE_4', maxlength='1', placeholder='', value='', required='')
+                .controls.col-12
+        .row
+          .col-12
+            // row
+            .form-group.mb-0
+              .col-12.btn-wrap.text-center
+                +btn-primary({
+                    type: 'button',
+                    className: 'btn_submit',
+                    text: 'сбросить пароль'
+                })(id='form-recovery-2-submit')
+    script.
+        !function () {
+            'use strict';
+
+            // Form validation
+            function initValid() {
+                // Validation options http://jqueryvalidation.org/documentation/
+                var form_validator = $('#form-recovery-2');
+                if (form_validator.length && $.fn.validate) {
+                    form_validator.validate({
+                        rules: {
+                            'form_recovery_2_CODE_1': {
+                                required: true,
+                            },
+                            'form_recovery_2_CODE_2': {
+                                required: true,
+                            },
+                            'form_recovery_2_CODE_3': {
+                                required: true,
+                            },
+                            'form_recovery_2_CODE_4': {
+                                required: true,
+                            }
+                        }
+                    });
+                }
+            }
+
+            function validOnButton() {
+                var form = $('#form-recovery-2');
+                var btn = $('#form-recovery-2-submit');
+
+                btn.on('click', function () {
+                    if (form.valid()) {
+                        form.submit();
+                    }
+                })
+            }
+
+            $(function () {
+                initValid();
+                validOnButton();
+            });
+        }();
+    script.
+        !function () {
+            'use strict';
+
+            function codeFocus() {
+                var codeInputs = $('#form-recovery-2 [id^="form_recovery_2_CODE"]');
+                if (codeInputs.length) {
+                  var num = 0;
+
+                  codeInputs.each(function (index) {
+                      if (num !== codeInputs.length - 1) {
+                          var self = $(this);
+
+                          self.off('input.codeInputs').on('input.codeInputs', function (e) {
+                              e.preventDefault();
+                              if ($(this).val() !== '') {
+                                  codeInputs[index + 1].focus();
+                              }
+                          });
+                          num++;
+                      }
+                  });
+                }
+            }
+
+            $(function () {
+                codeFocus();
+            });
+        }();

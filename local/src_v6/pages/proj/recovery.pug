@@ -1,0 +1,15 @@
+extends ../tpl/main
+block pageVars
+  - DB.pageTitle = 'Восстановление пароля';
+  - DB.layout = 'wide';
+  - DB.bodyClass = 'lk'
+  - DB.breadcrumb = ['Авторизация', 'Восстановление пароля']
+block title
+block breadcrumbs
+  include ../../components/base/breadcrumb/index
+block content
+  include ../../components/block/lk-classes/index
+  include ../../components/pages/recovery/content/index
+block contentBottom
+block popup
+  include ../../components/modals/fast-buy-modal/index

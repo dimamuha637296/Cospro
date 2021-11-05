@@ -1,0 +1,16 @@
+include ../../../../components/block/b-section/index
+include ../../../../components/block/b-head/index
+
+.content-wrap.lk-content-wrap
+  .row.justify-content-center
+    .col-xl-8.col-lg-11.col-12
+      +b-head({
+          className: 'b-head--recovery b-head--align-center',
+          title: {
+              tag: 'h1',
+              size: 'h1',
+              text: 'Восстановление пароля'
+          }
+      })
+      p.lk-content-descr.text-center Введите код восстановления, отправленный на почту anas*******ib@mail.ru
+      include ../form-recovery/index

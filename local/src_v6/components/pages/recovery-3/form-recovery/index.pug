@@ -1,0 +1,68 @@
+include ../../../base/forms/form_1/form/index
+
+.form-recovery-3.lk-form
+  .form-recovery-3__inner
+    form#form-recovery-3.form-1(name='form_recovery_3', method='post', target='_top', action='/')
+      fieldset.fieldset
+        .row
+          .col-md-6.col-12
+            // row
+            .form-group.control-group
+              .text.col-12
+                .input-wrap
+                  input#form_recovery_3_PASS.form-control.input-with-icon.input-with-icon--pass(type='password', name='form_recovery_3_PASS', placeholder='Введите новый пароль*', value='', required='')
+              .controls.col-12
+          .col-md-6.col-12
+            // row
+            .form-group.control-group
+              .text.col-12
+                .input-wrap
+                  input#form_recovery_3_NEWPASS.form-control.input-with-icon.input-with-icon--pass(type='password', name='form_recovery_3_NEWPASS', placeholder='Повторите пароль*', value='', required='')
+              .controls.col-12
+          .col-12
+            // row
+            .form-group.mb-0
+              .col-12.btn-wrap
+                +btn-primary({
+                    type: 'button',
+                    className: 'btn_submit',
+                    text: 'войти в аккаунт'
+                })(id='form-recovery-3-submit')
+    script.
+        !function () {
+            'use strict';
+
+            // Form validation
+            function initValid() {
+                // Validation options http://jqueryvalidation.org/documentation/
+                var form_validator = $('#form-recovery-3');
+                if (form_validator.length && $.fn.validate) {
+                    form_validator.validate({
+                        rules: {
+                            'form_recovery_PASS': {
+                                required: true
+                            },
+                            'form_recovery_NEWPASS': {
+                                required: true
+                            }
+                        }
+                    });
+                }
+            }
+
+            function validOnButton() {
+                var form = $('#form-recovery-3');
+                var btn = $('#form-recovery-3-submit');
+
+                btn.on('click', function () {
+                    if (form.valid()) {
+                        form.submit();
+                    }
+                })
+            }
+
+            $(function () {
+                initValid();
+                validOnButton();
+            });
+        }();

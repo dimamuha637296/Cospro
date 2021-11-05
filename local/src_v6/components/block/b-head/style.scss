@@ -139,4 +139,15 @@ $_b-head-gutter-width: 30px;
       }
     }
   }
+
+  &--recovery {
+
+    .g-wrap & {
+      margin-bottom: 20px;
+
+      @media (max-width: $screen-sm-max) {
+        margin-bottom: 8px;
+      }
+    }
+  }
 }
