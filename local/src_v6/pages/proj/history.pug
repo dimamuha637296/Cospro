@@ -1,6 +1,7 @@
 extends ../tpl/main
 block pageVars
   - DB.pageTitle = 'История заказов';
+  - DB.bodyClass = 'lk'
   - DB.breadcrumb = ['Личный кабинет', 'История заказов']
 block title
   h1.hidden#title H1 Заголовок страницы. В магазинах начался сезон скидок
@@ -9,6 +10,7 @@ block breadcrumbs
 block aside
   include ../../components/pages/history/lk-aside/index
 block content
+  include ../../components/block/lk-classes/index
   include ../../components/pages/history/content/index
 block popup
   include ../../components/modals/fast-buy-modal/index

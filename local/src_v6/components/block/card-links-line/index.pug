@@ -1,0 +1,25 @@
+mixin card-links-line(data)
+  .card-links-line(class=data.className)
+    .card-links-line__list
+      each card in data.cards
+        .card-links-line__item
+          .card-links-line__item-inner
+            .card-links-line__item-left
+              .card-links-line__item-row
+                if (card.img)
+                  .card-links-line__item-col.card-links-line__item-col--pic
+                    img.card-links-line__img(src=DB.DIR + card.img, alt=(card.img || 'alt'))
+            .card-links-line__item-right
+              .card-links-line__item-row
+                if (card.text)
+                  .card-links-line__item-col.card-links-line__item-col--text
+                    .card-links-line__text !{card.text}
+                    .card-links-line__volume !{card.volume}
+                if (card.kol)
+                  .card-links-line__item-col.card-links-line__item-col--kol
+                    .card-links-line__kol
+                      span.d-inline-block.d-md-none Количество:
+                      | !{card.kol}
+                if (card.cost)
+                  .card-links-line__item-col.card-links-line__item-col--cost
+                    .card-links-line__cost !{card.cost}
