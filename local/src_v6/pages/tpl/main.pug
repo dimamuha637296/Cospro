@@ -22,10 +22,10 @@ html(lang='ru-RU')
                 h1#title H1 Заголовок страницы. В магазинах начался сезон скидок
               if (DB.layout === 'aside')
                 .row
-                  aside.g-sidebar.col-lg-3.col-12.d-print-none
+                  aside.g-sidebar.col-xl-3.col-lg-4.col-12.d-print-none
                     block aside
                       include ../../components/aside/menu-aside-3/index
-                  main#workarea.g-content.col-lg-9.col-12
+                  main#workarea.g-content.col-xl-9.col-lg-8.col-12
                     block content
                 block contentBottom
               else
