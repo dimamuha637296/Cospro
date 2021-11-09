@@ -1,0 +1,16 @@
+extends ../tpl/main
+block pageVars
+  - DB.pageTitle = 'Дисконтная программа';
+  - DB.bodyClass = 'lk'
+  - DB.breadcrumb = ['Личный кабинет', 'Дисконтная программа']
+block title
+  h1.hidden#title H1 Заголовок страницы. В магазинах начался сезон скидок
+block breadcrumbs
+  include ../../components/base/breadcrumb/index
+block aside
+  include ../../components/pages/discont/lk-aside/index
+block content
+  include ../../components/block/lk-classes/index
+  include ../../components/pages/discont/content/index
+block popup
+  include ../../components/modals/fast-buy-modal/index
