@@ -1,0 +1,99 @@
+include ../../../base/forms/form_1/form/index
+
+.form-personal.lk-form
+  .form-personal__inner
+    form#form-personal.form-1(name='form_personal', method='post', target='_top', action='/')
+      fieldset.fieldset
+        .row
+          .col-12
+            // row
+            .form-group.control-group
+              .text.col-12
+                .input-wrap
+                  input#form_personal_FIO.form-control.input-with-icon.input-with-icon--human(type='text', name='form_personal_FIO', placeholder='Имя и фамилия', value='Любинова Ксения', required='')
+              .controls.col-12
+          .col-md-6.col-12
+            // row
+            .form-group.control-group
+              .text.col-12
+                .input-wrap
+                  input#form_personal_MAIL.form-control.input-with-icon.input-with-icon--email(type='email', name='form_personal_MAIL', placeholder='Электронная почта', value='lubimova.ks@mail.ru', required='')
+              .controls.col-12
+          .col-md-6.col-12
+            // row
+            .form-group.control-group
+              .text.col-12
+                .input-wrap
+                  input#form_personal_TEL.form-control.js_mask_tel.input-with-icon.input-with-icon--tel(type='tel', name='form_personal_TEL', placeholder='Номер телефона', value='+375 (29) 666-78-23', required='')
+              .controls.col-12
+          .col-md-6.col-12
+            // row
+            .form-group.control-group
+              .text.col-12
+                .input-wrap
+                  input#form_personal_PASS.form-control.input-with-icon.input-with-icon--pass(type='password', name='form_personal_PASS', placeholder='Введите пароль', value='', required='')
+              .controls.col-12
+          .col-md-6.col-12
+            // row
+            .form-group.control-group
+              .text.col-12
+                .input-wrap
+                  input#form_personal_NEWPASS.form-control.input-with-icon.input-with-icon--pass(type='password', name='form_personal_NEWPASS', placeholder='Повторите пароль', value='', required='')
+              .controls.col-12
+          .col-12
+            // row
+            .form-group.mb-0
+              .col-12.btn-wrap
+                +btn-primary({
+                    type: 'button',
+                    className: 'btn_submit with-icon icon-right toSave',
+                    text: '<span>сохранить данные</span><span class="icon"></span>'
+                })(id='form-personal-submit')
+    script.
+        !function () {
+            'use strict';
+
+            // Form validation
+            function initValid() {
+                // Validation options http://jqueryvalidation.org/documentation/
+                var form_validator = $('#form-personal');
+                if (form_validator.length && $.fn.validate) {
+                    form_validator.validate({
+                        rules: {
+                            'form_personal_FIO': {
+                                required: true,
+                                minlength: 2
+                            },
+                            'form_personal_MAIL': {
+                                required: true
+                            },
+                            'form_personal_TEL': {
+                                required: true
+                            },
+                            'form_personal_PASS': {
+                                required: true
+                            },
+                            'form_personal_NEWPASS': {
+                                required: true
+                            }
+                        }
+                    });
+                }
+            }
+
+            function validOnButton() {
+                var form = $('#form-personal');
+                var btn = $('#form-personal-submit');
+
+                btn.on('click', function () {
+                    if (form.valid()) {
+                        form.submit();
+                    }
+                })
+            }
+
+            $(function () {
+                initValid();
+                validOnButton();
+            });
+        }();
