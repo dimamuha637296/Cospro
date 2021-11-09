@@ -31,11 +31,14 @@
   }
 
   .btn {
-    padding-left: 30px;
-    padding-right: 30px;
 
-    @media (max-width: $screen-xs-max) {
-      width: 100%;
+    &:not(.addToBasket) {
+      padding-left: 30px;
+      padding-right: 30px;
+
+      @media (max-width: $screen-xs-max) {
+        width: 100%;
+      }
     }
   }
 }
@@ -88,12 +91,12 @@
       }
     }
   }
-  
+
   a {
     text-decoration: underline;
     color: #333;
     text-decoration-color: rgba(#333, .6);
-    
+
     @include hover-focus() {
       text-decoration: none;
     }
