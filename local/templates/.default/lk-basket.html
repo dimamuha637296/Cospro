@@ -1014,6 +1014,7 @@
 										</div>
 										<div class="basket__col basket__col--right col-lg-4 col-12">
 											<div class="form-ordering lk-form">
+												<div class="form-ordering__main-title form-main-title">Оформление заказа</div>
 												<div class="form-ordering__inner">
 													<form class="form-1" id="form-ordering" name="form_ordering" method="post" target="_top" action="/">
 														<fieldset class="fieldset">
@@ -1024,6 +1025,69 @@
 																		<div class="text col-12">
 																			<div class="input-wrap">
 																				<input class="form-control input-with-icon input-with-icon--human" id="form_ordering_FIO" type="text" name="form_ordering_FIO" placeholder="Имя и фамилия" value="" required="">
+																			</div>
+																		</div>
+																		<div class="controls col-12"></div>
+																	</div>
+																</div>
+																<div class="col-12">
+																	<!-- row-->
+																	<div class="form-group control-group">
+																		<div class="text col-12">
+																			<div class="input-wrap">
+																				<input class="form-control js_mask_tel input-with-icon input-with-icon--tel" id="form_ordering_TEL" type="tel" name="form_ordering_TEL" placeholder="Телефонный номер" value="" required="">
+																			</div>
+																		</div>
+																		<div class="controls col-12"></div>
+																	</div>
+																</div>
+																<div class="col-12">
+																	<!-- row-->
+																	<div class="form-group control-group">
+																		<div class="text col-12">
+																			<div class="input-wrap">
+																				<select class="form-control ui-select input-with-icon input-with-icon--book" id="form_ordering_SAVEADDRESS" name="form_ordering_SAVEADDRESS" required>
+																					<option value="" selected disabled>Сохраненный адрес</option>
+																					<option>Сохраненный адрес 1</option>
+																					<option>Сохраненный адрес 2</option>
+																				</select>
+																			</div>
+																		</div>
+																		<div class="controls col-12"></div>
+																	</div>
+																</div>
+																<div class="col-12">
+																	<!-- row-->
+																	<div class="form-group control-group">
+																		<div class="text col-12">
+																			<div class="input-wrap">
+																				<select class="form-control ui-select input-with-icon input-with-icon--location" id="form_ordering_CITY" name="form_ordering_CITY" required>
+																					<option value="" selected disabled>Населенный пункт</option>
+																					<option>Населенный пункт 1</option>
+																					<option>Населенный пункт 2</option>
+																				</select>
+																			</div>
+																		</div>
+																		<div class="controls col-12"></div>
+																	</div>
+																</div>
+																<div class="col-12">
+																	<!-- row-->
+																	<div class="form-group control-group">
+																		<div class="text col-12">
+																			<div class="input-wrap">
+																				<input class="form-control input-with-icon input-with-icon--address" id="form_ordering_ADDRESS" type="text" name="form_ordering_ADDRESS" placeholder="Адрес" value="" required="">
+																			</div>
+																		</div>
+																		<div class="controls col-12"></div>
+																	</div>
+																</div>
+																<div class="col-12">
+																	<!-- row-->
+																	<div class="form-group control-group">
+																		<div class="text col-12">
+																			<div class="input-wrap">
+																				<input class="form-control input-with-icon input-with-icon--post" id="form_ordering_POST" type="text" name="form_ordering_POST" placeholder="Почтовый индекс" value="" required="">
 																			</div>
 																		</div>
 																		<div class="controls col-12"></div>
@@ -1045,63 +1109,76 @@
 																	<div class="form-group control-group">
 																		<div class="text col-12">
 																			<div class="input-wrap">
-																				<input class="form-control js_mask_tel input-with-icon input-with-icon--tel" id="form_ordering_TEL" type="tel" name="form_ordering_TEL" placeholder="Номер телефона" value="" required="">
+																				<textarea class="form-control input-with-icon input-with-icon--comment" id="form_ordering_COMMENT" name="form_ordering_COMMENT" placeholder="Комментарий" required></textarea>
 																			</div>
 																		</div>
 																		<div class="controls col-12"></div>
 																	</div>
 																</div>
 																<div class="col-12">
+																	<div class="form-title mt-3">Способ доставки</div>
 																	<!-- row-->
 																	<div class="form-group control-group">
 																		<div class="text col-12">
-																			<div class="input-wrap">
-																				<input class="form-control input-with-icon input-with-icon--pass" id="form_ordering_PASS" type="password" name="form_ordering_PASS" placeholder="Введите пароль" value="" required="">
+																			<div class="radio">
+																				<label>
+																					<input class="ui-checkbox" type="radio" name="form_ordering_DELIVERY"><span>Почтой (+4 BYN)</span>
+																				</label>
+																			</div>
+																			<div class="radio">
+																				<label>
+																					<input class="ui-checkbox" type="radio" name="form_ordering_DELIVERY"><span>Курьером (+14 BYN)</span>
+																				</label>
+																			</div>
+																			<div class="radio">
+																				<label>
+																					<input class="ui-checkbox" type="radio" name="form_ordering_DELIVERY"><span>СДЭК (+8 BYN)</span>
+																				</label>
+																			</div>
+																			<div class="radio">
+																				<label>
+																					<input class="ui-checkbox" type="radio" name="form_ordering_DELIVERY"><span>Самомвывоз</span>
+																				</label>
 																			</div>
 																		</div>
 																		<div class="controls col-12"></div>
 																	</div>
 																</div>
 																<div class="col-12">
+																	<div class="form-title">Способ оплаты</div>
 																	<!-- row-->
 																	<div class="form-group control-group">
 																		<div class="text col-12">
-																			<div class="input-wrap">
-																				<input class="form-control input-with-icon input-with-icon--pass" id="form_ordering_NEWPASS" type="password" name="form_ordering_NEWPASS" placeholder="Повторите пароль" value="" required="">
+																			<div class="radio">
+																				<label>
+																					<input class="ui-checkbox" type="radio" name="form_ordering_PAY"><span>Оплата онлайн</span>
+																				</label>
+																			</div>
+																			<div class="radio">
+																				<label>
+																					<input class="ui-checkbox" type="radio" name="form_ordering_PAY"><span>Оплата наличными</span>
+																				</label>
 																			</div>
 																		</div>
 																		<div class="controls col-12"></div>
 																	</div>
+																</div>
+																<div class="col-12">
+																	<div class="form-ordering__cost form-title">ИТОГО с доставкой:<span> 64 BYN</span></div>
 																</div>
 																<div class="col-12">
 																	<!-- row-->
 																	<div class="form-group mb-0">
 																		<div class="col-12 btn-wrap">
-																																			<button class="btn btn-primary btn_submit with-icon icon-right toReg" id="form-ordering-submit" type="button"><span>зарегистрироваться</span><span class="icon"></span></button>
+																																			<button class="btn btn-primary btn_submit with-icon icon-right toSave" id="form-ordering-submit" type="button"><span>оформить заказ</span><span class="icon"></span></button>
 																		</div>
 																	</div>
 																</div>
-																<div class="col-12 info-wrap">
-																	<div class="form-group control-group mb-0">
-																		<div class="text col-12">
-																			<div class="checkbox">
-																				<label>
-																					<input class="ui-checkbox" type="checkbox"><span>Подписаться на новости и скидки, чтобы в числе первых узнавать о новинках, трендах и специальных предложениях.</span>
-																				</label>
-																			</div>
-																		</div>
-																		<div class="controls col-12"></div>
+																<div class="col-12">
+																	<div class="form-info">
+																		<div class="form-info__item">Забыли свой пароль?<a href="#">Восстановите</a></div>
 																	</div>
-																	<div class="form-group control-group">
-																		<div class="text col-12">
-																			<div class="categories__checkbox checkbox">
-																				<label>
-																					<input class="ui-checkbox" type="checkbox"><span>Нажимая на кнопку “Зарегистрироваться”, Вы принимаете условия <a href="#">Политики конфиденциальности</a></span>
-																				</label>
-																			</div>
-																		</div>
-																		<div class="controls col-12"></div>
-																	</div>
+																	<div class="form-info__item">Проблемы со входом в Ваш кабинет?<a href="#">Напишите нам</a></div></div>
 																</div>
 															</div>
 														</fieldset>
@@ -1118,19 +1195,33 @@
 														            form_validator.validate({
 														                rules: {
 														                    'form_ordering_FIO': {
-														                        required: true,
-														                        minlength: 2
-														                    },
-														                    'form_ordering_MAIL': {
 														                        required: true
 														                    },
 														                    'form_ordering_TEL': {
 														                        required: true
 														                    },
-														                    'form_ordering_PASS': {
+														                    'form_ordering_SAVEADDRESS': {
 														                        required: true
 														                    },
-														                    'form_ordering_NEWPASS': {
+														                    'form_ordering_CITY': {
+														                        required: true
+														                    },
+														                    'form_ordering_ADDRESS': {
+														                        required: true
+														                    },
+														                    'form_ordering_POST': {
+														                        required: true
+														                    },
+														                    'form_ordering_MAIL': {
+														                        required: true
+														                    },
+														                    'form_ordering_COMMENT': {
+														                        required: true
+														                    },
+														                    'form_ordering_DELIVERY': {
+														                        required: true
+														                    },
+														                    'form_ordering_PAY': {
 														                        required: true
 														                    }
 														                }

@@ -67,6 +67,17 @@
       background-position: 15px center;
     }
 
+    @at-root {
+
+      textarea#{&} {
+        background-position: 20px 16px;
+
+        @media (max-width: $screen-sm-max) {
+          background-position: 15px 16px;
+        }
+      }
+    }
+
     &--address {
       background-image: url(../img/tmp/input-address.svg);
 

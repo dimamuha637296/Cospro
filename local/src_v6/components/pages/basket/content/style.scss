@@ -2,14 +2,21 @@
 
   &__row {
     margin-bottom: 14px;
+
+    &--text {
+      @include font-family-medium();
+      font-size: 16px;
+      color: $brand-gray-10;
+    }
   }
 
   &__col {
     padding-left: 10px;
     padding-right: 10px;
-    @include font-family-medium();
-    font-size: 16px;
-    color: $brand-gray-10;
+
+    &--right {
+      padding-left: 37px;
+    }
 
     &--pic {
       flex: 0 0 550px;

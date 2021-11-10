@@ -113,12 +113,14 @@
 
     // radiobutton styles
     &.ui-checkboxradio-radio-label {
+      font-size: 16px;
+      line-height: 1.25;
 
       .ui-checkboxradio-icon {
-        width: 20px;
-        height: 20px;
-        margin: 0 9px 0 0;
-        border: 1px solid #acb3bd;
+        width: 16px;
+        height: 16px;
+        margin: 3px 10px 0 0;
+        border: 1px solid $brand-gray-11;
         border-radius: 50%;
         background-color: #fff;
       }
@@ -127,14 +129,14 @@
       &.ui-checkboxradio-checked {
 
         .ui-checkboxradio-icon {
-          border-color: $link-color;
+          border-color: $brand-gray-10;
 
           &:before {
             content: '';
-            width: 6px;
-            height: 6px;
+            width: 8px;
+            height: 8px;
             border-radius: 50%;
-            background-color: $link-color;
+            background-color: $brand-gray-10;
           }
         }
 

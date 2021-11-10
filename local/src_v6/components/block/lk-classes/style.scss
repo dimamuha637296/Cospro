@@ -73,6 +73,23 @@
     }
   }
 
+  .form-main-title {
+
+    .g-wrap & {
+      margin-bottom: 12px;
+    }
+  }
+
+  .form-title {
+    @include font-family-bold();
+    font-size: 18px;
+    line-height: 1.28;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: $brand-gray-10;
+    margin-bottom: 14px;
+  }
+
   .info-wrap {
     margin-top: 17px;
   }

@@ -1,6 +1,7 @@
 include ../../../base/forms/form_1/form/index
 
 .form-ordering.lk-form
+  .form-ordering__main-title.form-main-title Оформление заказа
   .form-ordering__inner
     form#form-ordering.form-1(name='form_ordering', method='post', target='_top', action='/')
       fieldset.fieldset
@@ -17,6 +18,47 @@ include ../../../base/forms/form_1/form/index
             .form-group.control-group
               .text.col-12
                 .input-wrap
+                  input#form_ordering_TEL.form-control.js_mask_tel.input-with-icon.input-with-icon--tel(type='tel', name='form_ordering_TEL', placeholder='Телефонный номер', value='', required='')
+              .controls.col-12
+          .col-12
+            // row
+            .form-group.control-group
+              .text.col-12
+                .input-wrap
+                  select#form_ordering_SAVEADDRESS.form-control.ui-select.input-with-icon.input-with-icon--book(name='form_ordering_SAVEADDRESS', required)
+                    option(value='', selected, disabled) Сохраненный адрес
+                    option Сохраненный адрес 1
+                    option Сохраненный адрес 2
+              .controls.col-12
+          .col-12
+            // row
+            .form-group.control-group
+              .text.col-12
+                .input-wrap
+                  select#form_ordering_CITY.form-control.ui-select.input-with-icon.input-with-icon--location(name='form_ordering_CITY', required)
+                    option(value='', selected, disabled) Населенный пункт
+                    option Населенный пункт 1
+                    option Населенный пункт 2
+              .controls.col-12
+          .col-12
+            // row
+            .form-group.control-group
+              .text.col-12
+                .input-wrap
+                  input#form_ordering_ADDRESS.form-control.input-with-icon.input-with-icon--address(type='text', name='form_ordering_ADDRESS', placeholder='Адрес', value='', required='')
+              .controls.col-12
+          .col-12
+            // row
+            .form-group.control-group
+              .text.col-12
+                .input-wrap
+                  input#form_ordering_POST.form-control.input-with-icon.input-with-icon--post(type='text', name='form_ordering_POST', placeholder='Почтовый индекс', value='', required='')
+              .controls.col-12
+          .col-12
+            // row
+            .form-group.control-group
+              .text.col-12
+                .input-wrap
                   input#form_ordering_MAIL.form-control.input-with-icon.input-with-icon--email(type='email', name='form_ordering_MAIL', placeholder='Электронная почта', value='', required='')
               .controls.col-12
           .col-12
@@ -24,46 +66,64 @@ include ../../../base/forms/form_1/form/index
             .form-group.control-group
               .text.col-12
                 .input-wrap
-                  input#form_ordering_TEL.form-control.js_mask_tel.input-with-icon.input-with-icon--tel(type='tel', name='form_ordering_TEL', placeholder='Номер телефона', value='', required='')
+                  textarea#form_ordering_COMMENT.form-control.input-with-icon.input-with-icon--comment(name='form_ordering_COMMENT', placeholder='Комментарий', required)
               .controls.col-12
           .col-12
+            .form-title.mt-3 Способ доставки
             // row
             .form-group.control-group
               .text.col-12
-                .input-wrap
-                  input#form_ordering_PASS.form-control.input-with-icon.input-with-icon--pass(type='password', name='form_ordering_PASS', placeholder='Введите пароль', value='', required='')
+                .radio
+                  label
+                    input.ui-checkbox(type='radio' name='form_ordering_DELIVERY')
+                    span Почтой (+4 BYN)
+                .radio
+                  label
+                    input.ui-checkbox(type='radio' name='form_ordering_DELIVERY')
+                    span Курьером (+14 BYN)
+                .radio
+                  label
+                    input.ui-checkbox(type='radio' name='form_ordering_DELIVERY')
+                    span СДЭК (+8 BYN)
+                .radio
+                  label
+                    input.ui-checkbox(type='radio' name='form_ordering_DELIVERY')
+                    span Самомвывоз
               .controls.col-12
           .col-12
+            .form-title Способ оплаты
             // row
             .form-group.control-group
               .text.col-12
-                .input-wrap
-                  input#form_ordering_NEWPASS.form-control.input-with-icon.input-with-icon--pass(type='password', name='form_ordering_NEWPASS', placeholder='Повторите пароль', value='', required='')
+                .radio
+                  label
+                    input.ui-checkbox(type='radio' name='form_ordering_PAY')
+                    span Оплата онлайн
+                .radio
+                  label
+                    input.ui-checkbox(type='radio' name='form_ordering_PAY')
+                    span Оплата наличными
               .controls.col-12
+          .col-12
+            .form-ordering__cost.form-title
+              | ИТОГО с доставкой:
+              span  64 BYN
           .col-12
             // row
             .form-group.mb-0
               .col-12.btn-wrap
                 +btn-primary({
                     type: 'button',
-                    className: 'btn_submit with-icon icon-right toReg',
-                    text: '<span>зарегистрироваться</span><span class="icon"></span>'
+                    className: 'btn_submit with-icon icon-right toSave',
+                    text: '<span>оформить заказ</span><span class="icon"></span>'
                 })(id='form-ordering-submit')
-          .col-12.info-wrap
-            .form-group.control-group.mb-0
-              .text.col-12
-                .checkbox
-                  label
-                    input.ui-checkbox(type='checkbox')
-                    span Подписаться на новости и скидки, чтобы в числе первых узнавать о новинках, трендах и специальных предложениях.
-              .controls.col-12
-            .form-group.control-group
-              .text.col-12
-                .categories__checkbox.checkbox
-                  label
-                    input.ui-checkbox(type='checkbox')
-                    span Нажимая на кнопку “Зарегистрироваться”, Вы принимаете условия <a href="#">Политики конфиденциальности</a>
-              .controls.col-12
+          .col-12
+            .form-info
+              .form-info__item Забыли свой пароль?
+                a(href='#') Восстановите
+            .form-info__item Проблемы со входом в Ваш кабинет?
+              a(href='#') Напишите нам
+            </div>
     script.
         !function () {
             'use strict';
@@ -76,19 +136,33 @@ include ../../../base/forms/form_1/form/index
                     form_validator.validate({
                         rules: {
                             'form_ordering_FIO': {
-                                required: true,
-                                minlength: 2
-                            },
-                            'form_ordering_MAIL': {
                                 required: true
                             },
                             'form_ordering_TEL': {
                                 required: true
                             },
-                            'form_ordering_PASS': {
+                            'form_ordering_SAVEADDRESS': {
                                 required: true
                             },
-                            'form_ordering_NEWPASS': {
+                            'form_ordering_CITY': {
+                                required: true
+                            },
+                            'form_ordering_ADDRESS': {
+                                required: true
+                            },
+                            'form_ordering_POST': {
+                                required: true
+                            },
+                            'form_ordering_MAIL': {
+                                required: true
+                            },
+                            'form_ordering_COMMENT': {
+                                required: true
+                            },
+                            'form_ordering_DELIVERY': {
+                                required: true
+                            },
+                            'form_ordering_PAY': {
                                 required: true
                             }
                         }

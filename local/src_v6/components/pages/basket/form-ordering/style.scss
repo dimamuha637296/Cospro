@@ -1,0 +1,22 @@
+.form-ordering {
+
+  &__inner {
+    padding: 30px 30px 40px;
+    background: #F5F2EF;
+  }
+
+  &__cost {
+
+    .g-wrap & {
+      margin-bottom: 22px;
+    }
+  }
+
+  .form-group {
+    margin-bottom: 10px;
+  }
+
+  textarea {
+    height: 100px;
+  }
+}
