@@ -1,3 +1,57 @@
 .basket {
 
+  &__row {
+    margin-bottom: 14px;
+  }
+
+  &__col {
+    padding-left: 10px;
+    padding-right: 10px;
+    @include font-family-medium();
+    font-size: 16px;
+    color: $brand-gray-10;
+
+    &--pic {
+      flex: 0 0 550px;
+      max-width: 550px;
+    }
+
+    &--kol {
+      flex: 0 0 220px;
+      max-width: 220px;
+    }
+
+    &--cost {
+      flex: 0 0 110px;
+      max-width: 110px;
+    }
+    
+    &--form {
+      flex: 0 0 402px;
+      max-width: 402px;
+      margin-bottom: 60px;
+
+      @media (max-width: $screen-sm-max) {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+    
+    &--result {
+      margin-left: auto;
+      margin-bottom: 40px;
+      text-align: right;
+    }
+  }
+
+  &__result {
+    @include font-family-medium();
+    font-size: 24px;
+    line-height: 1.25;
+    color: $brand-gray-11;
+
+    span {
+      color: $brand-gray-10;
+    }
+  }
 }

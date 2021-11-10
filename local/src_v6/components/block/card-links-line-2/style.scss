@@ -1,5 +1,5 @@
 .card-links-line-2 {
-  margin-bottom: 45px;
+  margin-bottom: 30px;
 
   &__item {
     flex: 1 1 auto;
@@ -70,8 +70,8 @@
       }
 
       @media (max-width: $screen-xs-max) {
-        flex: 0 0 calc(100vw - 20px - 120px);
-        //max-width: 400px;
+        flex: 0 0 calc(100vw - 40px - 120px);
+        max-width: calc(100vw - 40px - 120px);
       }
     }
 
@@ -90,11 +90,6 @@
         flex: 0 0 140px;
         max-width: 140px;
       }
-
-      //@media (max-width: $screen-sm-max) {
-      //  flex: 0 0 100%;
-      //  max-width: 100%;
-      //}
     }
 
     &--cost {
@@ -114,11 +109,6 @@
         flex: 0 0 140px;
         max-width: 140px;
       }
-
-      //@media (max-width: $screen-sm-max) {
-      //  flex: 0 0 100%;
-      //  max-width: 100%;
-      //}
     }
   }
 

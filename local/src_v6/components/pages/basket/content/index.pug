@@ -2,13 +2,20 @@
   .basket
     .basket__row.row
       .basket__col.basket__col--left.col-lg-8.col-12
-        .basket__text-row
-          .basket__text-col
+        .basket__row.basket__row--text.row.d-none.d-xl-flex
+          .basket__col.basket__col--pic
             | Информация о товаре
-          .basket__text-col
+          .basket__col.basket__col--kol
             | Количество
-          .basket__text-col
+          .basket__col.basket__col--cost
             | Стоимость
         include ../card-links-line-2/index
+        .basket__row.basket__row--result.row
+          .basket__col.basket__col--form.order-1.order-md-0
+            include ../form-code/index
+          .basket__col.basket__col--result.order-0.order-md-0
+            .basket__result
+              | ИТОГО:
+              span  60 BYN
       .basket__col.basket__col--right.col-lg-4.col-12
         include ../form-ordering/index

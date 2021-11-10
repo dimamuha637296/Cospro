@@ -32,7 +32,7 @@
 		<script src="js/libs/jquery-ui.datepicker_ru.min.js"></script>
 		<script src="js/app.min.js"></script>
 	</head>
-	<body class="ru js-off pm-close no-padding-bottom lk inner">
+	<body class="ru js-off pm-close lk inner">
 		<div class="db g-wrap" id="db">
 			<div class="outer-bg pm-content">
 				<header class="header">
@@ -901,10 +901,10 @@
 								<div class="basket">
 									<div class="basket__row row">
 										<div class="basket__col basket__col--left col-lg-8 col-12">
-											<div class="basket__text-row">
-												<div class="basket__text-col">Информация о товаре</div>
-												<div class="basket__text-col">Количество</div>
-												<div class="basket__text-col">Стоимость</div>
+											<div class="basket__row basket__row--text row d-none d-xl-flex">
+												<div class="basket__col basket__col--pic">Информация о товаре</div>
+												<div class="basket__col basket__col--kol">Количество</div>
+												<div class="basket__col basket__col--cost">Стоимость</div>
 											</div>
 																						<div class="card-links-line-2">
 																							<div class="card-links-line-2__list">
@@ -967,6 +967,50 @@
 																								</div>
 																							</div>
 																						</div>
+											<div class="basket__row basket__row--result row">
+												<div class="basket__col basket__col--form order-1 order-md-0">
+													<div class="form-code lk-form">
+														<form class="b-form" id="form-code" action="#">
+															<fieldset>
+																<div class="control-group">
+																	<div class="input-wrap">
+																		<input class="input form-control input-with-icon input-with-icon--percent" type="text" name="form_code_CODE" placeholder="Введите промокод" value="" required>
+																		<div class="b-btn">
+																																			<input class="btn btn-primary" name="OK" type="submit" value="применить">
+																		</div>
+																	</div>
+																</div>
+															</fieldset>
+														</form>
+														<script>
+															!function () {
+															    'use strict';
+															
+															    function initValid() {
+															        // Validation options http://jqueryvalidation.org/documentation/
+															        var form_validator = $('#form-code');
+															        if (form_validator.length && $.fn.validate) {
+															            form_validator.validate({
+															                rules: {
+															                    'form_code_CODE': {
+															                        required: true,
+															                    }
+															                }
+															            });
+															        }
+															    }
+															
+															    $(function () {
+															        initValid();
+															    });
+															}();
+														</script>
+													</div>
+												</div>
+												<div class="basket__col basket__col--result order-0 order-md-0">
+													<div class="basket__result">ИТОГО:<span> 60 BYN</span></div>
+												</div>
+											</div>
 										</div>
 										<div class="basket__col basket__col--right col-lg-4 col-12">
 											<div class="form-ordering lk-form">

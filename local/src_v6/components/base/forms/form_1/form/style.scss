@@ -38,6 +38,7 @@
 
   // Placeholder
   &::placeholder {
+    @include font-family-light();
     color: $brand-gray-11;
     // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
     opacity: 1;
@@ -143,6 +144,14 @@
 
       &:valid {
         background-image: url(../img/tmp/input-pay-black.svg);
+      }
+    }
+
+    &--percent {
+      background-image: url(../img/tmp/input-percent.svg);
+
+      &:valid {
+        background-image: url(../img/tmp/input-percent-black.svg);
       }
     }
 

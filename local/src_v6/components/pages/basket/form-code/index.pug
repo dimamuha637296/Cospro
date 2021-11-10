@@ -1,27 +1,24 @@
-include ../../../components/base/btns/btn/index
-.subscription
-  .h1.title
-    span СЛЕДИТЕ ЗА ОБНОВЛЕНИЯМИ
-  form#form-subscript-confirm.b-form(action='#')
+include ../../../base/forms/form_1/form/index
+.form-code.lk-form
+  form#form-code.b-form(action='#')
     fieldset
       .control-group
         .input-wrap
-          input.input.form-control.input-with-icon.input-with-icon--email(type='email', name='sf_EMAIL', placeholder='Введите ваш e-mail', value='', required)
+          input.input.form-control.input-with-icon.input-with-icon--percent(type='text', name='form_code_CODE', placeholder='Введите промокод', value='', required)
           .b-btn
-            +btn-primary({type: 'input', text: 'подписаться на рассылку'})(name='OK')
+            +btn-primary({type: 'input', text: 'применить'})(name='OK')
   script.
       !function () {
           'use strict';
 
           function initValid() {
               // Validation options http://jqueryvalidation.org/documentation/
-              var form_validator = $('#form-subscript-confirm');
+              var form_validator = $('#form-code');
               if (form_validator.length && $.fn.validate) {
                   form_validator.validate({
                       rules: {
-                          'sf_EMAIL': {
+                          'form_code_CODE': {
                               required: true,
-                              email: true
                           }
                       }
                   });

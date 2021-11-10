@@ -98,6 +98,13 @@
         }
       }
 
+      &--percent {
+
+        & ~ .ui-selectmenu-button {
+          background-image: url(../img/tmp/input-percent.svg);
+        }
+      }
+
       &--post {
 
         & ~ .ui-selectmenu-button {
