@@ -5,6 +5,64 @@ $_accordion-font-size:                24px;
 .accordion {
   //margin: 0 0 40px;
 
+  &.lk-accordion {
+
+    .panel {
+      padding-left: 0;
+      padding-right: 0;
+      margin-bottom: 10px;
+
+      .link {
+        display: block;
+        padding: 17px 20px 17px 0;
+        @include font-family-medium();
+        font-size: 16px;
+        letter-spacing: .05em;
+        text-transform: uppercase;
+        color: $brand-gray-12;
+
+        @media (max-width: $screen-sm-max) {
+          font-size: 14px;
+          padding: 14px 20px 13px 0;
+        }
+
+        @include hover-focus() {
+          color: rgba($brand-gray-12, .8);
+
+          &:before {
+            @include svg-arrow2-hover();
+          }
+        }
+
+        &:before {
+          top: 27px;
+          left: auto;
+          right: 0;
+
+          @media (max-width: $screen-sm-max) {
+            top: 22px;
+          }
+        }
+      }
+    }
+
+    .acc-heading {
+      padding-top: 0;
+      padding-bottom: 0;
+      border-bottom: 1px solid rgba($brand-gray-10, .2);
+
+      @media (max-width: $screen-sm-max) {
+        border-bottom: none;
+
+      }
+    }
+
+    .acc-body {
+      padding-top: 20px;
+      padding-left: 0;
+    }
+  }
+
   .panel {
     padding-left: $_accordion-padding-left;
     margin-bottom: 5px;

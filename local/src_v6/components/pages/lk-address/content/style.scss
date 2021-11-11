@@ -1,0 +1,22 @@
+.lk-address {
+
+}
+
+.lk-address-info {
+
+  &__item {
+    @include font-family-medium();
+    font-size: 14px;
+    margin-bottom: 28px;
+  }
+
+  &__prop {
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    color: #333333;
+  }
+
+  &__mean {
+    color: $brand-gray-11;
+  }
+}

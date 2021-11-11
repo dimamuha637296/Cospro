@@ -752,6 +752,32 @@
   }
 }
 
+@mixin svg-arrow2-hover {
+  background-image:url('data:image/svg+xml,%3Csvg%20width%3D%2211%22%20height%3D%227%22%20viewBox%3D%220%200%2011%207%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M1%201l4.5%204.504L10%201%22%20stroke%3D%22%23080508%22%2F%3E%3C%2Fsvg%3E');
+  width: 11px;
+  height: 7px;
+}
+
+.svg-arrow2-hover {
+
+  &:before {
+    @include svg-arrow2-hover;
+  }
+}
+
+@mixin svg-arrow2 {
+  background-image:url('data:image/svg+xml,%3Csvg%20width%3D%2211%22%20height%3D%227%22%20viewBox%3D%220%200%2011%207%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M1%201l4.5%204.504L10%201%22%20stroke%3D%22%23080508%22%2F%3E%3C%2Fsvg%3E');
+  width: 11px;
+  height: 7px;
+}
+
+.svg-arrow2 {
+
+  &:before {
+    @include svg-arrow2;
+  }
+}
+
 @mixin svg-catalog-filters-arrow--hover {
   background-image:url('data:image/svg+xml,%3Csvg%20width%3D%2210%22%20height%3D%2210%22%20viewBox%3D%220%200%2010%2010%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M10%205l-5%205-5-5%20.833-.833L5%208.332l4.166-4.167L10%205z%22%20fill%3D%22%23#{str-slice(#{$brand-3}, 2, -1)}%22%2F%3E%3C%2Fsvg%3E');
   width: 10px;

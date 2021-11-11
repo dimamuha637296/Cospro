@@ -1,0 +1,141 @@
+.content-wrap.lk-content-wrap
+  .lk-address
+    .accordion.lk-accordion
+      #accordion-7.acc-group
+        .panel
+          .acc-heading
+            a.link.svg-arrow2(data-toggle='collapse', href='#accordion-11', class='collapsed')
+              span 01. Проспект мира, 12 кв. 310
+          .collapse(id='accordion-11', class='')
+            .acc-body 1
+        .panel
+          .acc-heading
+            a.link.svg-arrow2(data-toggle='collapse', href='#accordion-12', class='collapsed')
+              span 02. ул. Победителей, 38 кв. 44
+          .collapse(id='accordion-12', class='')
+            .acc-body
+              .lk-address-info
+                .lk-address-info__row.row
+                  .lk-address-info__col.col-md-6.col-12
+                    .lk-address-info__item
+                      span.lk-address-info__prop Имя и фамилия:&ensp;
+                      span.lk-address-info__mean Диана Василевич
+                    .lk-address-info__item
+                      span.lk-address-info__prop Населенный пункт:&ensp;
+                      span.lk-address-info__mean Минск
+                    .lk-address-info__item
+                      span.lk-address-info__prop Адрес:&ensp;
+                      span.lk-address-info__mean ул. Победителей, 38 квартира 44
+                  .lk-address-info__col.col-md-6.col-12
+                    .lk-address-info__item
+                      span.lk-address-info__prop телефон:&ensp;
+                      span.lk-address-info__mean +375 (29) 666-78-23
+                    .lk-address-info__item
+                      span.lk-address-info__prop Почтовый индекс:&ensp;
+                      span.lk-address-info__mean 988 234 223 00
+        .panel
+          .acc-heading
+            a.link.svg-arrow2(data-toggle='collapse', href='#accordion-13', class='collapsed')
+              span 03. ул. Захарова, 77 кв. 12
+          .collapse(id='accordion-13', class='')
+            .acc-body
+              .form-address.lk-form
+                .form-address__inner
+                  form#form-address.form-1(name='form_address', method='post', target='_top', action='/')
+                    fieldset.fieldset
+                      .row
+                        .col-md-6.col-12
+                          // row
+                          .form-group.control-group
+                            .text.col-12
+                              .input-wrap
+                                input#form_address_FIO.form-control.input-with-icon.input-with-icon--human(type='text', name='form_address_FIO', placeholder='Имя и фамилия', value='Диана Василевич', required='')
+                            .controls.col-12
+                        .col-md-6.col-12
+                          // row
+                          .form-group.control-group
+                            .text.col-12
+                              .input-wrap
+                                input#form_address_TEL.form-control.js_mask_tel.input-with-icon.input-with-icon--tel(type='tel', name='form_address_TEL', placeholder='Номер телефона', value='+375 (29) 666-78-23', required='')
+                            .controls.col-12
+                        .col-md-6.col-12
+                          // row
+                          .form-group.control-group
+                            .text.col-12
+                              .input-wrap
+                                select#form_address_CITY.form-control.ui-select.input-with-icon.input-with-icon--book(name='form_address_CITY', required)
+                                  option(value='', selected, disabled) Населенный пункт:
+                                  option Населенный пункт: 1
+                                  option Населенный пункт: 2
+                            .controls.col-12
+                        .col-md-6.col-12
+                          // row
+                          .form-group.control-group
+                            .text.col-12
+                              .input-wrap
+                                input#form_address_POST.form-control.input-with-icon.input-with-icon--post(type='text', name='form_address_POST', placeholder='Почтовый индекс', value='', required='')
+                            .controls.col-12
+                        .col-12
+                          // row
+                          .form-group.control-group
+                            .text.col-12
+                              .input-wrap
+                                input#form_address_ADDRESS.form-control.input-with-icon.input-with-icon--post(type='text', name='form_address_ADDRESS', placeholder='Почтовый индекс', value='', required='')
+                            .controls.col-12
+                        .col-md-5.col-12
+                          // row
+                          .form-group.mb-0
+                            .col-12.btn-wrap
+                              +btn-primary({
+                                  type: 'button',
+                                  className: 'btn_submit with-icon icon-right toReg',
+                                  text: '<span>зарегистрироваться</span><span class="icon"></span>'
+                              })(id='form-address-submit')
+                  script.
+                      !function () {
+                          'use strict';
+
+                          // Form validation
+                          function initValid() {
+                              // Validation options http://jqueryvalidation.org/documentation/
+                              var form_validator = $('#form-address');
+                              if (form_validator.length && $.fn.validate) {
+                                  form_validator.validate({
+                                      rules: {
+                                          'form_address_FIO': {
+                                              required: true,
+                                              minlength: 2
+                                          },
+                                          'form_address_TEL': {
+                                              required: true
+                                          },
+                                          'form_address_CITY': {
+                                              required: true
+                                          },
+                                          'form_address_POST': {
+                                              required: true
+                                          },
+                                          'form_address_ADDRESS': {
+                                              required: true
+                                          }
+                                      }
+                                  });
+                              }
+                          }
+
+                          function validOnButton() {
+                              var form = $('#form-address');
+                              var btn = $('#form-address-submit');
+
+                              btn.on('click', function () {
+                                  if (form.valid()) {
+                                      form.submit();
+                                  }
+                              })
+                          }
+
+                          $(function () {
+                              initValid();
+                              validOnButton();
+                          });
+                      }();
