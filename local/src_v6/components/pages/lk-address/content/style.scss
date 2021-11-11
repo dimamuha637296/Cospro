@@ -1,5 +1,9 @@
 .lk-address {
 
+  .btn-reset {
+    font-size: 14px;
+    line-height: 1.29;
+  }
 }
 
 .lk-address-info {
@@ -8,6 +12,10 @@
     @include font-family-medium();
     font-size: 14px;
     margin-bottom: 28px;
+
+    @media (max-width: $screen-sm-max) {
+      margin-bottom: 15px;
+    }
   }
 
   &__prop {
@@ -18,5 +26,83 @@
 
   &__mean {
     color: $brand-gray-11;
+  }
+}
+
+.lk-accordion {
+
+  .panel {
+
+    .link {
+      position: static;
+      padding-right: 300px;
+    }
+  }
+
+  .acc-heading {
+    position: relative;
+
+    @include hover-focus() {
+
+      .delete-btn,
+      .edit-btn {
+        opacity: 1;
+      }
+    }
+  }
+
+  .delete-btn,
+  .edit-btn {
+    display: inline-block;
+    color: #707070;
+    font-size: 14px;
+    line-height: 1.29;
+    letter-spacing: -.02em;
+    text-decoration: underline;
+    z-index: 1;
+    opacity: 0;
+
+    @media (max-width: $screen-sm-max) {
+      opacity: 1;
+      position: static;
+      margin-right: 34px;
+    }
+
+    @include hover-focus() {
+      text-decoration: none;
+    }
+
+    &:last-child {
+
+      @media (max-width: $screen-sm-max) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .edit-btn {
+    position: absolute;
+    right: 172px;
+    top: 20px;
+
+    &:before {
+      @include svg();
+      @include svg-lk-edit();
+      margin-right: 10px;
+      vertical-align: -5px;
+    }
+  }
+
+  .delete-btn {
+    position: absolute;
+    right: 51px;
+    top: 20px;
+
+    &:before {
+      @include svg();
+      @include svg-lk-delete();
+      margin-right: 10px;
+      vertical-align: -5px;
+    }
   }
 }
