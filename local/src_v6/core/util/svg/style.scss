@@ -193,32 +193,6 @@
   }
 }
 
-@mixin svg-search-btn_mob--hover {
-  background-image:url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%3E%3Ctitle%3Esearch%3C%2Ftitle%3E%3Cpath%20fill%3D%22%23#{str-slice(#{$link-color-hover}, 2, -1)}%22%20d%3D%22M15.56%2015.56a1.502%201.502%200%200%201-2.125%200l-2.652-2.652a6.96%206.96%200%200%201-3.771%201.116%207.012%207.012%200%201%201%207.012-7.012c0%201.391-.417%202.68-1.116%203.771l2.652%202.652a1.502%201.502%200%200%201%200%202.125zM7.012%202.003a5.009%205.009%200%201%200%200%2010.018%205.009%205.009%200%200%200%200-10.018z%22%2F%3E%3C%2Fsvg%3E');
-  width: 16px;
-  height: 16px;
-}
-
-.svg-search-btn_mob--hover {
-
-  &:before {
-    @include svg-search-btn_mob--hover;
-  }
-}
-
-@mixin svg-search-btn_mob {
-  background-image:url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%3E%3Ctitle%3Esearch%3C%2Ftitle%3E%3Cpath%20fill%3D%22%23#{str-slice(#{$link-color}, 2, -1)}%22%20d%3D%22M15.56%2015.56a1.502%201.502%200%200%201-2.125%200l-2.652-2.652a6.96%206.96%200%200%201-3.771%201.116%207.012%207.012%200%201%201%207.012-7.012c0%201.391-.417%202.68-1.116%203.771l2.652%202.652a1.502%201.502%200%200%201%200%202.125zM7.012%202.003a5.009%205.009%200%201%200%200%2010.018%205.009%205.009%200%200%200%200-10.018z%22%2F%3E%3C%2Fsvg%3E');
-  width: 16px;
-  height: 16px;
-}
-
-.svg-search-btn_mob {
-
-  &:before {
-    @include svg-search-btn_mob;
-  }
-}
-
 @mixin svg-menu-drop-8-arrow {
   background-image:url('data:image/svg+xml,%3Csvg%20width%3D%2211%22%20height%3D%227%22%20viewBox%3D%220%200%2011%207%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M1%201l4.5%204.504L10%201%22%20stroke%3D%22%23515855%22%2F%3E%3C%2Fsvg%3E');
   width: 11px;
@@ -1828,6 +1802,32 @@
 
   &:before {
     @include svg-datepicker-calendar-2;
+  }
+}
+
+@mixin svg-search-btn_mob--hover {
+  background-image:url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%3E%3Ctitle%3Esearch%3C%2Ftitle%3E%3Cpath%20fill%3D%22%23#{str-slice(#{$link-color-hover}, 2, -1)}%22%20d%3D%22M15.56%2015.56a1.502%201.502%200%200%201-2.125%200l-2.652-2.652a6.96%206.96%200%200%201-3.771%201.116%207.012%207.012%200%201%201%207.012-7.012c0%201.391-.417%202.68-1.116%203.771l2.652%202.652a1.502%201.502%200%200%201%200%202.125zM7.012%202.003a5.009%205.009%200%201%200%200%2010.018%205.009%205.009%200%200%200%200-10.018z%22%2F%3E%3C%2Fsvg%3E');
+  width: 16px;
+  height: 16px;
+}
+
+.svg-search-btn_mob--hover {
+
+  &:before {
+    @include svg-search-btn_mob--hover;
+  }
+}
+
+@mixin svg-search-btn_mob {
+  background-image:url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%3E%3Ctitle%3Esearch%3C%2Ftitle%3E%3Cpath%20fill%3D%22%23#{str-slice(#{$link-color}, 2, -1)}%22%20d%3D%22M15.56%2015.56a1.502%201.502%200%200%201-2.125%200l-2.652-2.652a6.96%206.96%200%200%201-3.771%201.116%207.012%207.012%200%201%201%207.012-7.012c0%201.391-.417%202.68-1.116%203.771l2.652%202.652a1.502%201.502%200%200%201%200%202.125zM7.012%202.003a5.009%205.009%200%201%200%200%2010.018%205.009%205.009%200%200%200%200-10.018z%22%2F%3E%3C%2Fsvg%3E');
+  width: 16px;
+  height: 16px;
+}
+
+.svg-search-btn_mob {
+
+  &:before {
+    @include svg-search-btn_mob;
   }
 }
 

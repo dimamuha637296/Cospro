@@ -37,80 +37,22 @@
 		<div class="db g-wrap" id="db">
 			<div class="outer-bg pm-content">
 				<header class="header">
-					<div class="header__mob">
-						<div class="container">
-							<div class="logo-mob">
-								<a href="/"><span>cospro.by</span></a>
-							</div>
-							<div class="header__tools">
-								<div class="contacts-mob dropdown js-dropdown-full-width">
-									<div class="dropdown-toggle" data-toggle="dropdown"></div>
-									<div class="dropdown-menu">
-										<div class="container inner">
-											<div class="contacts-head">
-												<div>
-													<!-- Nav tabs-->
-													<ul class="nav list-reset open-dropdown">
-														<li class="nav-item"><a class="nav-link active" href="#tab-mob-200" data-toggle="tab">Минск</a></li>
-														<li class="nav-item"><a class="nav-link" href="#tab-mob-201" data-toggle="tab">Москва</a></li>
-													</ul>
-													<!-- Tab panes-->
-													<div class="tab-content">
-														<div class="tab-pane fade show active" id="tab-mob-200">
-															<div class="tel"><a href="tel:+375291632322"><span>+375 17 <b>233-66-35</b> <i>(многоканальный)</i></span></a></div>
-															<div class="tel"><a href="tel:+375295662322">+375 29 <b>233-66-35</b></a></div>
-														</div>
-														<div class="tab-pane fade" id="tab-mob-201">
-															<div class="tel"><a href="tel:+375291632322"><span>+375 17 <b>233-66-36</b> <i>(многоканальный)</i></span></a></div>
-															<div class="tel"><a href="tel:+375295662322">+375 29 <b>233-66-36</b></a></div>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="btn-question">
-																												<button class="btn btn-success" data-toggle="modal" data-target="#questModal" type="button">Оставить заявку</button>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="search-mob dropdown js-dropdown-full-width">
-									<div class="dropdown-toggle" data-toggle="dropdown"></div>
-									<div class="dropdown-menu">
-										<div class="container">
-											<div class="search-head-mob">
-												<form action="/search/" method="get">
-													<fieldset class="field">
-														<input class="input" id="searchinp-mob" type="search" placeholder="Поиск по сайту" name="q-mob" maxlength="50" required=""><span class="submit">
-																															<input class="btn btn-primary btn-search" name="btn-search" type="submit" value="Найти"></span>
-													</fieldset>
-												</form>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="lang-mob">
-									<ul class="list list-reset clearfix">
-										<li class="item"><a class="eng" href="#">En</a></li>
-										<li class="item"><span class="rus active">Рус</span></li>
-									</ul>
-								</div>
-								<div class="hamb-wrap">
-									<button class="hamburger pm-opener closed"><span class="ico"></span></button>
-								</div>
-							</div>
-						</div>
-					</div>
 					<div class="header__desktop">
 						<div class="container">
 							<div class="header__row row">
-								<div class="header__col header__col--logo">
+								<div class="header__col header__col--hamb d-lg-none">
+									<div class="hamb-wrap">
+										<button class="hamburger pm-opener closed"><span class="ico"></span></button>
+									</div>
+								</div>
+								<div class="header__col header__col--logo d-none d-lg-flex">
 									<div class="logo-desk">
 										<div class="wrap">
 											<a href="/"><span>cospro.by</span></a>
 										</div>
 									</div>
 								</div>
-								<div class="header__col header__col--menu">
+								<div class="header__col header__col--menu d-none d-lg-flex">
 									<div class="menu-drop-8 js-menu-tablet js-menuMore d-print-none">
 										<ul class="menu_level_1 break-word list-reset">
 											<li class="item_1 has-submenu-2"><a href="#"><span>Каталог</span><span class="icon"></span></a>
@@ -782,11 +724,18 @@
 													</div>
 												</div>
 											</div>
+											<div class="head-links__col head-links__col--logo d-block d-lg-none">
+												<div class="logo-desk">
+													<div class="wrap">
+														<a href="/"><span>cospro.by</span></a>
+													</div>
+												</div>
+											</div>
 											<div class="head-links__col">
 												<div class="head-links__link head-links__link--cart">
 													<div class="head-cart"><a class="head-cart__link" href="#">
 															<div class="head-cart__icon"></div></a>
-														<div class="head-cart__drop">
+														<div class="head-cart__drop d-none d-lg-block">
 															<div class="head-cart__drop-inner">
 																<div class="head-cart__drop-title">Ваши товары</div>
 																<div class="head-cards">
@@ -851,7 +800,7 @@
 																	<div class="head-cart__drop-total-title">СУММА ЗАКАЗА</div>
 																	<div class="head-cart__drop-total-sum">36.00 BYN</div>
 																</div>
-																																<button class="btn btn-primary" type="button">ПЕРЕЙТИ В КОРЗИНУ</button>
+																										<button class="btn btn-primary" type="button">ПЕРЕЙТИ В КОРЗИНУ</button>
 															</div>
 														</div>
 													</div>
@@ -864,7 +813,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="header__col header__col--contacts">
+								<div class="header__col header__col--contacts d-none d-lg-flex">
 									<div class="contacts-head-5">
 										<div class="contacts-head-5__dropdown-wrap">
 											<div class="contacts-head-5__dropdown dropdown"><a class="contacts-head-5__toggle dropdown-toggle" data-toggle="dropdown" href="#"><span>+375 (33) 382-31-38</span></a>
@@ -945,10 +894,10 @@
 																											<div class="card-links-3-card__bottom">
 																												<div class="card-links-3-card__row card-links-3-card__row--btns row">
 																													<div class="card-links-3-card__col card-links-3-card__col--buy">
-																																														<button class="btn btn-primary" data-toggle="modal" data-target="#fastBuyModal" type="button"><span>быстрая покупка</span></button>
+																																								<button class="btn btn-primary" data-toggle="modal" data-target="#fastBuyModal" type="button"><span>быстрая покупка</span></button>
 																													</div>
 																													<div class="card-links-3-card__col card-links-3-card__col--basket">
-																																														<button class="btn btn-primary-outline with-icon addToBasket js-addToBasket" type="button"><span class="icon"></span></button>
+																																								<button class="btn btn-primary-outline with-icon addToBasket js-addToBasket" type="button"><span class="icon"></span></button>
 																													</div>
 																												</div>
 																											</div>
@@ -981,10 +930,10 @@
 																											<div class="card-links-3-card__bottom">
 																												<div class="card-links-3-card__row card-links-3-card__row--btns row">
 																													<div class="card-links-3-card__col card-links-3-card__col--buy">
-																																														<button class="btn btn-primary" data-toggle="modal" data-target="#fastBuyModal" type="button"><span>быстрая покупка</span></button>
+																																								<button class="btn btn-primary" data-toggle="modal" data-target="#fastBuyModal" type="button"><span>быстрая покупка</span></button>
 																													</div>
 																													<div class="card-links-3-card__col card-links-3-card__col--basket">
-																																														<button class="btn btn-primary-outline with-icon addToBasket js-addToBasket" type="button"><span class="icon"></span></button>
+																																								<button class="btn btn-primary-outline with-icon addToBasket js-addToBasket" type="button"><span class="icon"></span></button>
 																													</div>
 																												</div>
 																											</div>
@@ -1017,10 +966,10 @@
 																											<div class="card-links-3-card__bottom">
 																												<div class="card-links-3-card__row card-links-3-card__row--btns row">
 																													<div class="card-links-3-card__col card-links-3-card__col--buy">
-																																														<button class="btn btn-primary" data-toggle="modal" data-target="#fastBuyModal" type="button"><span>быстрая покупка</span></button>
+																																								<button class="btn btn-primary" data-toggle="modal" data-target="#fastBuyModal" type="button"><span>быстрая покупка</span></button>
 																													</div>
 																													<div class="card-links-3-card__col card-links-3-card__col--basket">
-																																														<button class="btn btn-primary-outline with-icon addToBasket js-addToBasket" type="button"><span class="icon"></span></button>
+																																								<button class="btn btn-primary-outline with-icon addToBasket js-addToBasket" type="button"><span class="icon"></span></button>
 																													</div>
 																												</div>
 																											</div>
@@ -1059,10 +1008,10 @@
 																											<div class="card-links-3-card__bottom">
 																												<div class="card-links-3-card__row card-links-3-card__row--btns row">
 																													<div class="card-links-3-card__col card-links-3-card__col--buy">
-																																														<button class="btn btn-primary" data-toggle="modal" data-target="#fastBuyModal" type="button"><span>быстрая покупка</span></button>
+																																								<button class="btn btn-primary" data-toggle="modal" data-target="#fastBuyModal" type="button"><span>быстрая покупка</span></button>
 																													</div>
 																													<div class="card-links-3-card__col card-links-3-card__col--basket">
-																																														<button class="btn btn-primary-outline with-icon addToBasket js-addToBasket" type="button"><span class="icon"></span></button>
+																																								<button class="btn btn-primary-outline with-icon addToBasket js-addToBasket" type="button"><span class="icon"></span></button>
 																													</div>
 																												</div>
 																											</div>
@@ -1095,10 +1044,10 @@
 																											<div class="card-links-3-card__bottom">
 																												<div class="card-links-3-card__row card-links-3-card__row--btns row">
 																													<div class="card-links-3-card__col card-links-3-card__col--buy">
-																																														<button class="btn btn-primary" data-toggle="modal" data-target="#fastBuyModal" type="button"><span>быстрая покупка</span></button>
+																																								<button class="btn btn-primary" data-toggle="modal" data-target="#fastBuyModal" type="button"><span>быстрая покупка</span></button>
 																													</div>
 																													<div class="card-links-3-card__col card-links-3-card__col--basket">
-																																														<button class="btn btn-primary-outline with-icon addToBasket js-addToBasket" type="button"><span class="icon"></span></button>
+																																								<button class="btn btn-primary-outline with-icon addToBasket js-addToBasket" type="button"><span class="icon"></span></button>
 																													</div>
 																												</div>
 																											</div>
@@ -1131,10 +1080,10 @@
 																											<div class="card-links-3-card__bottom">
 																												<div class="card-links-3-card__row card-links-3-card__row--btns row">
 																													<div class="card-links-3-card__col card-links-3-card__col--buy">
-																																														<button class="btn btn-primary" data-toggle="modal" data-target="#fastBuyModal" type="button"><span>быстрая покупка</span></button>
+																																								<button class="btn btn-primary" data-toggle="modal" data-target="#fastBuyModal" type="button"><span>быстрая покупка</span></button>
 																													</div>
 																													<div class="card-links-3-card__col card-links-3-card__col--basket">
-																																														<button class="btn btn-primary-outline with-icon addToBasket js-addToBasket" type="button"><span class="icon"></span></button>
+																																								<button class="btn btn-primary-outline with-icon addToBasket js-addToBasket" type="button"><span class="icon"></span></button>
 																													</div>
 																												</div>
 																											</div>
@@ -1173,10 +1122,10 @@
 																											<div class="card-links-3-card__bottom">
 																												<div class="card-links-3-card__row card-links-3-card__row--btns row">
 																													<div class="card-links-3-card__col card-links-3-card__col--buy">
-																																														<button class="btn btn-primary" data-toggle="modal" data-target="#fastBuyModal" type="button"><span>быстрая покупка</span></button>
+																																								<button class="btn btn-primary" data-toggle="modal" data-target="#fastBuyModal" type="button"><span>быстрая покупка</span></button>
 																													</div>
 																													<div class="card-links-3-card__col card-links-3-card__col--basket">
-																																														<button class="btn btn-primary-outline with-icon addToBasket js-addToBasket" type="button"><span class="icon"></span></button>
+																																								<button class="btn btn-primary-outline with-icon addToBasket js-addToBasket" type="button"><span class="icon"></span></button>
 																													</div>
 																												</div>
 																											</div>
@@ -1209,10 +1158,10 @@
 																											<div class="card-links-3-card__bottom">
 																												<div class="card-links-3-card__row card-links-3-card__row--btns row">
 																													<div class="card-links-3-card__col card-links-3-card__col--buy">
-																																														<button class="btn btn-primary" data-toggle="modal" data-target="#fastBuyModal" type="button"><span>быстрая покупка</span></button>
+																																								<button class="btn btn-primary" data-toggle="modal" data-target="#fastBuyModal" type="button"><span>быстрая покупка</span></button>
 																													</div>
 																													<div class="card-links-3-card__col card-links-3-card__col--basket">
-																																														<button class="btn btn-primary-outline with-icon addToBasket js-addToBasket" type="button"><span class="icon"></span></button>
+																																								<button class="btn btn-primary-outline with-icon addToBasket js-addToBasket" type="button"><span class="icon"></span></button>
 																													</div>
 																												</div>
 																											</div>
@@ -1245,10 +1194,10 @@
 																											<div class="card-links-3-card__bottom">
 																												<div class="card-links-3-card__row card-links-3-card__row--btns row">
 																													<div class="card-links-3-card__col card-links-3-card__col--buy">
-																																														<button class="btn btn-primary" data-toggle="modal" data-target="#fastBuyModal" type="button"><span>быстрая покупка</span></button>
+																																								<button class="btn btn-primary" data-toggle="modal" data-target="#fastBuyModal" type="button"><span>быстрая покупка</span></button>
 																													</div>
 																													<div class="card-links-3-card__col card-links-3-card__col--basket">
-																																														<button class="btn btn-primary-outline with-icon addToBasket js-addToBasket" type="button"><span class="icon"></span></button>
+																																								<button class="btn btn-primary-outline with-icon addToBasket js-addToBasket" type="button"><span class="icon"></span></button>
 																													</div>
 																												</div>
 																											</div>

@@ -4,11 +4,7 @@ $_hamburger-bg: $brand-1;
   position: relative;
   @include mobile-height;
   justify-content: flex-end;
-  width: 29px;
-
-  @media (min-width: $screen-sm-min) {
-    width: 34px;
-  }
+  width: 24px;
 }
 
 .hamburger {
@@ -16,7 +12,7 @@ $_hamburger-bg: $brand-1;
   border: none;
   cursor: pointer;
   height: 16px;
-  width: 18px;
+  width: 24px;
   transition: 0.3s;
   padding: 0;
   background: transparent;
@@ -36,7 +32,7 @@ $_hamburger-bg: $brand-1;
     &:before,
     &:after {
       position: absolute;
-      height: 2px;
+      height: 1px;
       left: 0;
       width: 100%;
       transition: 0.3s;

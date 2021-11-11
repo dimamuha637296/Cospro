@@ -1,20 +1,17 @@
-.header__mob
-  .container
-    include ../../../components/header/logo/logo-mob/index
-    .header__tools
-      include ../../../components/header/contacts/contacts-mob/index
-      include ../../../components/header/search/search-mob/index
-      include ../../../components/header/lang/lang-mob/index
-      include ../../../components/header/hamburger/hamburger-opener/index
+include ../../../components/base/btns/btn/index
+include ../../../components/base/btns/btns-brand/index
+
 .header__desktop
   .container
     .header__row.row
-      .header__col.header__col--logo
+      .header__col.header__col--hamb.d-lg-none
+        include ../../../components/header/hamburger/hamburger-opener/index
+      .header__col.header__col--logo.d-none.d-lg-flex
         include ../../../components/header/logo/logo-png/index
-      .header__col.header__col--menu
+      .header__col.header__col--menu.d-none.d-lg-flex
         block menu_head
           include ../../../components/header/menu/menu-drop-8/index
       .header__col.header__col--links
         include ../../../components/header/head-links/index
-      .header__col.header__col--contacts
+      .header__col.header__col--contacts.d-none.d-lg-flex
         include ../../../components/header/contacts/contacts-head-5/index

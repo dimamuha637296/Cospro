@@ -21,6 +21,7 @@
 
       @media (max-width: $screen-lg-max) {
         font-size: 20px;
+        justify-content: center;
       }
 
       @include hover-focus() {

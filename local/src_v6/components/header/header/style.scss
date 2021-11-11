@@ -1,4 +1,4 @@
-$header-mob-height:                 48px;
+$header-mob-height:                 40px;
 $header-additional-background:      $brand-gray-1;
 $mob-menu-element-width-mob:        40px;
 $mob-menu-element-width-xs:         50px;
@@ -8,11 +8,11 @@ $mob-menu-element-width-xs:         50px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: $mob-menu-element-width-mob;
-
-  @media (min-width: $screen-sm-min) {
-    width: $mob-menu-element-width-xs;
-  }
+  //width: $mob-menu-element-width-mob;
+  //
+  //@media (min-width: $screen-sm-min) {
+  //  width: $mob-menu-element-width-xs;
+  //}
 }
 
 @mixin mobile-height-item {
@@ -48,25 +48,36 @@ $mob-menu-element-width-xs:         50px;
   }
 
   &__tools {
+    flex: 0 0 100%;
     margin-left: auto;
     display: flex;
   }
 
-  &__desktop {
-
-    @media (max-width: $grid-breakpoint-max) {
-      display: none;
-    }
-  }
+  //&__desktop {
+  //
+  //  @media (max-width: $grid-breakpoint-max) {
+  //    display: none;
+  //  }
+  //}
 
   &__row {
     display: flex;
     position: relative;
+
+    @media (max-width: $screen-md-max) {
+      margin-left: -5px;
+      margin-right: -5px;
+    }
   }
 
   &__col {
     padding-left: 10px;
     padding-right: 10px;
+
+    @media (max-width: $screen-md-max) {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
 
     &--logo {
       display: flex;
@@ -87,6 +98,10 @@ $mob-menu-element-width-xs:         50px;
       display: flex;
       align-items: center;
       margin-left: auto;
+
+      @media (max-width: $screen-md-max) {
+        flex: 1 0 auto;
+      }
     }
   }
 

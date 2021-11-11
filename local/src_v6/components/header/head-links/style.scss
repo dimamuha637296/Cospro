@@ -1,11 +1,12 @@
 $head-links-padding-width:          10px;
 $head-links-padding-width-lg:        5px;
-$head-links-padding-width-md:        0px;
+$head-links-padding-width-md:        5px;
 
 .head-links {
   margin-top: -2px;
 
   @media (max-width: $screen-md-max) {
+    flex: 1 0 auto;
     margin-top: 0;
   }
 
@@ -38,6 +39,10 @@ $head-links-padding-width-md:        0px;
     @media (max-width: $screen-md-max) {
       padding-left: $head-links-padding-width-md;
       padding-right: $head-links-padding-width-md;
+    }
+
+    &--logo {
+      flex: 1 0 auto;
     }
   }
 
