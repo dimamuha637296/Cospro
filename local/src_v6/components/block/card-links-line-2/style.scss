@@ -56,6 +56,7 @@
         max-width: 500px;
         margin-bottom: 10px;
         justify-content: flex-start;
+        padding-bottom: 20px;
       }
 
       @media (max-width: $screen-md-max) {
@@ -67,6 +68,7 @@
         display: block;
         flex: 0 0 400px;
         max-width: 400px;
+        padding-bottom: 40px;
       }
 
       @media (max-width: $screen-xs-max) {
@@ -110,6 +112,14 @@
         max-width: 140px;
       }
     }
+
+    &--kol,
+    &--cost {
+
+      @media (min-width: $screen-xl-min) {
+        padding-bottom: 20px;
+      }
+    }
   }
 
   &__text {
@@ -141,5 +151,37 @@
     font-size: 20px;
     line-height: 1.25;
     color: $brand-gray-10;
+  }
+
+  .delete-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    bottom: 28px;
+    color: #707070;
+    font-size: 14px;
+    line-height: 1.29;
+    letter-spacing: -.02em;
+    text-decoration: underline;
+
+    @media (max-width: $screen-lg-max) {
+      bottom: 110px;
+    }
+
+    @media (max-width: $screen-sm-max) {
+      font-size: 10px;
+      bottom: 120px;
+    }
+
+    @include hover-focus() {
+      text-decoration: none;
+    }
+
+    &:before {
+      @include svg();
+      @include svg-lk-delete();
+      margin-right: 10px;
+      vertical-align: -5px;
+    }
   }
 }

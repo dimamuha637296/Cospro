@@ -3,17 +3,18 @@ mixin card-links-line-2(data)
     .card-links-line-2__list
       each card in data.cards
         .card-links-line-2__item
-            .card-links-line-2__item-row
-              if (card.img)
-                .card-links-line-2__item-col.card-links-line-2__item-col--pic
-                  img.card-links-line-2__img(src=DB.DIR + card.img, alt=(card.img || 'alt'))
-              if (card.text)
-                .card-links-line-2__item-col.card-links-line-2__item-col--text
-                  .card-links-line-2__text !{card.text}
-                  .card-links-line-2__volume !{card.volume}
-              if (card.kol)
-                .card-links-line-2__item-col.card-links-line-2__item-col--kol
-                  include ../../block/quantity/index
-              if (card.cost)
-                .card-links-line-2__item-col.card-links-line-2__item-col--cost
-                  .card-links-line-2__cost !{card.cost}
+          a(href="#").card-links-line-2__delete-btn.delete-btn Удалить из корзины
+          .card-links-line-2__item-row
+            if (card.img)
+              .card-links-line-2__item-col.card-links-line-2__item-col--pic
+                img.card-links-line-2__img(src=DB.DIR + card.img, alt=(card.img || 'alt'))
+            if (card.text)
+              .card-links-line-2__item-col.card-links-line-2__item-col--text
+                .card-links-line-2__text !{card.text}
+                .card-links-line-2__volume !{card.volume}
+            if (card.kol)
+              .card-links-line-2__item-col.card-links-line-2__item-col--kol
+                include ../../block/quantity/index
+            if (card.cost)
+              .card-links-line-2__item-col.card-links-line-2__item-col--cost
+                .card-links-line-2__cost !{card.cost}
