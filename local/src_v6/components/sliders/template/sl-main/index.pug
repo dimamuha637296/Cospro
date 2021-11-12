@@ -1,21 +1,25 @@
 include ../../../../components/base/btns/btn/index
 mixin sl-main(data)
   .sl-main(class=data.modifier ? data.modifier : '')
+    .bg
     .wrap.cursor.inited-not(class=data.fullWrap === true ? 'full-wrap' : '')
       .slider
         each slide in data.slides
           .slide
             .inner
-              .pic
-                img.img(src=DB.DIR + 'img/tmp/' + slide.pic, alt=slide.title)
               .container
-                .b-wrap
-                  .h1.title #{slide.title ? slide.title : 'Заголовок слайда'}
-                  if (slide.text)
-                    p.text #{slide.text}
-                  if (slide.btnText)
-                    .btn-wrap
-                      +btn-primary({text: slide.btnText})
+                .row
+                  .col-text
+                    .b-wrap
+                      .h1.title #{slide.title ? slide.title : 'Заголовок слайда'}
+                      if (slide.text)
+                        p.text #{slide.text}
+                      if (slide.btnText)
+                        .btn-wrap
+                          +btn-primary({text: slide.btnText})
+                  .col-pic
+                    .pic
+                      img.img(src=DB.DIR + 'img/tmp/' + slide.pic, alt=slide.title)
       if (data.pager !== undefined)
         +#{data.pager}()
       if (data.fullWrap === true && data.nav !== undefined)

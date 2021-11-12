@@ -21,7 +21,7 @@
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 adaptiveHeight: false, // true - height: auto
-                autoplay: true,
+                autoplay: false,
                 autoplaySpeed: 7000,
                 speed: 500,
                 arrows: slidesLength > 1,
@@ -30,14 +30,14 @@
                 dotsClass: 'list-reset', // pager class
                 nextArrow: next,
                 prevArrow: prev,
-                responsive: [
-                    {
-                        breakpoint: ws.const.screen.screen_xs_max,
-                        settings: {
-                            arrows: false
-                        }
-                    }
-                ]
+                // responsive: [
+                //     {
+                //         breakpoint: ws.const.screen.screen_xs_max,
+                //         settings: {
+                //             arrows: false
+                //         }
+                //     }
+                // ]
             });
             sliderWrap.addClass('inited');
         });
