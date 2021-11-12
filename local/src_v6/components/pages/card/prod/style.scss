@@ -114,6 +114,34 @@
       padding-left: 0;
       padding-right: 0;
       width: 50px;
+
+      &:focus {
+        background:           $brand-white;
+        border-color:         $brand-gray-12;
+
+        .icon {
+          @include svg-toFavorites-black();
+        }
+      }
+
+      &:active,
+      &.active {
+        background: $brand-gray-12;
+        border-color: $brand-gray-12;
+      }
+
+      &:active,
+      &.active {
+
+        &:focus {
+          background: $brand-gray-12;
+          border-color: $brand-gray-12;
+
+          .icon {
+            @include svg-toFavorites();
+          }
+        }
+      }
     }
   }
 }
