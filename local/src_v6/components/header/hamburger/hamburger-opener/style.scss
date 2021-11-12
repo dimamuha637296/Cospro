@@ -37,6 +37,10 @@ $_hamburger-bg: $brand-1;
       width: 100%;
       transition: 0.3s;
       background: $_hamburger-bg;
+
+      .main .header__desktop:not(.header__desktop--scroll) & {
+        background: $brand-white;
+      }
     }
 
     &:before,

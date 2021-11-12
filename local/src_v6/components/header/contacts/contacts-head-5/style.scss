@@ -68,6 +68,13 @@
       @media (max-width: $grid-breakpoint-max) {
         content: none;
       }
+
+      .main .header__desktop:not(.header__desktop--scroll) & {
+
+        @media (max-width: $screen-md-max) {
+          @include svg-contacts-head-5-arrow-white();
+        }
+      }
     }
 
     @at-root {

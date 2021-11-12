@@ -27,6 +27,10 @@
       @include hover-focus() {
         text-decoration: none;
       }
+
+      .main .header__desktop:not(.header__desktop--scroll) & {
+        color: $brand-white;
+      }
     }
   }
 }

@@ -36,6 +36,13 @@
         margin-top: 1px;
       }
 
+      .main .header__desktop:not(.header__desktop--scroll) & {
+
+        @media (max-width: $screen-lg-max) {
+          @include svg-search-head-5-white();
+        }
+      }
+
       .header__desktop--scroll & {
         margin-top: 1px;
       }

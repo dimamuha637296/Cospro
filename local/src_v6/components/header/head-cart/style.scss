@@ -18,6 +18,13 @@
     &:before {
       @include svg();
       @include svg-head-cart();
+
+      .main .header__desktop:not(.header__desktop--scroll) & {
+
+        @media (max-width: $screen-lg-max) {
+          @include svg-head-cart-white();
+        }
+      }
     }
   }
 

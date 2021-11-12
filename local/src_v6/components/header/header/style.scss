@@ -26,8 +26,6 @@ $mob-menu-element-width-xs:         50px;
   left: 0;
   width: 100%;
   z-index: 101;
-  background: $body-bg-color;
-  box-shadow: $box-shadow-base;
   opacity: 1;
   transition: $transition-default;
 
@@ -53,12 +51,18 @@ $mob-menu-element-width-xs:         50px;
     display: flex;
   }
 
-  //&__desktop {
-  //
-  //  @media (max-width: $grid-breakpoint-max) {
-  //    display: none;
-  //  }
-  //}
+  &__desktop {
+    background: $brand-white;
+    box-shadow: $box-shadow-base;
+
+    .main & {
+
+      &:not(.header__desktop--scroll) {
+        background: transparent;
+        box-shadow: none;
+      }
+    }
+  }
 
   &__row {
     display: flex;
