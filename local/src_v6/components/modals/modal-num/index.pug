@@ -1,0 +1,216 @@
+include ../../../components/base/forms/form_1/form/index
+include ../../../components/base/btns/btn/index
+#numModal.numModal.modal.fade.vertical-center(tabindex='-1', role='dialog', aria-hidden='true')
+  .modal-dialog
+    .modal-content
+      .modal-header
+        .h1.modal-title Введите номер карты
+        button.close(type='button', data-dismiss='modal', aria-hidden='true')
+      .modal-body
+        .form-num
+          .form-num__inner
+            form#form-num.form-1(name='form_num', method='post', target='_top', action='/')
+              fieldset.fieldset
+                .code-wrap
+                  .row-num
+                    .col-num
+                      // row
+                      .form-group.control-group
+                        .text.col-12
+                          .input-wrap
+                            input#form_num_CODE_1.form-control(type='text', name='form_num_CODE_1', maxlength='1', placeholder='', value='', required='')
+                        .controls.col-12
+                    .col-num
+                      // row
+                      .form-group.control-group
+                        .text.col-12
+                          .input-wrap
+                            input#form_num_CODE_2.form-control(type='text', name='form_num_CODE_2', maxlength='1', placeholder='', value='', required='')
+                        .controls.col-12
+                    .col-num
+                      // row
+                      .form-group.control-group
+                        .text.col-12
+                          .input-wrap
+                            input#form_num_CODE_3.form-control(type='text', name='form_num_CODE_3', maxlength='1', placeholder='', value='', required='')
+                        .controls.col-12
+                    .col-num
+                      // row
+                      .form-group.control-group
+                        .text.col-12
+                          .input-wrap
+                            input#form_num_CODE_4.form-control(type='text', name='form_num_CODE_4', maxlength='1', placeholder='', value='', required='')
+                        .controls.col-12
+                    .col-num
+                      // row
+                      .form-group.control-group
+                        .text.col-12
+                          .input-wrap
+                            input#form_num_CODE_5.form-control(type='text', name='form_num_CODE_5', maxlength='1', placeholder='', value='', required='')
+                        .controls.col-12
+                    .col-num
+                      // row
+                      .form-group.control-group
+                        .text.col-12
+                          .input-wrap
+                            input#form_num_CODE_6.form-control(type='text', name='form_num_CODE_6', maxlength='1', placeholder='', value='', required='')
+                        .controls.col-12
+                    .col-num
+                      // row
+                      .form-group.control-group
+                        .text.col-12
+                          .input-wrap
+                            input#form_num_CODE_7.form-control(type='text', name='form_num_CODE_7', maxlength='1', placeholder='', value='', required='')
+                        .controls.col-12
+                    .col-num
+                      // row
+                      .form-group.control-group
+                        .text.col-12
+                          .input-wrap
+                            input#form_num_CODE_8.form-control(type='text', name='form_num_CODE_8', maxlength='1', placeholder='', value='', required='')
+                        .controls.col-12
+                    .col-num
+                      // row
+                      .form-group.control-group
+                        .text.col-12
+                          .input-wrap
+                            input#form_num_CODE_9.form-control(type='text', name='form_num_CODE_9', maxlength='1', placeholder='', value='', required='')
+                        .controls.col-12
+                    .col-num
+                      // row
+                      .form-group.control-group
+                        .text.col-12
+                          .input-wrap
+                            input#form_num_CODE_10.form-control(type='text', name='form_num_CODE_10', maxlength='1', placeholder='', value='', required='')
+                        .controls.col-12
+                    .col-num
+                      // row
+                      .form-group.control-group
+                        .text.col-12
+                          .input-wrap
+                            input#form_num_CODE_11.form-control(type='text', name='form_num_CODE_11', maxlength='1', placeholder='', value='', required='')
+                        .controls.col-12
+                    .col-num
+                      // row
+                      .form-group.control-group
+                        .text.col-12
+                          .input-wrap
+                            input#form_num_CODE_12.form-control(type='text', name='form_num_CODE_12', maxlength='1', placeholder='', value='', required='')
+                        .controls.col-12
+                    .col-num
+                      // row
+                      .form-group.control-group
+                        .text.col-12
+                          .input-wrap
+                            input#form_num_CODE_13.form-control(type='text', name='form_num_CODE_13', maxlength='1', placeholder='', value='', required='')
+                        .controls.col-12
+                .row
+                  .col-12
+                    // row
+                    .form-group.mb-0
+                      .col-12.btn-wrap.text-center
+                        +btn-primary({
+                            type: 'button',
+                            className: 'btn_submit',
+                            text: 'добавить карту'
+                        })(id='form-num-submit')
+            script.
+                !function () {
+                    'use strict';
+
+                    // Form validation
+                    function initValid() {
+                        // Validation options http://jqueryvalidation.org/documentation/
+                        var form_validator = $('#form-num');
+                        if (form_validator.length && $.fn.validate) {
+                            form_validator.validate({
+                                rules: {
+                                    'form_num_CODE_1': {
+                                        required: true,
+                                    },
+                                    'form_num_CODE_2': {
+                                        required: true,
+                                    },
+                                    'form_num_CODE_3': {
+                                        required: true,
+                                    },
+                                    'form_num_CODE_4': {
+                                        required: true,
+                                    },
+                                    'form_num_CODE_5': {
+                                        required: true,
+                                    },
+                                    'form_num_CODE_6': {
+                                        required: true,
+                                    },
+                                    'form_num_CODE_7': {
+                                        required: true,
+                                    },
+                                    'form_num_CODE_8': {
+                                        required: true,
+                                    },
+                                    'form_num_CODE_9': {
+                                        required: true,
+                                    },
+                                    'form_num_CODE_10': {
+                                        required: true,
+                                    },
+                                    'form_num_CODE_11': {
+                                        required: true,
+                                    },
+                                    'form_num_CODE_12': {
+                                        required: true,
+                                    },
+                                    'form_num_CODE_13': {
+                                        required: true,
+                                    }
+                                }
+                            });
+                        }
+                    }
+
+                    function validOnButton() {
+                        var form = $('#form-num');
+                        var btn = $('#form-num-submit');
+
+                        btn.on('click', function () {
+                            if (form.valid()) {
+                                form.submit();
+                            }
+                        })
+                    }
+
+                    $(function () {
+                        initValid();
+                        validOnButton();
+                    });
+                }();
+            script.
+                !function () {
+                    'use strict';
+
+                    function codeFocus() {
+                        var codeInputs = $('#form-num [id^="form_num_CODE"]');
+                        if (codeInputs.length) {
+                            var num = 0;
+
+                            codeInputs.each(function (index) {
+                                if (num !== codeInputs.length - 1) {
+                                    var self = $(this);
+
+                                    self.off('input.codeInputs').on('input.codeInputs', function (e) {
+                                        e.preventDefault();
+                                        if ($(this).val() !== '') {
+                                            codeInputs[index + 1].focus();
+                                        }
+                                    });
+                                    num++;
+                                }
+                            });
+                        }
+                    }
+
+                    $(function () {
+                        codeFocus();
+                    });
+                }();

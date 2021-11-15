@@ -235,6 +235,104 @@ $modal-transition:                  transform .3s ease-out;
   }
 }
 
+.numModal {
+
+  .modal-dialog {
+
+    @media (min-width: $screen-sm-min) {
+      max-width: 862px;
+    }
+  }
+
+  .modal-header {
+    padding: 70px 30px 10px;
+
+    @media (max-width: $screen-sm-max) {
+      padding: 30px 20px 10px;
+    }
+
+    .modal-title {
+      width: 100%;
+      font-size: 40px;
+      line-height: 1.2;
+      text-align: center;
+      text-transform: uppercase;
+      color: $brand-gray-10;
+
+      @media (max-width: $screen-sm-max) {
+        font-size: 25px;
+      }
+    }
+  }
+
+  .modal-body {
+    padding: 30px 45px 71px;
+
+    @media (max-width: $screen-sm-max) {
+      padding: 10px 20px 40px;
+      font-size: 16px;
+    }
+
+    @media (max-width: $screen-sm-max) {
+      padding: 10px 10px 40px;
+    }
+  }
+
+  .row-num {
+    display: flex;
+    margin-left: -5px;
+    margin-right: -5px;
+
+    @media (max-width: $screen-xs-max) {
+      margin-left: -3px;
+      margin-right: -3px;
+    }
+  }
+
+  .col-num {
+    padding-left: 5px;
+    padding-right: 5px;
+    flex: calc(100 / 13);
+
+    @media (max-width: $screen-xs-max) {
+      padding-left: 3px;
+      padding-right: 3px;
+    }
+  }
+
+  .code-wrap {
+    margin-bottom: 20px;
+
+    .form-control {
+      @include font-family-bold();
+      padding: 10px;
+      font-size: 47px;
+      text-align: center;
+      
+      @media (max-width: $screen-md-max) {
+        font-size: 30px;
+      }
+
+      @media (max-width: $screen-sm-max) {
+        padding: 10px 5px;
+        font-size: 20px;
+      }
+
+      @media (max-width: $screen-sm-max) {
+        padding: 10px 2px;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .btn {
+
+    .g-wrap & {
+      margin-right: 0;
+    }
+  }
+}
+
 .bannerModal {
 
   .modal-body {
@@ -326,9 +424,9 @@ $modal-transition:                  transform .3s ease-out;
 
   .modal-dialog {
 
-    //@media (min-width: $screen-sm-min) {
-    //  max-width: 862px;
-    //}
+    @media (min-width: $screen-sm-min) {
+      max-width: 862px;
+    }
   }
 
   .modal-header {
