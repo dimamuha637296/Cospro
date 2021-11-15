@@ -1,0 +1,18 @@
+include ../../../components/base/btns/btn/index
+#bannerModal.bannerModal.modal.fade.vertical-center(tabindex='-1', role='dialog', aria-hidden='true')
+  .modal-dialog
+    .modal-content
+      .modal-body
+        button.close(type='button', data-dismiss='modal', aria-hidden='true')
+        .d-flex
+          .col-pic.d-none.d-md-block
+            img(src=DB.DIR + 'img/tmp/modal-banner.png', alt='alt')
+          .col-text
+            .text
+              span Первый раз на сайте?
+              br
+              br
+              span Зарегистрируйтесь и
+              br
+              span.with-big получите <span class="color">скидку <span class="big">10%</span></span> на первую покупку
+            +btn-third({text: 'зарегистрироваться'})
