@@ -235,6 +235,182 @@ $modal-transition:                  transform .3s ease-out;
   }
 }
 
+.fastBuyModal {
+
+  .modal-dialog {
+
+    @media (min-width: $screen-sm-min) {
+      max-width: 1090px;
+    }
+
+    @media (max-width: $screen-xs-max) {
+      margin: 0;
+    }
+  }
+
+  .modal-header {
+    padding: 32px 60px 24px 40px;
+
+    @media (max-width: $screen-sm-max) {
+      padding-top: 15px;
+      padding-bottom: 30px;
+    }
+
+    @media (max-width: $screen-xs-max) {
+      padding-left: 15px;
+      padding-right: 30px;
+    }
+
+    .modal-title {
+      font-size: 40px;
+      line-height: 1.2;
+
+      @media (max-width: $screen-md-max) {
+        font-size: 25px;
+      }
+    }
+  }
+
+  .modal-body {
+    padding: 10px 39px 40px;
+
+    @media (max-width: $screen-xs-max) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+
+  .row-fast {
+    display: flex;
+    align-items: center;
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-bottom: 41px;
+
+    @media (max-width: $screen-md-max) {
+      flex-wrap: wrap;
+    }
+  }
+
+  .col-fast {
+    padding-left: 10px;
+    padding-right: 10px;
+
+    &--pic {
+      flex: 0 0 92px;
+      max-width: 92px;
+      margin-right: 19px;
+
+      @media (max-width: $screen-lg-max) {
+        margin-right: 0;
+      }
+
+      @media (max-width: $screen-md-max) {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+      }
+
+      img {
+
+        @media (max-width: $screen-md-max) {
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    }
+
+    &--text {
+      flex: 0 0 295px;
+      max-width: 295px;
+      margin-right: 32px;
+
+      @media (max-width: $screen-lg-max) {
+        margin-right: 10px;
+      }
+
+      @media (max-width: $screen-md-max) {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 10px;
+      }
+    }
+
+    &--tabs {
+      flex: 0 0 230px;
+      max-width: 230px;
+
+      @media (max-width: $screen-md-max) {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+      }
+    }
+
+    &--quantity {
+      flex: 0 0 170px;
+      max-width: 170px;
+      margin-left: auto;
+
+      @media (max-width: $screen-md-max) {
+        flex: 0 0 60%;
+        max-width: 60%;
+        margin-left: 0;
+      }
+    }
+
+    &--cost {
+      flex: 0 0 40%;
+      max-width: 40%;
+      margin-left: auto;
+    }
+  }
+
+  .text {
+    font-size: 17px;
+    line-height: 1.24;
+    color: $brand-gray-10;
+  }
+
+  .cost {
+    @include font-family-bold();
+    font-size: 24px;
+    line-height: 1.25;
+    text-align: right;
+  }
+
+  .tabs {
+    margin-top: 10px;
+  }
+
+  .tabs .nav-item {
+    margin-right: 15px;
+  }
+
+  .tabs .nav-link {
+    padding: 4.5px 19.5px;
+    font-size: 18px;
+  }
+
+  .btn-wrap {
+
+    @media (min-width: $screen-md-min) {
+      margin-top: 20px;
+    }
+  }
+
+  .btn {
+
+    .g-wrap & {
+      margin-right: 0;
+
+      @media (max-width: $screen-xs-max) {
+        width: 100%;
+      }
+    }
+  }
+}
+
 .numModal {
 
   .modal-dialog {

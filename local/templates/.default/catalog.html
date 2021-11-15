@@ -1403,101 +1403,312 @@
 				</div>
 			</div>
 			<div class="scroll-to-top"></div>
-			<div class="modal fade vertical-center" id="fastBuyModal" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="fastBuyModal modal fade vertical-center" id="fastBuyModal" tabindex="-1" role="dialog" aria-hidden="true">
 				<div class="modal-dialog">
 					<div class="modal-content">
 						<div class="modal-header">
-							<div class="h2 modal-title">Купить</div>
+							<div class="h1 modal-title">быстрая покупка</div>
 							<button class="close" type="button" data-dismiss="modal" aria-hidden="true"></button>
 						</div>
 						<div class="modal-body">
-							<form class="form-horizontal" id="form-buy" method="post" action="/">
-								<fieldset class="fieldset">
-									<!-- row-->
-									<div class="form-group control-group">
-										<label class="name label-pt col-lg-3 col-sm-3 col-12" for="form-NAME-buy">Ваше имя<span class="f-star">&nbsp;*</span>
-										</label>
-										<div class="text col-lg-6 col-sm-5 col-12">
-											<input class="form-control input-with-icon" id="form-NAME-buy" type="text" name="form-NAME-buy" maxlength="50" spellcheck="true" value="" required="" style="background-image: url(img/tmp/input-human.svg);">
-										</div>
-										<div class="controls col-lg-3 col-sm-4 col-12"></div>
+							<div class="row-fast">
+								<div class="col-fast col-fast--pic"><img src="img/tmp/fast-pic.png" alt="alt"></div>
+								<div class="col-fast col-fast--text">
+									<div class="text">BES активный шампунь для профилактики выпадения и активации роста новых волос c1</div>
+								</div>
+								<div class="col-fast col-fast--tabs">
+									<div class="tabs-border tabs mb-0">
+										<ul class="nav nav-tabs list-reset" role="tablist">
+											<li class="nav-item"><a class="nav-link active" href="#tab-fast-1" data-toggle="tab"><span>100 мл</span></a></li>
+											<li class="nav-item"><a class="nav-link" href="#tab-fast-2" data-toggle="tab"><span>50 мл</span></a></li>
+										</ul>
 									</div>
-									<!-- row-->
-									<div class="form-group control-group">
-										<label class="name label-pt col-lg-3 col-sm-3 col-12" for="form-MAIL-buy">Эл. почта</label>
-										<div class="text col-lg-6 col-sm-5 col-12">
-											<input class="form-control" id="form-MAIL-buy" type="email" name="form-EMAIL-buy" maxlength="50" spellcheck="true" value="" placeholder="email@example.com" required="">
-										</div>
-										<div class="controls col-lg-3 col-sm-4 col-12"></div>
+								</div>
+								<div class="col-fast col-fast--quantity">
+									<div class="quantity js-quantity">
+										<button class="quantity__btn quantity__btn--minus js-quantity-btn js-quantity-btn-minus"></button>
+										<input class="quantity__input js-quantity-input" type="number" value="1" min="1">
+										<button class="quantity__btn quantity__btn--plus js-quantity-btn js-quantity-btn-plus"></button>
 									</div>
-									<!-- row-->
-									<div class="form-group control-group">
-										<label class="name label-pt col-lg-3 col-sm-3 col-12" for="form-PHONE-buy">Телефон<span class="f-star">&nbsp;*</span>
-										</label>
-										<div class="text col-lg-6 col-sm-5 col-12">
-											<input class="form-control" id="form-PHONE-buy" type="tel" name="form-PHONE-buy" maxlength="50" spellcheck="true" required="">
-											<p class="help-block">Например: +375 (29) 123-45-67</p>
-										</div>
-										<div class="controls col-lg-3 col-sm-4 col-12"></div>
-									</div>
-									<!-- row-->
-									<div class="form-group control-group">
-										<label class="name label-pt col-lg-3 col-sm-3 col-12" for="form-MESSAGE-buy">Сообщение</label>
-										<div class="text col-lg-6 col-sm-5 col-12">
-											<textarea class="form-control" id="form-MESSAGE-buy" name="form-MESSAGE-buy" maxlength="500" cols="60" rows="4" spellcheck="true" required=""></textarea>
-										</div>
-										<div class="controls col-lg-3 col-sm-4 col-12"></div>
-									</div>
-									<!-- row-->
-									<div class="form-group">
-										<div class="col-12 col-xs-offset-0 col-sm-offset-3">
-																	<input class="btn btn-primary btn_submit" name="submit" type="submit" value="Отправить">
-										</div>
-									</div>
-								</fieldset>
-							</form>
-							<script>
-								!function () {
-								    'use strict';
-								
-								    function maskForm() {
-								        $("#form-PHONE-buy").mask("+375 - 99 - 999 - 99 - 99");
-								    }
-								
-								    // Form validation
-								    function initQuestValid() {
-								        // Validation options http://jqueryvalidation.org/documentation/
-								        var form_validator = $('#form-buy');
-								        if (form_validator.length && $.fn.validate) {
-								            form_validator.validate({
-								                rules: {
-								                    'form-NAME-buy': {
-								                        required: true,
-								                        minlength: 4
-								                    },
-								                    'form-PHONE-buy': {
-								                        required: true,
-								                        minlength: 4
-								                    },
-								                    'form-MAIL-buy': {
-								                        required: true,
-								                        minlength: 4
-								                    },
-								                    'form-MESSAGE-buy': {
-								                        required: true,
-								                        minlength: 10
-								                    }
-								                }
-								            });
-								        }
-								    }
-								
-								    $(function () {
-								        maskForm();
-								        initQuestValid();
-								    });
-								}();
-							</script>
+								</div>
+								<div class="col-fast col-fast--cost">
+									<div class="cost">22 BYN</div>
+								</div>
+							</div>
+							<div class="tab-content">
+								<div class="tab-pane fade in active show" id="tab-fast-1" role="tabpanel">
+									<form class="form-1" id="form-fastpay" name="form_fastpay" method="post" target="_top" action="/">
+										<fieldset class="fieldset">
+											<div class="row">
+												<div class="col-lg-6 col-12">
+													<!-- row-->
+													<div class="form-group control-group">
+														<div class="text col-12">
+															<div class="input-wrap">
+																<input class="form-control input-with-icon input-with-icon--human" id="form_fastpay_FIO" type="text" name="form_fastpay_FIO" placeholder="Имя и фамилия" value="" required="">
+															</div>
+														</div>
+														<div class="controls col-12"></div>
+													</div>
+												</div>
+												<div class="col-lg-6 col-12">
+													<!-- row-->
+													<div class="form-group control-group">
+														<div class="text col-12">
+															<div class="input-wrap">
+																<input class="form-control js_mask_tel input-with-icon input-with-icon--tel" id="form_fastpay_TEL" type="tel" name="form_fastpay_TEL" placeholder="Номер телефона" value="" required="">
+															</div>
+														</div>
+														<div class="controls col-12"></div>
+													</div>
+												</div>
+												<div class="col-lg-6 col-12">
+													<!-- row-->
+													<div class="form-group control-group">
+														<div class="text col-12">
+															<div class="input-wrap">
+																<select class="form-control ui-select input-with-icon input-with-icon--auto" id="form_fastpay_DELIVERY" name="form_fastpay_DELIVERY" required>
+																	<option value="" selected disabled>Способ доставки</option>
+																	<option>Курьерская доставка 1</option>
+																	<option>Курьерская доставка 2</option>
+																</select>
+															</div>
+														</div>
+														<div class="controls col-12"></div>
+													</div>
+												</div>
+												<div class="col-lg-6 col-12">
+													<!-- row-->
+													<div class="form-group control-group">
+														<div class="text col-12">
+															<div class="input-wrap">
+																<select class="form-control ui-select input-with-icon input-with-icon--pay" id="form_fastpay_PAY" name="form_fastpay_PAY" required>
+																	<option value="" selected disabled>Способ оплаты</option>
+																	<option>Способ оплаты 1</option>
+																	<option>Способ оплаты 2</option>
+																</select>
+															</div>
+														</div>
+														<div class="controls col-12"></div>
+													</div>
+												</div>
+												<div class="col-12">
+													<!-- row-->
+													<div class="form-group mb-0">
+														<div class="col-12 btn-wrap text-center">
+																					<button class="btn btn-primary btn_submit" id="form-fastpay-submit" type="button"><span>оформить заказ</span></button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</fieldset>
+									</form>
+									<script>
+										!function () {
+										    'use strict';
+										
+										    // Form validation
+										    function initValid() {
+										        // Validation options http://jqueryvalidation.org/documentation/
+										        var form_validator = $('#form-fastpay');
+										        if (form_validator.length && $.fn.validate) {
+										            form_validator.validate({
+										                rules: {
+										                    'form_fastpay_FIO': {
+										                        required: true
+										                    },
+										                    'form_fastpay_TEL': {
+										                        required: true
+										                    },
+										                    'form_fastpay_DELIVERY': {
+										                        required: true
+										                    },
+										                    'form_fastpay_PAY': {
+										                        required: true
+										                    }
+										                }
+										            });
+										        }
+										    }
+										
+										    function validOnButton() {
+										        var form = $('#form-fastpay');
+										        var btn = $('#form-fastpay-submit');
+										
+										        btn.on('click', function () {
+										            if (form.valid()) {
+										                form.submit();
+										            }
+										        })
+										    }
+										
+										    $(function () {
+										        initValid();
+										        validOnButton();
+										    });
+										}();
+									</script>
+								</div>
+								<div class="tab-pane fade" id="tab-fast-2" role="tabpanel">
+									<form class="form-1" id="form-fastpay-2" name="form_fastpay_2" method="post" target="_top" action="/">
+										<fieldset class="fieldset">
+											<div class="row">
+												<div class="col-lg-6 col-12">
+													<!-- row-->
+													<div class="form-group control-group">
+														<div class="text col-12">
+															<div class="input-wrap">
+																<input class="form-control input-with-icon input-with-icon--human" id="form_fastpay_2_FIO" type="text" name="form_fastpay_2_FIO" placeholder="Имя и фамилия" value="" required="">
+															</div>
+														</div>
+														<div class="controls col-12"></div>
+													</div>
+												</div>
+												<div class="col-lg-6 col-12">
+													<!-- row-->
+													<div class="form-group control-group">
+														<div class="text col-12">
+															<div class="input-wrap">
+																<input class="form-control js_mask_tel input-with-icon input-with-icon--tel" id="form_fastpay_2_TEL" type="tel" name="form_fastpay_2_TEL" placeholder="Номер телефона" value="" required="">
+															</div>
+														</div>
+														<div class="controls col-12"></div>
+													</div>
+												</div>
+												<div class="col-lg-6 col-12">
+													<!-- row-->
+													<div class="form-group control-group">
+														<div class="text col-12">
+															<div class="input-wrap">
+																<select class="form-control ui-select input-with-icon input-with-icon--auto" id="form_fastpay_2_DELIVERY" name="form_fastpay_2_DELIVERY" required>
+																	<option value="" selected disabled>Способ доставки</option>
+																	<option>Курьерская доставка 1</option>
+																	<option>Курьерская доставка 2</option>
+																</select>
+															</div>
+														</div>
+														<div class="controls col-12"></div>
+													</div>
+												</div>
+												<div class="col-lg-6 col-12">
+													<!-- row-->
+													<div class="form-group control-group">
+														<div class="text col-12">
+															<div class="input-wrap">
+																<select class="form-control ui-select input-with-icon input-with-icon--pay" id="form_fastpay_2_PAY" name="form_fastpay_2_PAY" required>
+																	<option value="" selected disabled>Способ оплаты</option>
+																	<option>Способ оплаты 1</option>
+																	<option>Способ оплаты 2</option>
+																</select>
+															</div>
+														</div>
+														<div class="controls col-12"></div>
+													</div>
+												</div>
+												<div class="col-lg-6 col-12">
+													<!-- row-->
+													<div class="form-group control-group">
+														<div class="text col-12">
+															<div class="input-wrap">
+																<select class="form-control ui-select input-with-icon input-with-icon--location" id="form_fastpay_2_CITY" name="form_fastpay_2_CITY" required>
+																	<option value="" selected disabled>Населенный пункт</option>
+																	<option>Населенный пункт 1</option>
+																	<option>Населенный пункт 2</option>
+																</select>
+															</div>
+														</div>
+														<div class="controls col-12"></div>
+													</div>
+												</div>
+												<div class="col-lg-6 col-12">
+													<!-- row-->
+													<div class="form-group control-group">
+														<div class="text col-12">
+															<div class="input-wrap">
+																<input class="form-control input-with-icon input-with-icon--post" id="form_fastpay_2_POST" type="text" name="form_fastpay_2_POST" placeholder="Почтовый индекс" value="" required="">
+															</div>
+														</div>
+														<div class="controls col-12"></div>
+													</div>
+												</div>
+												<div class="col-12">
+													<!-- row-->
+													<div class="form-group control-group">
+														<div class="text col-12">
+															<div class="input-wrap">
+																<input class="form-control input-with-icon input-with-icon--address" id="form_fastpay_2_ADDRESS" type="text" name="form_fastpay_2_ADDRESS" placeholder="Адрес" value="" required="">
+															</div>
+														</div>
+														<div class="controls col-12"></div>
+													</div>
+												</div>
+												<div class="col-12">
+													<!-- row-->
+													<div class="form-group mb-0">
+														<div class="col-12 btn-wrap text-center">
+																					<button class="btn btn-primary btn_submit" id="form-fastpay-2-submit" type="button"><span>оформить заказ</span></button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</fieldset>
+									</form>
+									<script>
+										!function () {
+										    'use strict';
+										
+										    // Form validation
+										    function initValid() {
+										        // Validation options http://jqueryvalidation.org/documentation/
+										        var form_validator = $('#form-fastpay-2');
+										        if (form_validator.length && $.fn.validate) {
+										            form_validator.validate({
+										                rules: {
+										                    'form_fastpay_2_FIO': {
+										                        required: true
+										                    },
+										                    'form_fastpay_2_TEL': {
+										                        required: true
+										                    },
+										                    'form_fastpay_2_DELIVERY': {
+										                        required: true
+										                    },
+										                    'form_fastpay_2_PAY': {
+										                        required: true
+										                    },
+										                    'form_fastpay_2_CITY': {
+										                        required: true
+										                    },
+										                    'form_fastpay_2_POST': {
+										                        required: true
+										                    },
+										                    'form_fastpay_2_ADDRESS': {
+										                        required: true
+										                    }
+										                }
+										            });
+										        }
+										    }
+										
+										    function validOnButton() {
+										        var form = $('#form-fastpay-2');
+										        var btn = $('#form-fastpay-2-submit');
+										
+										        btn.on('click', function () {
+										            if (form.valid()) {
+										                form.submit();
+										            }
+										        })
+										    }
+										
+										    $(function () {
+										        initValid();
+										        validOnButton();
+										    });
+										}();
+									</script>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
