@@ -17,7 +17,7 @@ $close-text-shadow:                 0 1px 0 #000;
     opacity: 1;
     transition: $transition-link;
 
-    @media (max-width: $screen-xs-max) {
+    @media (max-width: $screen-sm-max) {
       @include svg-close-small;
     }
   }
@@ -27,7 +27,7 @@ $close-text-shadow:                 0 1px 0 #000;
     &:before {
       @include svg-close-hover;
 
-      @media (max-width: $screen-xs-max) {
+      @media (max-width: $screen-sm-max) {
         @include svg-close-small-hover;
       }
     }

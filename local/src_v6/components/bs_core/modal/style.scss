@@ -22,14 +22,14 @@ $modal-content-box-shadow-sm-up:    0 .5rem 1rem rgba(#000, .5);
 
 $modal-backdrop-bg:                 #000;
 $modal-backdrop-opacity:            .5;
-$modal-header-border-color:         #e9ecef;
+$modal-header-border-color:         $brand-white;
 $modal-footer-border-color:         $modal-header-border-color;
 $modal-header-border-width:         $modal-content-border-width;
 $modal-footer-border-width:         $modal-header-border-width;
 $modal-header-padding:              1rem 3rem;
 
 $modal-lg:                          900px;
-$modal-md:                          600px;
+$modal-md:                          1080px;
 $modal-sm:                          300px;
 
 $modal-transition:                  transform .3s ease-out;
@@ -59,6 +59,17 @@ $modal-transition:                  transform .3s ease-out;
   .modal-open & {
     overflow-x: hidden;
     overflow-y: auto;
+  }
+
+  .close {
+    position: absolute;
+    top: 40px;
+    right: 30px;
+
+    @media (max-width: $screen-sm-max) {
+      top: 20px;
+      right: 15px;
+    }
   }
 }
 
@@ -126,9 +137,6 @@ $modal-transition:                  transform .3s ease-out;
   //align-items: baseline; // so the close btn always stays on the upper right corner
   justify-content: space-between; // Put modal header elements (title and dismiss) on opposite ends
   padding: $modal-header-padding;
-  border-bottom: $modal-header-border-width solid $modal-header-border-color;
-  border-top-right-radius: $modal-content-border-radius;
-  border-top-left-radius: $modal-content-border-radius;
 
   @media (max-width: $screen-sm-max) {
     padding-left: 15px;
@@ -223,5 +231,48 @@ $modal-transition:                  transform .3s ease-out;
 @media (min-width: $screen-lg-min) {
   .modal-lg {
     max-width: $modal-lg;
+  }
+}
+
+.thanksModal {
+
+  .modal-dialog {
+
+    @media (min-width: $screen-sm-min) {
+      max-width: 862px;
+    }
+  }
+
+  .modal-header {
+    padding: 70px 30px 10px;
+
+    @media (max-width: $screen-sm-max) {
+      padding: 30px 20px 10px;
+    }
+
+    .modal-title {
+      width: 100%;
+      font-size: 40px;
+      line-height: 1.2;
+      text-align: center;
+      color: $brand-gray-10;
+
+      @media (max-width: $screen-sm-max) {
+        font-size: 25px;
+      }
+    }
+  }
+
+  .modal-body {
+    padding: 19px 100px 71px;
+    font-size: 18px;
+    line-height: 1.63;
+    text-align: center;
+    color: $brand-black;
+
+    @media (max-width: $screen-sm-max) {
+      padding: 10px 20px 40px;
+      font-size: 16px;
+    }
   }
 }

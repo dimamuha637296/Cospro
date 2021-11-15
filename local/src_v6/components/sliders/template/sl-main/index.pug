@@ -16,7 +16,7 @@ mixin sl-main(data)
                         p.text #{slide.text}
                       if (slide.btnText)
                         .btn-wrap
-                          +btn-primary({text: slide.btnText})
+                          +btn-primary({text: slide.btnText})(data-toggle='modal', data-target='#thanksModal')
                   .col-pic
                     .pic
                       img.img(src=DB.DIR + 'img/tmp/' + slide.pic, alt=slide.title)
