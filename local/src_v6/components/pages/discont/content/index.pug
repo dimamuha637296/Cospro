@@ -6,7 +6,9 @@
         .discont__level уровень карты: бронзовый
         +btn-secondary({text: 'сменить карту'})(data-toggle='modal', data-target='#numModal')
       .discont__col.discont__col--right
-        img.discont__img(src=DB.DIR + 'img/tmp/discont.jpg', alt='alt')
+        .discont__pic-wrap
+          img.discont__img(src=DB.DIR + 'img/tmp/discont.jpg', alt='alt')
+          span.discont__code 1 783 267 167 992
     .discont__subtitle Условия дисконтной программы
     .discont__text
       | Дисконтная программа магазина профессиональной косметики - это возможность получать скидки до 10% от общей суммы покупок.
