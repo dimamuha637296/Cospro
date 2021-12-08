@@ -11,9 +11,6 @@ include ../../../util/menuMore/index
     li.item_1.has-submenu-2
       a(href="#")
         span Бренды
-        span.icon
-      .submenu-2.js-submenu-scroll-wrap
-        include ../submenu-big/index
     li.item_1
       span
         span Блог
@@ -26,41 +23,3 @@ include ../../../util/menuMore/index
     li.item_1.has-submenu
       a(href="#")
         span Покупателю
-        span.icon
-      .submenu
-        +submenu-3([
-            {
-                text: 'О компании',
-                isActive: true,
-                href: '#'
-            },
-            {
-                text: 'Продукция',
-                href: '#',
-                submenu: [
-                    {
-                        text: 'нструменты и загрузки',
-                        href: '#'
-                    },
-                    {
-                        text: 'нструменты и загрузки Инструменты и загрузки 2',
-                        href: '#'
-                    }
-                ]
-            },
-            {
-                text: 'Услуги',
-                isActive: true
-            },
-            {
-                text: 'Наши проекты',
-                href: '#'
-            },
-            {
-                text: 'Инструменты и загрузки',
-                href: '#'
-            }
-        ])
-    //+menuMore({
-    //    itemModifier: 'has-submenu'
-    //})
