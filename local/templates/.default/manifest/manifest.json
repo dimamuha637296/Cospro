@@ -1,7 +1,7 @@
 {
   "name": "Cospro",
   "short_name": "Cospro",
-  "description": "db.by framework based on Bootstrap",
+  "description": "framework based on Bootstrap",
   "dir": "auto",
   "lang": "ru-RU",
   "display": "standalone",
